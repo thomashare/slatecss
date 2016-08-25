@@ -430,213 +430,273 @@ div {
 div+div {
   margin-top: 5px;
 }
-div.xs-12,
+div.xs-16,
 div.xs-full {
   width: 100%;
 }
 @media screen and (min-width: 0px) {
   div.xs-1 {
-    width: 8.333333333333334% !important;
+    width: 6.25% !important;
   }
   div.xs-2 {
-    width: 16.666666666666668% !important;
+    width: 12.5% !important;
   }
   div.xs-3 {
-    width: 25% !important;
+    width: 18.75% !important;
   }
   div.xs-4 {
-    width: 33.333333333333336% !important;
+    width: 25% !important;
   }
   div.xs-5 {
-    width: 41.66666666666667% !important;
+    width: 31.25% !important;
   }
   div.xs-6 {
-    width: 50% !important;
+    width: 37.5% !important;
   }
   div.xs-7 {
-    width: 58.333333333333336% !important;
+    width: 43.75% !important;
   }
   div.xs-8 {
-    width: 66.66666666666667% !important;
+    width: 50% !important;
   }
   div.xs-9 {
-    width: 75% !important;
+    width: 56.25% !important;
   }
   div.xs-10 {
-    width: 83.33333333333334% !important;
+    width: 62.5% !important;
   }
   div.xs-11 {
-    width: 91.66666666666667% !important;
+    width: 68.75% !important;
   }
   div.xs-12 {
+    width: 75% !important;
+  }
+  div.xs-13 {
+    width: 81.25% !important;
+  }
+  div.xs-14 {
+    width: 87.5% !important;
+  }
+  div.xs-15 {
+    width: 93.75% !important;
+  }
+  div.xs-16 {
     width: 100% !important;
   }
 }
-div.sm-12,
+div.sm-16,
 div.sm-full {
   width: 100%;
 }
 @media screen and (min-width: 544px) {
   div.sm-1 {
-    width: 8.333333333333334% !important;
+    width: 6.25% !important;
   }
   div.sm-2 {
-    width: 16.666666666666668% !important;
+    width: 12.5% !important;
   }
   div.sm-3 {
-    width: 25% !important;
+    width: 18.75% !important;
   }
   div.sm-4 {
-    width: 33.333333333333336% !important;
+    width: 25% !important;
   }
   div.sm-5 {
-    width: 41.66666666666667% !important;
+    width: 31.25% !important;
   }
   div.sm-6 {
-    width: 50% !important;
+    width: 37.5% !important;
   }
   div.sm-7 {
-    width: 58.333333333333336% !important;
+    width: 43.75% !important;
   }
   div.sm-8 {
-    width: 66.66666666666667% !important;
+    width: 50% !important;
   }
   div.sm-9 {
-    width: 75% !important;
+    width: 56.25% !important;
   }
   div.sm-10 {
-    width: 83.33333333333334% !important;
+    width: 62.5% !important;
   }
   div.sm-11 {
-    width: 91.66666666666667% !important;
+    width: 68.75% !important;
   }
   div.sm-12 {
+    width: 75% !important;
+  }
+  div.sm-13 {
+    width: 81.25% !important;
+  }
+  div.sm-14 {
+    width: 87.5% !important;
+  }
+  div.sm-15 {
+    width: 93.75% !important;
+  }
+  div.sm-16 {
     width: 100% !important;
   }
 }
-div.md-12,
+div.md-16,
 div.md-full {
   width: 100%;
 }
 @media screen and (min-width: 768px) {
   div.md-1 {
-    width: 8.333333333333334% !important;
+    width: 6.25% !important;
   }
   div.md-2 {
-    width: 16.666666666666668% !important;
+    width: 12.5% !important;
   }
   div.md-3 {
-    width: 25% !important;
+    width: 18.75% !important;
   }
   div.md-4 {
-    width: 33.333333333333336% !important;
+    width: 25% !important;
   }
   div.md-5 {
-    width: 41.66666666666667% !important;
+    width: 31.25% !important;
   }
   div.md-6 {
-    width: 50% !important;
+    width: 37.5% !important;
   }
   div.md-7 {
-    width: 58.333333333333336% !important;
+    width: 43.75% !important;
   }
   div.md-8 {
-    width: 66.66666666666667% !important;
+    width: 50% !important;
   }
   div.md-9 {
-    width: 75% !important;
+    width: 56.25% !important;
   }
   div.md-10 {
-    width: 83.33333333333334% !important;
+    width: 62.5% !important;
   }
   div.md-11 {
-    width: 91.66666666666667% !important;
+    width: 68.75% !important;
   }
   div.md-12 {
+    width: 75% !important;
+  }
+  div.md-13 {
+    width: 81.25% !important;
+  }
+  div.md-14 {
+    width: 87.5% !important;
+  }
+  div.md-15 {
+    width: 93.75% !important;
+  }
+  div.md-16 {
     width: 100% !important;
   }
 }
-div.lg-12,
+div.lg-16,
 div.lg-full {
   width: 100%;
 }
 @media screen and (min-width: 992px) {
   div.lg-1 {
-    width: 8.333333333333334% !important;
+    width: 6.25% !important;
   }
   div.lg-2 {
-    width: 16.666666666666668% !important;
+    width: 12.5% !important;
   }
   div.lg-3 {
-    width: 25% !important;
+    width: 18.75% !important;
   }
   div.lg-4 {
-    width: 33.333333333333336% !important;
+    width: 25% !important;
   }
   div.lg-5 {
-    width: 41.66666666666667% !important;
+    width: 31.25% !important;
   }
   div.lg-6 {
-    width: 50% !important;
+    width: 37.5% !important;
   }
   div.lg-7 {
-    width: 58.333333333333336% !important;
+    width: 43.75% !important;
   }
   div.lg-8 {
-    width: 66.66666666666667% !important;
+    width: 50% !important;
   }
   div.lg-9 {
-    width: 75% !important;
+    width: 56.25% !important;
   }
   div.lg-10 {
-    width: 83.33333333333334% !important;
+    width: 62.5% !important;
   }
   div.lg-11 {
-    width: 91.66666666666667% !important;
+    width: 68.75% !important;
   }
   div.lg-12 {
+    width: 75% !important;
+  }
+  div.lg-13 {
+    width: 81.25% !important;
+  }
+  div.lg-14 {
+    width: 87.5% !important;
+  }
+  div.lg-15 {
+    width: 93.75% !important;
+  }
+  div.lg-16 {
     width: 100% !important;
   }
 }
-div.xl-12,
+div.xl-16,
 div.xl-full {
   width: 100%;
 }
 @media screen and (min-width: 1140px) {
   div.xl-1 {
-    width: 8.333333333333334% !important;
+    width: 6.25% !important;
   }
   div.xl-2 {
-    width: 16.666666666666668% !important;
+    width: 12.5% !important;
   }
   div.xl-3 {
-    width: 25% !important;
+    width: 18.75% !important;
   }
   div.xl-4 {
-    width: 33.333333333333336% !important;
+    width: 25% !important;
   }
   div.xl-5 {
-    width: 41.66666666666667% !important;
+    width: 31.25% !important;
   }
   div.xl-6 {
-    width: 50% !important;
+    width: 37.5% !important;
   }
   div.xl-7 {
-    width: 58.333333333333336% !important;
+    width: 43.75% !important;
   }
   div.xl-8 {
-    width: 66.66666666666667% !important;
+    width: 50% !important;
   }
   div.xl-9 {
-    width: 75% !important;
+    width: 56.25% !important;
   }
   div.xl-10 {
-    width: 83.33333333333334% !important;
+    width: 62.5% !important;
   }
   div.xl-11 {
-    width: 91.66666666666667% !important;
+    width: 68.75% !important;
   }
   div.xl-12 {
+    width: 75% !important;
+  }
+  div.xl-13 {
+    width: 81.25% !important;
+  }
+  div.xl-14 {
+    width: 87.5% !important;
+  }
+  div.xl-15 {
+    width: 93.75% !important;
+  }
+  div.xl-16 {
     width: 100% !important;
   }
 }
