@@ -1,0 +1,33 @@
+{
+  "name": "slatecss",
+  "version": "1.0.0",
+  "description": "CSS framework for beautiful website creation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomashare/slatecss.git"
+  },
+  "keywords": [
+    "slate",
+    "css",
+    "slatecss",
+    "slate-css",
+    "css",
+    "framework",
+    "framework",
+    "beautiful",
+    "simple",
+    "elegeant",
+    "clean",
+    "easy"
+  ],
+  "author": "Tommy Hare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomashare/slatecss/issues"
+  },
+  "homepage": "https://github.com/thomashare/slatecss#readme"
+}
