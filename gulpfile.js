@@ -3,8 +3,14 @@ var stylus = require('gulp-stylus');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 
+gulp.task('default', ['slate-min', 'watch']);
+
+gulp.task('watch', function() {
+  return gulp.watch('./styl/**/*.styl', ['slate-min']);
+});
+
 gulp.task('slate', function() {
-  gulp.src('./styl/slate.styl')
+  return gulp.src('./styl/slate.styl')
   .pipe(stylus({
     'include css': true
   }))
@@ -12,7 +18,7 @@ gulp.task('slate', function() {
 });
 
 gulp.task('slate-min', ['slate'], function() {
-  gulp.src('./styl/slate.styl')
+  return gulp.src('./styl/slate.styl')
   .pipe(stylus({
     'include css': true
   }))

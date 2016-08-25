@@ -29,5 +29,12 @@
   "bugs": {
     "url": "https://github.com/thomashare/slatecss/issues"
   },
-  "homepage": "https://github.com/thomashare/slatecss#readme"
+  "homepage": "https://github.com/thomashare/slatecss#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-stylus": "^2.5.0",
+    "normalize.css": "^4.2.0"
+  }
 }
