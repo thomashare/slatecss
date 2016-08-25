@@ -13,49 +13,11 @@ for screen-size in screen-sizes
   div.{screen-size}-{max_columns}, div.{screen-size}-full
     width: 100%
     
-// phones
-//@media only screen and (max-width: xs-max-width)
+  width = mobile-first? 'min-width' : 'max-width'
 
-// bigger phones
-@media screen and (min-width: sm-min-width)
-  div 
-    background: #333
-    color: #FFF
-    
-  for i in (1..max_columns)
-    div.sm-{i}
-      percentage = (100/max_columns)*i + '%'
-      width: percentage !important
-      
-// tablets
-@media screen and (min-width: md-min-width)
-  div 
-    background: #666
-    color: #FFF
-    
-  for i in (1..max_columns)
-    div.md-{i}
-      percentage = (100/max_columns)*i + '%'
-      width: percentage !important
-      
-// desktops
-@media screen and (min-width: lg-min-width)
-  div 
-    background: #BBB
-    color: #000
-    
-  for i in (1..max_columns)
-    div.lg-{i}
-      percentage = (100/max_columns)*i + '%'
-      width: percentage !important
-      
-// large desktops
-@media screen and (min-width: xl-min-width)
-  div 
-    background: #FFF
-    color: #000
-    
-  for i in (1..max_columns)
-    div.xl-{i}
-      percentage = (100/max_columns)*i + '%'
-      width: percentage !important
+  // setup screen sizes for each column size
+  @media screen and ({width}: screen-size+'_width')
+    for i in (1..max_columns)
+      div.{screen-size}-{i}
+        percentage = (100/max_columns)*i + '%'
+        width: percentage !important

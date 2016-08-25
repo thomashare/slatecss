@@ -434,27 +434,49 @@ div.xs-12,
 div.xs-full {
   width: 100%;
 }
+@media screen and (min-width: 0px) {
+  div.xs-1 {
+    width: 8.333333333333334% !important;
+  }
+  div.xs-2 {
+    width: 16.666666666666668% !important;
+  }
+  div.xs-3 {
+    width: 25% !important;
+  }
+  div.xs-4 {
+    width: 33.333333333333336% !important;
+  }
+  div.xs-5 {
+    width: 41.66666666666667% !important;
+  }
+  div.xs-6 {
+    width: 50% !important;
+  }
+  div.xs-7 {
+    width: 58.333333333333336% !important;
+  }
+  div.xs-8 {
+    width: 66.66666666666667% !important;
+  }
+  div.xs-9 {
+    width: 75% !important;
+  }
+  div.xs-10 {
+    width: 83.33333333333334% !important;
+  }
+  div.xs-11 {
+    width: 91.66666666666667% !important;
+  }
+  div.xs-12 {
+    width: 100% !important;
+  }
+}
 div.sm-12,
 div.sm-full {
   width: 100%;
 }
-div.md-12,
-div.md-full {
-  width: 100%;
-}
-div.lg-12,
-div.lg-full {
-  width: 100%;
-}
-div.xl-12,
-div.xl-full {
-  width: 100%;
-}
 @media screen and (min-width: 544px) {
-  div {
-    background: #333;
-    color: #fff;
-  }
   div.sm-1 {
     width: 8.333333333333334% !important;
   }
@@ -492,11 +514,11 @@ div.xl-full {
     width: 100% !important;
   }
 }
+div.md-12,
+div.md-full {
+  width: 100%;
+}
 @media screen and (min-width: 768px) {
-  div {
-    background: #666;
-    color: #fff;
-  }
   div.md-1 {
     width: 8.333333333333334% !important;
   }
@@ -534,11 +556,11 @@ div.xl-full {
     width: 100% !important;
   }
 }
+div.lg-12,
+div.lg-full {
+  width: 100%;
+}
 @media screen and (min-width: 992px) {
-  div {
-    background: #bbb;
-    color: #000;
-  }
   div.lg-1 {
     width: 8.333333333333334% !important;
   }
@@ -576,11 +598,11 @@ div.xl-full {
     width: 100% !important;
   }
 }
+div.xl-12,
+div.xl-full {
+  width: 100%;
+}
 @media screen and (min-width: 1140px) {
-  div {
-    background: #fff;
-    color: #000;
-  }
   div.xl-1 {
     width: 8.333333333333334% !important;
   }
