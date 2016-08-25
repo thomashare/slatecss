@@ -1,0 +1,15 @@
+[class*='btn']
+  border-radius: 4px
+  padding: 10px 12px
+  
+  for color in colors
+    &.btn-{color}
+      color-name = color+'-color'
+      background-color: color-name
+      border: none
+      color: light(color-name)? #000 : #FFF
+      cursor: pointer
+      outline: none
+      
+      &:hover
+        background-color: darken(color-name, 10%)
