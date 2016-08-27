@@ -421,12 +421,21 @@ textarea {
   font: inherit; /* 2 */
 }
 
-[class*='xs-'] {
-  background-color: rgba(255,255,255,0.75);
+* + .full-width {
+  margin-top: 10px;
+}
+.full-width {
   float: left;
-  margin: 10px 10px 0 10px;
+  min-height: 5px;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  width: 100%;
+}
+[class*='xs-'] {
+  float: left;
   min-height: 5px;
   padding: 10px;
+  margin: 10px 10px 0 10px;
 }
 .xs-12,
 .xs-full,
@@ -471,12 +480,21 @@ textarea {
     width: calc(100% - 20px);
   }
 }
-[class*='sm-'] {
-  background-color: rgba(255,255,255,0.75);
+* + .full-width {
+  margin-top: 10px;
+}
+.full-width {
   float: left;
-  margin: 10px 10px 0 10px;
+  min-height: 5px;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  width: 100%;
+}
+[class*='sm-'] {
+  float: left;
   min-height: 5px;
   padding: 10px;
+  margin: 10px 10px 0 10px;
 }
 .sm-12,
 .sm-full,
@@ -521,12 +539,21 @@ textarea {
     width: calc(100% - 20px);
   }
 }
-[class*='md-'] {
-  background-color: rgba(255,255,255,0.75);
+* + .full-width {
+  margin-top: 10px;
+}
+.full-width {
   float: left;
-  margin: 10px 10px 0 10px;
+  min-height: 5px;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  width: 100%;
+}
+[class*='md-'] {
+  float: left;
   min-height: 5px;
   padding: 10px;
+  margin: 10px 10px 0 10px;
 }
 .md-12,
 .md-full,
@@ -571,12 +598,21 @@ textarea {
     width: calc(100% - 20px);
   }
 }
-[class*='lg-'] {
-  background-color: rgba(255,255,255,0.75);
+* + .full-width {
+  margin-top: 10px;
+}
+.full-width {
   float: left;
-  margin: 10px 10px 0 10px;
+  min-height: 5px;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  width: 100%;
+}
+[class*='lg-'] {
+  float: left;
   min-height: 5px;
   padding: 10px;
+  margin: 10px 10px 0 10px;
 }
 .lg-12,
 .lg-full,
@@ -621,12 +657,21 @@ textarea {
     width: calc(100% - 20px);
   }
 }
-[class*='xl-'] {
-  background-color: rgba(255,255,255,0.75);
+* + .full-width {
+  margin-top: 10px;
+}
+.full-width {
   float: left;
-  margin: 10px 10px 0 10px;
+  min-height: 5px;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  width: 100%;
+}
+[class*='xl-'] {
+  float: left;
   min-height: 5px;
   padding: 10px;
+  margin: 10px 10px 0 10px;
 }
 .xl-12,
 .xl-full,

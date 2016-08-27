@@ -1,15 +1,24 @@
 // for each screen size in the screen-sizes array, set its max to 100% width  
 for screen-size in screen-sizes
   
+  * + .full-width
+    margin-top: gutter
+
+  .full-width
+    float: left
+    min-height: 5px
+    margin: gutter 0 0 0
+    padding: 10px
+    width: 100%
+
   // set gutters for all required containers
   [class*=\'{screen-size}-\']
-    background-color: rgba(255,255,255,0.75)
     float: left
-    margin: 10px gutter 0 gutter
     min-height: 5px
     padding: 10px
+    margin: gutter gutter 0 gutter
 
-  // full-screen columns, either *-full or *-max-columns set
+  // full-screen columns, either fit-screen, *-full or *-max-columns set
   .{screen-size}-{max_columns}, .{screen-size}-full, .fit-screen
     width: 'calc(%s - %s)' % (100% gutter*2)
     
