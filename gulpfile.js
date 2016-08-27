@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var stylus = require('gulp-stylus');
+var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 
@@ -14,6 +15,7 @@ gulp.task('slate', function() {
   .pipe(stylus({
     'include css': true
   }))
+  .pipe(autoprefixer())
   .pipe(gulp.dest('./css'));
 });
 
@@ -22,6 +24,7 @@ gulp.task('slate-min', ['slate'], function() {
   .pipe(stylus({
     'include css': true
   }))
+  .pipe(autoprefixer())
   .pipe(cssnano())
   .pipe(rename({
     extname: '-min.css'

@@ -1,23 +1,25 @@
-// div basics
-div
-  background-color: #FFF
-  min-height: 5px
-  margin: 0
-  padding: 2px
-  
-  &+div
-    margin-top: 5px
-    
 // for each screen size in the screen-sizes array, set its max to 100% width  
 for screen-size in screen-sizes
-  div.{screen-size}-{max_columns}, div.{screen-size}-full
-    width: 100%
+  
+  // set gutters for all required containers
+  [class*=\'{screen-size}-\']
+    background-color: #FFF
+    float: left
+    margin: 10px gutter 0 gutter
+    min-height: 5px
+    padding: 10px
+
+  // full-screen columns, either *-full or *-max-columns set
+  .{screen-size}-{max_columns}, .{screen-size}-full, .fit-screen
+    width: 'calc(%s - %s)' % (100% gutter*2)
     
+  // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
   width = mobile-first? 'min-width' : 'max-width'
 
   // setup screen sizes for each column size
   @media screen and ({width}: screen-size+'_width')
     for i in (1..max_columns)
-      div.{screen-size}-{i}
-        percentage = (100/max_columns)*i + '%'
-        width: percentage !important
+      .{screen-size}-{i}
+        percentage = (100%/max_columns)*i
+        width: 'calc(%s - %s)' % (percentage gutter*2)
+        
