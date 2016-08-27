@@ -422,7 +422,7 @@ textarea {
 }
 
 [class*='xs-'] {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
   float: left;
   margin: 10px 10px 0 10px;
   min-height: 5px;
@@ -472,7 +472,7 @@ textarea {
   }
 }
 [class*='sm-'] {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
   float: left;
   margin: 10px 10px 0 10px;
   min-height: 5px;
@@ -522,7 +522,7 @@ textarea {
   }
 }
 [class*='md-'] {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
   float: left;
   margin: 10px 10px 0 10px;
   min-height: 5px;
@@ -572,7 +572,7 @@ textarea {
   }
 }
 [class*='lg-'] {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
   float: left;
   margin: 10px 10px 0 10px;
   min-height: 5px;
@@ -622,7 +622,7 @@ textarea {
   }
 }
 [class*='xl-'] {
-  background-color: #fff;
+  background-color: rgba(255,255,255,0.75);
   float: left;
   margin: 10px 10px 0 10px;
   min-height: 5px;
@@ -681,10 +681,14 @@ textarea {
   border: none;
   cursor: pointer;
   outline: none;
+  margin: 3px 0;
   padding: 10px 12px;
 }
 [class*='btn']:hover {
   background-color: #c7c7c7;
+}
+[class*='btn'] + [class*='btn'] {
+  margin-left: 5px;
 }
 [class*='btn'].btn-primary {
   color: #fff;
@@ -742,4 +746,614 @@ body {
 }
 .bg-tertiary {
   background-color: #eee;
+}
+@media screen and (min-width: 0px) {
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xs-left {
+    float: left;
+  }
+  .xs-right {
+    float: right;
+  }
+  .xs-center {
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 544px) {
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .sm-left {
+    float: left;
+  }
+  .sm-right {
+    float: right;
+  }
+  .sm-center {
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .md-left {
+    float: left;
+  }
+  .md-right {
+    float: right;
+  }
+  .md-center {
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .lg-left {
+    float: left;
+  }
+  .lg-right {
+    float: right;
+  }
+  .lg-center {
+    float: none;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
+  .xl-left {
+    float: left;
+  }
+  .xl-right {
+    float: right;
+  }
+  .xl-center {
+    float: none;
+    margin: 0 auto;
+  }
 }
