@@ -1,3 +1,34 @@
-.navbar.fit-screen
-  margin: 0
-  width: 100%
+nav
+  background-color: #FFF
+  
+  &.full-width
+    float: left
+    margin: 0
+    padding: 0
+    width: 100%
+    
+    img
+      max-height: nav-image-height
+    
+    & > *
+      margin: 0
+
+    a
+      color: #666
+      float: left
+      text-decoration: none
+
+      &:hover
+        color: darken(#666, 50%)
+        
+      &:not(.no-pad)
+        padding: gutter
+        
+      &.no-pad
+        padding: 0
+        
+    a:not(.no-pad) > img
+      max-height: nav-image-height - gutter*2
+
+    a.no-pad > img
+      max-height: nav-image-height
