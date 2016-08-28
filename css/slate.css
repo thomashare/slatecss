@@ -427,45 +427,48 @@ textarea {
   padding: 10px;
   margin: 10px 10px 0 10px;
 }
-.xs-12,
-.xs-full {
+[class*='xs-'].full-width {
+  width: calc(100% - 20px);
+}
+.xs-12:not(.full-width),
+.xs-full:not(.full-width) {
   width: calc(100% - 20px);
 }
 @media screen and (min-width: 0px) {
-  .xs-1 {
+  .xs-1:not(.full-width) {
     width: calc(8.333333333333334% - 20px);
   }
-  .xs-2 {
+  .xs-2:not(.full-width) {
     width: calc(16.666666666666668% - 20px);
   }
-  .xs-3 {
+  .xs-3:not(.full-width) {
     width: calc(25% - 20px);
   }
-  .xs-4 {
+  .xs-4:not(.full-width) {
     width: calc(33.333333333333336% - 20px);
   }
-  .xs-5 {
+  .xs-5:not(.full-width) {
     width: calc(41.66666666666667% - 20px);
   }
-  .xs-6 {
+  .xs-6:not(.full-width) {
     width: calc(50% - 20px);
   }
-  .xs-7 {
+  .xs-7:not(.full-width) {
     width: calc(58.333333333333336% - 20px);
   }
-  .xs-8 {
+  .xs-8:not(.full-width) {
     width: calc(66.66666666666667% - 20px);
   }
-  .xs-9 {
+  .xs-9:not(.full-width) {
     width: calc(75% - 20px);
   }
-  .xs-10 {
+  .xs-10:not(.full-width) {
     width: calc(83.33333333333334% - 20px);
   }
-  .xs-11 {
+  .xs-11:not(.full-width) {
     width: calc(91.66666666666667% - 20px);
   }
-  .xs-12 {
+  .xs-12:not(.full-width) {
     width: calc(100% - 20px);
   }
 }
@@ -475,45 +478,48 @@ textarea {
   padding: 10px;
   margin: 10px 10px 0 10px;
 }
-.sm-12,
-.sm-full {
+[class*='sm-'].full-width {
+  width: calc(100% - 20px);
+}
+.sm-12:not(.full-width),
+.sm-full:not(.full-width) {
   width: calc(100% - 20px);
 }
 @media screen and (min-width: 544px) {
-  .sm-1 {
+  .sm-1:not(.full-width) {
     width: calc(8.333333333333334% - 20px);
   }
-  .sm-2 {
+  .sm-2:not(.full-width) {
     width: calc(16.666666666666668% - 20px);
   }
-  .sm-3 {
+  .sm-3:not(.full-width) {
     width: calc(25% - 20px);
   }
-  .sm-4 {
+  .sm-4:not(.full-width) {
     width: calc(33.333333333333336% - 20px);
   }
-  .sm-5 {
+  .sm-5:not(.full-width) {
     width: calc(41.66666666666667% - 20px);
   }
-  .sm-6 {
+  .sm-6:not(.full-width) {
     width: calc(50% - 20px);
   }
-  .sm-7 {
+  .sm-7:not(.full-width) {
     width: calc(58.333333333333336% - 20px);
   }
-  .sm-8 {
+  .sm-8:not(.full-width) {
     width: calc(66.66666666666667% - 20px);
   }
-  .sm-9 {
+  .sm-9:not(.full-width) {
     width: calc(75% - 20px);
   }
-  .sm-10 {
+  .sm-10:not(.full-width) {
     width: calc(83.33333333333334% - 20px);
   }
-  .sm-11 {
+  .sm-11:not(.full-width) {
     width: calc(91.66666666666667% - 20px);
   }
-  .sm-12 {
+  .sm-12:not(.full-width) {
     width: calc(100% - 20px);
   }
 }
@@ -523,45 +529,48 @@ textarea {
   padding: 10px;
   margin: 10px 10px 0 10px;
 }
-.md-12,
-.md-full {
+[class*='md-'].full-width {
+  width: calc(100% - 20px);
+}
+.md-12:not(.full-width),
+.md-full:not(.full-width) {
   width: calc(100% - 20px);
 }
 @media screen and (min-width: 768px) {
-  .md-1 {
+  .md-1:not(.full-width) {
     width: calc(8.333333333333334% - 20px);
   }
-  .md-2 {
+  .md-2:not(.full-width) {
     width: calc(16.666666666666668% - 20px);
   }
-  .md-3 {
+  .md-3:not(.full-width) {
     width: calc(25% - 20px);
   }
-  .md-4 {
+  .md-4:not(.full-width) {
     width: calc(33.333333333333336% - 20px);
   }
-  .md-5 {
+  .md-5:not(.full-width) {
     width: calc(41.66666666666667% - 20px);
   }
-  .md-6 {
+  .md-6:not(.full-width) {
     width: calc(50% - 20px);
   }
-  .md-7 {
+  .md-7:not(.full-width) {
     width: calc(58.333333333333336% - 20px);
   }
-  .md-8 {
+  .md-8:not(.full-width) {
     width: calc(66.66666666666667% - 20px);
   }
-  .md-9 {
+  .md-9:not(.full-width) {
     width: calc(75% - 20px);
   }
-  .md-10 {
+  .md-10:not(.full-width) {
     width: calc(83.33333333333334% - 20px);
   }
-  .md-11 {
+  .md-11:not(.full-width) {
     width: calc(91.66666666666667% - 20px);
   }
-  .md-12 {
+  .md-12:not(.full-width) {
     width: calc(100% - 20px);
   }
 }
@@ -571,45 +580,48 @@ textarea {
   padding: 10px;
   margin: 10px 10px 0 10px;
 }
-.lg-12,
-.lg-full {
+[class*='lg-'].full-width {
+  width: calc(100% - 20px);
+}
+.lg-12:not(.full-width),
+.lg-full:not(.full-width) {
   width: calc(100% - 20px);
 }
 @media screen and (min-width: 992px) {
-  .lg-1 {
+  .lg-1:not(.full-width) {
     width: calc(8.333333333333334% - 20px);
   }
-  .lg-2 {
+  .lg-2:not(.full-width) {
     width: calc(16.666666666666668% - 20px);
   }
-  .lg-3 {
+  .lg-3:not(.full-width) {
     width: calc(25% - 20px);
   }
-  .lg-4 {
+  .lg-4:not(.full-width) {
     width: calc(33.333333333333336% - 20px);
   }
-  .lg-5 {
+  .lg-5:not(.full-width) {
     width: calc(41.66666666666667% - 20px);
   }
-  .lg-6 {
+  .lg-6:not(.full-width) {
     width: calc(50% - 20px);
   }
-  .lg-7 {
+  .lg-7:not(.full-width) {
     width: calc(58.333333333333336% - 20px);
   }
-  .lg-8 {
+  .lg-8:not(.full-width) {
     width: calc(66.66666666666667% - 20px);
   }
-  .lg-9 {
+  .lg-9:not(.full-width) {
     width: calc(75% - 20px);
   }
-  .lg-10 {
+  .lg-10:not(.full-width) {
     width: calc(83.33333333333334% - 20px);
   }
-  .lg-11 {
+  .lg-11:not(.full-width) {
     width: calc(91.66666666666667% - 20px);
   }
-  .lg-12 {
+  .lg-12:not(.full-width) {
     width: calc(100% - 20px);
   }
 }
@@ -619,45 +631,48 @@ textarea {
   padding: 10px;
   margin: 10px 10px 0 10px;
 }
-.xl-12,
-.xl-full {
+[class*='xl-'].full-width {
+  width: calc(100% - 20px);
+}
+.xl-12:not(.full-width),
+.xl-full:not(.full-width) {
   width: calc(100% - 20px);
 }
 @media screen and (min-width: 1140px) {
-  .xl-1 {
+  .xl-1:not(.full-width) {
     width: calc(8.333333333333334% - 20px);
   }
-  .xl-2 {
+  .xl-2:not(.full-width) {
     width: calc(16.666666666666668% - 20px);
   }
-  .xl-3 {
+  .xl-3:not(.full-width) {
     width: calc(25% - 20px);
   }
-  .xl-4 {
+  .xl-4:not(.full-width) {
     width: calc(33.333333333333336% - 20px);
   }
-  .xl-5 {
+  .xl-5:not(.full-width) {
     width: calc(41.66666666666667% - 20px);
   }
-  .xl-6 {
+  .xl-6:not(.full-width) {
     width: calc(50% - 20px);
   }
-  .xl-7 {
+  .xl-7:not(.full-width) {
     width: calc(58.333333333333336% - 20px);
   }
-  .xl-8 {
+  .xl-8:not(.full-width) {
     width: calc(66.66666666666667% - 20px);
   }
-  .xl-9 {
+  .xl-9:not(.full-width) {
     width: calc(75% - 20px);
   }
-  .xl-10 {
+  .xl-10:not(.full-width) {
     width: calc(83.33333333333334% - 20px);
   }
-  .xl-11 {
+  .xl-11:not(.full-width) {
     width: calc(91.66666666666667% - 20px);
   }
-  .xl-12 {
+  .xl-12:not(.full-width) {
     width: calc(100% - 20px);
   }
 }
