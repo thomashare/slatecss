@@ -721,7 +721,7 @@ nav.full-width {
   width: 100%;
 }
 nav.full-width img {
-  max-height: 42px;
+  max-height: 38px;
 }
 nav.full-width > * {
   margin: 0;
@@ -741,10 +741,10 @@ nav.full-width a.no-pad {
   padding: 0;
 }
 nav.full-width a:not(.no-pad) > img {
-  max-height: 22px;
+  max-height: 18px;
 }
 nav.full-width a.no-pad > img {
-  max-height: 42px;
+  max-height: 38px;
 }
 html {
   box-sizing: border-box;
