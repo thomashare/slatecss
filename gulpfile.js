@@ -27,7 +27,7 @@ gulp.task('slate-min', ['slate'], function() {
   .pipe(autoprefixer())
   .pipe(cssnano())
   .pipe(rename({
-    extname: '-min.css'
+    extname: '.min.css'
   }))
   .pipe(gulp.dest('./css'));
 });
