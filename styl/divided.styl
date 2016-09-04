@@ -1,0 +1,42 @@
+/*
+
+for each in screen sizes
+  create media query
+    for each divided size 1 to the set max
+      set width of element inside .divided-x to below:
+        width = 100/x %
+*/
+
+// screen sizes
+screen-sizes = ( xs sm md lg xl )
+
+// define max dividers
+divided_max = 20
+
+// define screen widths
+xs_width = 0px
+sm_width = 544px
+md_width = 768px
+lg_width = 992px
+xl_width = 1140px
+
+[class*='divided']
+  text-align: center
+  & > *
+    margin: 0
+    padding: 5px
+    width: 100%
+
+// setup screen sizes for each divided size
+for screen-size in screen-sizes
+  
+  // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
+  width = mobile-first? 'min-width' : 'max-width'
+    
+  // setup screen sizes for each column size
+  @media screen and ({width}: screen-size+'_width')
+    for divided in (1..divided_max)
+      .{screen-size}-divided-{divided}
+        & > *
+          float: left
+          width: 'calc(%s / %s)' % (100% divided)

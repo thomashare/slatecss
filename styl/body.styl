@@ -2,3 +2,14 @@
 body
   background-color: tertiary-color
   
+  & > *:not([class*='xs'])
+    &:before
+      content: "";
+      display: inline-block;
+      min-height: font-base
+      vertical-align: middle;content: "";
+      
+    display: inline-block
+    margin: gutter gutter 0 gutter
+    width: 'calc(%s - %s)' % (100% gutter*2)
+      

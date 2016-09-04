@@ -676,6 +676,424 @@ textarea {
     width: calc(100% - 40px);
   }
 }
+[class*='divided'] {
+  text-align: center;
+}
+[class*='divided'] > * {
+  margin: 0;
+  padding: 5px;
+  width: 100%;
+}
+@media screen and (min-width: 0px) {
+  .xs-divided-1 > * {
+    float: left;
+    width: calc(100% / 1);
+  }
+  .xs-divided-2 > * {
+    float: left;
+    width: calc(100% / 2);
+  }
+  .xs-divided-3 > * {
+    float: left;
+    width: calc(100% / 3);
+  }
+  .xs-divided-4 > * {
+    float: left;
+    width: calc(100% / 4);
+  }
+  .xs-divided-5 > * {
+    float: left;
+    width: calc(100% / 5);
+  }
+  .xs-divided-6 > * {
+    float: left;
+    width: calc(100% / 6);
+  }
+  .xs-divided-7 > * {
+    float: left;
+    width: calc(100% / 7);
+  }
+  .xs-divided-8 > * {
+    float: left;
+    width: calc(100% / 8);
+  }
+  .xs-divided-9 > * {
+    float: left;
+    width: calc(100% / 9);
+  }
+  .xs-divided-10 > * {
+    float: left;
+    width: calc(100% / 10);
+  }
+  .xs-divided-11 > * {
+    float: left;
+    width: calc(100% / 11);
+  }
+  .xs-divided-12 > * {
+    float: left;
+    width: calc(100% / 12);
+  }
+  .xs-divided-13 > * {
+    float: left;
+    width: calc(100% / 13);
+  }
+  .xs-divided-14 > * {
+    float: left;
+    width: calc(100% / 14);
+  }
+  .xs-divided-15 > * {
+    float: left;
+    width: calc(100% / 15);
+  }
+  .xs-divided-16 > * {
+    float: left;
+    width: calc(100% / 16);
+  }
+  .xs-divided-17 > * {
+    float: left;
+    width: calc(100% / 17);
+  }
+  .xs-divided-18 > * {
+    float: left;
+    width: calc(100% / 18);
+  }
+  .xs-divided-19 > * {
+    float: left;
+    width: calc(100% / 19);
+  }
+  .xs-divided-20 > * {
+    float: left;
+    width: calc(100% / 20);
+  }
+}
+@media screen and (min-width: 544px) {
+  .sm-divided-1 > * {
+    float: left;
+    width: calc(100% / 1);
+  }
+  .sm-divided-2 > * {
+    float: left;
+    width: calc(100% / 2);
+  }
+  .sm-divided-3 > * {
+    float: left;
+    width: calc(100% / 3);
+  }
+  .sm-divided-4 > * {
+    float: left;
+    width: calc(100% / 4);
+  }
+  .sm-divided-5 > * {
+    float: left;
+    width: calc(100% / 5);
+  }
+  .sm-divided-6 > * {
+    float: left;
+    width: calc(100% / 6);
+  }
+  .sm-divided-7 > * {
+    float: left;
+    width: calc(100% / 7);
+  }
+  .sm-divided-8 > * {
+    float: left;
+    width: calc(100% / 8);
+  }
+  .sm-divided-9 > * {
+    float: left;
+    width: calc(100% / 9);
+  }
+  .sm-divided-10 > * {
+    float: left;
+    width: calc(100% / 10);
+  }
+  .sm-divided-11 > * {
+    float: left;
+    width: calc(100% / 11);
+  }
+  .sm-divided-12 > * {
+    float: left;
+    width: calc(100% / 12);
+  }
+  .sm-divided-13 > * {
+    float: left;
+    width: calc(100% / 13);
+  }
+  .sm-divided-14 > * {
+    float: left;
+    width: calc(100% / 14);
+  }
+  .sm-divided-15 > * {
+    float: left;
+    width: calc(100% / 15);
+  }
+  .sm-divided-16 > * {
+    float: left;
+    width: calc(100% / 16);
+  }
+  .sm-divided-17 > * {
+    float: left;
+    width: calc(100% / 17);
+  }
+  .sm-divided-18 > * {
+    float: left;
+    width: calc(100% / 18);
+  }
+  .sm-divided-19 > * {
+    float: left;
+    width: calc(100% / 19);
+  }
+  .sm-divided-20 > * {
+    float: left;
+    width: calc(100% / 20);
+  }
+}
+@media screen and (min-width: 768px) {
+  .md-divided-1 > * {
+    float: left;
+    width: calc(100% / 1);
+  }
+  .md-divided-2 > * {
+    float: left;
+    width: calc(100% / 2);
+  }
+  .md-divided-3 > * {
+    float: left;
+    width: calc(100% / 3);
+  }
+  .md-divided-4 > * {
+    float: left;
+    width: calc(100% / 4);
+  }
+  .md-divided-5 > * {
+    float: left;
+    width: calc(100% / 5);
+  }
+  .md-divided-6 > * {
+    float: left;
+    width: calc(100% / 6);
+  }
+  .md-divided-7 > * {
+    float: left;
+    width: calc(100% / 7);
+  }
+  .md-divided-8 > * {
+    float: left;
+    width: calc(100% / 8);
+  }
+  .md-divided-9 > * {
+    float: left;
+    width: calc(100% / 9);
+  }
+  .md-divided-10 > * {
+    float: left;
+    width: calc(100% / 10);
+  }
+  .md-divided-11 > * {
+    float: left;
+    width: calc(100% / 11);
+  }
+  .md-divided-12 > * {
+    float: left;
+    width: calc(100% / 12);
+  }
+  .md-divided-13 > * {
+    float: left;
+    width: calc(100% / 13);
+  }
+  .md-divided-14 > * {
+    float: left;
+    width: calc(100% / 14);
+  }
+  .md-divided-15 > * {
+    float: left;
+    width: calc(100% / 15);
+  }
+  .md-divided-16 > * {
+    float: left;
+    width: calc(100% / 16);
+  }
+  .md-divided-17 > * {
+    float: left;
+    width: calc(100% / 17);
+  }
+  .md-divided-18 > * {
+    float: left;
+    width: calc(100% / 18);
+  }
+  .md-divided-19 > * {
+    float: left;
+    width: calc(100% / 19);
+  }
+  .md-divided-20 > * {
+    float: left;
+    width: calc(100% / 20);
+  }
+}
+@media screen and (min-width: 992px) {
+  .lg-divided-1 > * {
+    float: left;
+    width: calc(100% / 1);
+  }
+  .lg-divided-2 > * {
+    float: left;
+    width: calc(100% / 2);
+  }
+  .lg-divided-3 > * {
+    float: left;
+    width: calc(100% / 3);
+  }
+  .lg-divided-4 > * {
+    float: left;
+    width: calc(100% / 4);
+  }
+  .lg-divided-5 > * {
+    float: left;
+    width: calc(100% / 5);
+  }
+  .lg-divided-6 > * {
+    float: left;
+    width: calc(100% / 6);
+  }
+  .lg-divided-7 > * {
+    float: left;
+    width: calc(100% / 7);
+  }
+  .lg-divided-8 > * {
+    float: left;
+    width: calc(100% / 8);
+  }
+  .lg-divided-9 > * {
+    float: left;
+    width: calc(100% / 9);
+  }
+  .lg-divided-10 > * {
+    float: left;
+    width: calc(100% / 10);
+  }
+  .lg-divided-11 > * {
+    float: left;
+    width: calc(100% / 11);
+  }
+  .lg-divided-12 > * {
+    float: left;
+    width: calc(100% / 12);
+  }
+  .lg-divided-13 > * {
+    float: left;
+    width: calc(100% / 13);
+  }
+  .lg-divided-14 > * {
+    float: left;
+    width: calc(100% / 14);
+  }
+  .lg-divided-15 > * {
+    float: left;
+    width: calc(100% / 15);
+  }
+  .lg-divided-16 > * {
+    float: left;
+    width: calc(100% / 16);
+  }
+  .lg-divided-17 > * {
+    float: left;
+    width: calc(100% / 17);
+  }
+  .lg-divided-18 > * {
+    float: left;
+    width: calc(100% / 18);
+  }
+  .lg-divided-19 > * {
+    float: left;
+    width: calc(100% / 19);
+  }
+  .lg-divided-20 > * {
+    float: left;
+    width: calc(100% / 20);
+  }
+}
+@media screen and (min-width: 1140px) {
+  .xl-divided-1 > * {
+    float: left;
+    width: calc(100% / 1);
+  }
+  .xl-divided-2 > * {
+    float: left;
+    width: calc(100% / 2);
+  }
+  .xl-divided-3 > * {
+    float: left;
+    width: calc(100% / 3);
+  }
+  .xl-divided-4 > * {
+    float: left;
+    width: calc(100% / 4);
+  }
+  .xl-divided-5 > * {
+    float: left;
+    width: calc(100% / 5);
+  }
+  .xl-divided-6 > * {
+    float: left;
+    width: calc(100% / 6);
+  }
+  .xl-divided-7 > * {
+    float: left;
+    width: calc(100% / 7);
+  }
+  .xl-divided-8 > * {
+    float: left;
+    width: calc(100% / 8);
+  }
+  .xl-divided-9 > * {
+    float: left;
+    width: calc(100% / 9);
+  }
+  .xl-divided-10 > * {
+    float: left;
+    width: calc(100% / 10);
+  }
+  .xl-divided-11 > * {
+    float: left;
+    width: calc(100% / 11);
+  }
+  .xl-divided-12 > * {
+    float: left;
+    width: calc(100% / 12);
+  }
+  .xl-divided-13 > * {
+    float: left;
+    width: calc(100% / 13);
+  }
+  .xl-divided-14 > * {
+    float: left;
+    width: calc(100% / 14);
+  }
+  .xl-divided-15 > * {
+    float: left;
+    width: calc(100% / 15);
+  }
+  .xl-divided-16 > * {
+    float: left;
+    width: calc(100% / 16);
+  }
+  .xl-divided-17 > * {
+    float: left;
+    width: calc(100% / 17);
+  }
+  .xl-divided-18 > * {
+    float: left;
+    width: calc(100% / 18);
+  }
+  .xl-divided-19 > * {
+    float: left;
+    width: calc(100% / 19);
+  }
+  .xl-divided-20 > * {
+    float: left;
+    width: calc(100% / 20);
+  }
+}
 [class*='btn'] {
   background-color: #ddd;
   border-radius: 4px;
@@ -683,7 +1101,7 @@ textarea {
   cursor: pointer;
   outline: none;
   margin: 3px 0;
-  padding: 10px 12px;
+  padding: 15px 12px;
 }
 [class*='btn']:hover {
   background-color: #c7c7c7;
@@ -775,6 +1193,18 @@ html *:after {
 }
 body {
   background-color: #eee;
+}
+body > *:not([class*='xs']) {
+  display: inline-block;
+  margin: 20px 20px 0 20px;
+  width: calc(100% - 40px);
+}
+body > *:not([class*='xs']):before {
+  content: "";
+  display: inline-block;
+  min-height: 1em;
+  vertical-align: middle;
+  content: "";
 }
 .bg-primary {
   background-color: #08e;
