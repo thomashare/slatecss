@@ -22,7 +22,9 @@ xl_width = 1140px
 
 [class*='divided']
   text-align: center
-  & > *
+  &.equal-height
+    display: flex
+  &:not(.equal-height) > *
     margin: 0
     padding: 5px
     width: 100%
@@ -36,7 +38,7 @@ for screen-size in screen-sizes
   // setup screen sizes for each column size
   @media screen and ({width}: screen-size+'_width')
     for divided in (1..divided_max)
-      .{screen-size}-divided-{divided}
+      .{screen-size}-divided-{divided}:not(.equal-height)
         & > *
           float: left
           width: 'calc(%s / %s)' % (100% divided)
