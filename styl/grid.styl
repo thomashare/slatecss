@@ -3,15 +3,26 @@ if grid == standard
   
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
+    
     // set gutters for all required containers
     [class*=\'{screen-size}-\']
       float: left
       min-height: 5px
-      padding: 10px
-      margin: gutter gutter 0 gutter
-
+      &:not(nav) *
+        padding: gutter*0.5
+      
+      &:not(.full-width):not([class$=\'-left\']):not([class$=\'-right\'])
+        margin: gutter gutter 0 gutter
+        
       &.full-width
-        width: 'calc(%s - %s)' % (100% gutter*2)
+        margin: gutter 0 0 0
+        width: 100%
+        
+    // set left and right padding for floating elements
+    [class*=\'{screen-size}-\'][class$=\'-left\']
+      padding-right: gutter
+    [class*=\'{screen-size}-\'][class$=\'-right\']
+      padding-left: gutter
 
     // full-screen columns, either *-full or *-max-columns set
     .{screen-size}-{max_columns}:not(.full-width), .{screen-size}-full:not(.full-width)

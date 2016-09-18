@@ -8,8 +8,10 @@ nav
     padding: 0
     width: 100%
     
-    img
-      max-height: nav-image-height
+    .brand
+      padding: gutter
+      img 
+        max-height: 80px
     
     & > *
       margin: 0
@@ -18,18 +20,14 @@ nav
       color: #666
       float: left
       text-decoration: none
+      transition: background-color 0.075s ease
 
       &:hover
+        background-color: darken(#FFF, 2%)
         color: darken(#666, 50%)
         
       &:not(.no-pad)
-        padding: gutter
+        padding: gutter*2 gutter
         
       &.no-pad
         padding: 0
-        
-    a:not(.no-pad) > img
-      max-height: nav-image-height - gutter*2
-
-    a.no-pad > img
-      max-height: nav-image-height
