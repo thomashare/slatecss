@@ -8,7 +8,7 @@ if grid == standard
     [class*=\'{screen-size}-\']
       float: left
       min-height: 5px
-      &:not(nav) *
+      &:not(nav) *:not([class*='btn'])
         padding: gutter*0.5
       
       &:not(.full-width):not([class$=\'-left\']):not([class$=\'-right\'])
