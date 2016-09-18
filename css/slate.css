@@ -426,7 +426,7 @@ textarea {
   min-height: 5px;
 }
 [class*='xs-']:not(nav) *:not([class*='btn']) {
-  padding: 10px;
+  padding: 5px 10px;
 }
 [class*='xs-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
   margin: 20px 20px 0 20px;
@@ -488,7 +488,7 @@ textarea {
   min-height: 5px;
 }
 [class*='sm-']:not(nav) *:not([class*='btn']) {
-  padding: 10px;
+  padding: 5px 10px;
 }
 [class*='sm-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
   margin: 20px 20px 0 20px;
@@ -550,7 +550,7 @@ textarea {
   min-height: 5px;
 }
 [class*='md-']:not(nav) *:not([class*='btn']) {
-  padding: 10px;
+  padding: 5px 10px;
 }
 [class*='md-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
   margin: 20px 20px 0 20px;
@@ -612,7 +612,7 @@ textarea {
   min-height: 5px;
 }
 [class*='lg-']:not(nav) *:not([class*='btn']) {
-  padding: 10px;
+  padding: 5px 10px;
 }
 [class*='lg-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
   margin: 20px 20px 0 20px;
@@ -674,7 +674,7 @@ textarea {
   min-height: 5px;
 }
 [class*='xl-']:not(nav) *:not([class*='btn']) {
-  padding: 10px;
+  padding: 5px 10px;
 }
 [class*='xl-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
   margin: 20px 20px 0 20px;
@@ -1161,7 +1161,7 @@ textarea {
   cursor: pointer;
   outline: none;
   margin: 3px 0;
-  padding: 15px 12px;
+  padding: 10px 12px;
 }
 [class*='btn']:hover {
   background-color: #c7c7c7;
@@ -1206,7 +1206,7 @@ textarea {
 }
 nav {
   background-color: #fff;
-  line-height: 0.1em;
+  line-height: 1em;
 }
 nav.full-width {
   float: left;
@@ -1244,7 +1244,7 @@ html {
   box-sizing: border-box;
   font-family: 'Helvetica Neaue', 'Helvetica', 'Calibri', 'Arial', sans-serif;
   font-size: 1em;
-  line-height: 0.1em;
+  line-height: 1em;
 }
 html *,
 html *:before,
