@@ -1,3 +1,22 @@
+// remove font style defaults from headings
+h1,h2,h3,h4,h5,h6
+  font-size: initial
+  font-weight: normal
+// no padding
+.no-pad
+  padding: 0
+//no margin
+.no-margin
+  margin: 0
+  
+// element visibility
+.hidden
+  opacity: 0
+.faded
+  opacity: 0.5
+.visible
+  opacity: 1
+
 // pull classes (left, center and right)
 for screen-size in screen-sizes
   
@@ -7,6 +26,7 @@ for screen-size in screen-sizes
   // setup screen sizes for each column size
   @media screen and ({width}: screen-size+'_width')
     for i in (1..max_columns)
+      // div alignment
       .{screen-size}-left
         float: left
       .{screen-size}-right
@@ -15,3 +35,40 @@ for screen-size in screen-sizes
         float: none
         margin: 0 auto
         
+      // text alignment
+      .{screen-size}-text-left
+        text-align: left
+      .{screen-size}-text-right
+        text-align: right
+      .{screen-size}-text-center
+        text-align: center
+        
+      // padding levels
+      for level in (0..5)
+        .{screen-size}-pad-{level}
+          padding: level*10px
+        .{screen-size}-margin-{level}
+          margin: level*10px
+        for level2 in (0..5)
+          .{screen-size}-pad-{level}-{level2}
+            padding: level*20px level2*20px
+          .{screen-size}-margin-{level}-{level2}
+            margin: level*20px level2*20px
+
+// text alignment defaults
+[class*='-text-']
+  & > *
+    display: inline-block
+    float: none
+    padding: 0
+    vertical-align: top
+    & > *
+      padding: 0 !important
+      
+// element formation: inline or block
+.inline
+  display: inline
+.inline-block
+  display: inline-block
+.block
+  display: block

@@ -1,4 +1,11 @@
-[class*='btn']
+.btn-link
+  background-color: transparent
+  border-width: 0px
+  cursor: pointer
+  &:focus, &:active
+    outline-width: 0px
+  
+[class*='btn']:not(.btn-link)
   background-color: #DDD
   border-radius: 4px
   border: none
@@ -6,9 +13,10 @@
   outline: none
   margin: 3px 0
   padding: 10px 12px
-  
+
   &:hover
     background-color: darken(#DDD, 10%)
+  
     
   & + [class*='btn']
     margin-left: 5px
@@ -16,7 +24,7 @@
   for color in colors
     &.btn-{color}
       color-name = color+'-color'
-      color: light(color-name)? #000 : #FFF
+      color: dark(darken(color-name, 15%))? rgba(255,255,255,0.85) : rgba(0,0,0,0.85)
       background-color: color-name
       
       &:hover

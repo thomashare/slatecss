@@ -1,0 +1,19 @@
+// font-sizes
+for size in (1..10)
+  .font-size-{size}
+    font-size: size*0.5em
+    if size < 3
+      line-height: size*0.5em
+    else 
+      line-height: 1em
+
+// font weights
+.font-weight-normal
+  font-weight: normal
+.font-weight-bold
+  font-weight: bold
+
+// text colors
+for color_name in colors
+  .text-{color_name}
+    color: color_name+'-color'

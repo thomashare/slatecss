@@ -1,6 +1,6 @@
 // grid setting: Standard
 if grid == standard
-  
+
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
     
@@ -9,20 +9,10 @@ if grid == standard
       float: left
       min-height: 5px
       &:not(nav) *:not([class*='btn'])
-        padding: 5px 10px
+        padding: gutter*0.5
       
       &:not(.full-width):not([class$=\'-left\']):not([class$=\'-right\'])
         margin: gutter gutter 0 gutter
-        
-      &.full-width
-        margin: gutter 0 0 0
-        width: 100%
-        
-    // set left and right padding for floating elements
-    [class*=\'{screen-size}-\'][class$=\'-left\']
-      padding-right: gutter
-    [class*=\'{screen-size}-\'][class$=\'-right\']
-      padding-left: gutter
 
     // full-screen columns, either *-full or *-max-columns set
     .{screen-size}-{max_columns}:not(.full-width), .{screen-size}-full:not(.full-width)
@@ -37,4 +27,10 @@ if grid == standard
         .{screen-size}-{i}:not(.full-width)
           percentage = (100%/max_columns)*i
           width: 'calc(%s - %s)' % (percentage gutter*2)
-          
+
+  // full width column with no margin
+  .full-width
+    float: left
+    width: 100%
+    &:not(.no-margin)
+      margin-top: gutter
