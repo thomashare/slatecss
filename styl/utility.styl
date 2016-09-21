@@ -17,6 +17,12 @@ h1,h2,h3,h4,h5,h6
 .visible
   opacity: 1
 
+// element effects
+.box-glow
+  box-shadow: 0px 2px 10px rgba(255,255,255,0.85), 0px -3px 15px rgba(255,255,255,0.85), 0px 5px 15px rgba(255,255,255,0.85), 0px -5px 15px rgba(255,255,255,0.85)
+.text-glow
+  text-shadow: 0px 2px 15px rgba(255,255,255,0.85),-2px 0px 15px rgba(255,255,255,0.85),0px -2px 15px rgba(255,255,255,0.85),2px 0px 15px rgba(255,255,255,0.85)
+
 // pull classes (left, center and right)
 for screen-size in screen-sizes
   
@@ -60,10 +66,12 @@ for screen-size in screen-sizes
   & > *
     display: inline-block
     float: none
-    padding: 0
+    &:not(.no-pad)
+      padding: 0
     vertical-align: top
     & > *
-      padding: 0 !important
+      &:not(.no-pad)
+        padding: 0 !important
       
 // element formation: inline or block
 .inline

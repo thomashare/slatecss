@@ -8,10 +8,10 @@ if grid == standard
     [class*=\'{screen-size}-\']
       float: left
       min-height: 5px
-      &:not(nav) *:not([class*='btn'])
+      &:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a)
         padding: gutter*0.5
       
-      &:not(.full-width):not([class$=\'-left\']):not([class$=\'-right\'])
+      &:not(.full-width):not([class*=\'-left\']):not([class*=\'-right\'])
         margin: gutter gutter 0 gutter
 
     // full-screen columns, either *-full or *-max-columns set

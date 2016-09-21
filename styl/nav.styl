@@ -6,13 +6,14 @@ nav
   &.full-width
     .brand
       font-size: 1.5em
-      padding: 0
+      padding: gutter*0.5
       &> *:not([class$='-left']):not([class$='-right'])
         float: left
       & > img
-        max-height: gutter*3.3
+        max-height: gutter*2.25
       & > :not(img)
-        margin-top: gutter*0.8
+        margin: gutter*0.75 0
+        padding: 0 15px
     
     & > *
       margin: 0

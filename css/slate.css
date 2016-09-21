@@ -425,10 +425,10 @@ textarea {
   float: left;
   min-height: 5px;
 }
-[class*='xs-']:not(nav) *:not([class*='btn']) {
+[class*='xs-']:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a) {
   padding: 10px;
 }
-[class*='xs-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
+[class*='xs-']:not(.full-width):not([class*='-left']):not([class*='-right']) {
   margin: 20px 20px 0 20px;
 }
 .xs-12:not(.full-width),
@@ -477,10 +477,10 @@ textarea {
   float: left;
   min-height: 5px;
 }
-[class*='sm-']:not(nav) *:not([class*='btn']) {
+[class*='sm-']:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a) {
   padding: 10px;
 }
-[class*='sm-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
+[class*='sm-']:not(.full-width):not([class*='-left']):not([class*='-right']) {
   margin: 20px 20px 0 20px;
 }
 .sm-12:not(.full-width),
@@ -529,10 +529,10 @@ textarea {
   float: left;
   min-height: 5px;
 }
-[class*='md-']:not(nav) *:not([class*='btn']) {
+[class*='md-']:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a) {
   padding: 10px;
 }
-[class*='md-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
+[class*='md-']:not(.full-width):not([class*='-left']):not([class*='-right']) {
   margin: 20px 20px 0 20px;
 }
 .md-12:not(.full-width),
@@ -581,10 +581,10 @@ textarea {
   float: left;
   min-height: 5px;
 }
-[class*='lg-']:not(nav) *:not([class*='btn']) {
+[class*='lg-']:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a) {
   padding: 10px;
 }
-[class*='lg-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
+[class*='lg-']:not(.full-width):not([class*='-left']):not([class*='-right']) {
   margin: 20px 20px 0 20px;
 }
 .lg-12:not(.full-width),
@@ -633,10 +633,10 @@ textarea {
   float: left;
   min-height: 5px;
 }
-[class*='xl-']:not(nav) *:not([class*='btn']) {
+[class*='xl-']:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a) {
   padding: 10px;
 }
-[class*='xl-']:not(.full-width):not([class$='-left']):not([class$='-right']) {
+[class*='xl-']:not(.full-width):not([class*='-left']):not([class*='-right']) {
   margin: 20px 20px 0 20px;
 }
 .xl-12:not(.full-width),
@@ -1191,16 +1191,17 @@ nav {
 }
 nav.full-width .brand {
   font-size: 1.5em;
-  padding: 0;
+  padding: 10px;
 }
 nav.full-width .brand> *:not([class$='-left']):not([class$='-right']) {
   float: left;
 }
 nav.full-width .brand > img {
-  max-height: 66px;
+  max-height: 45px;
 }
 nav.full-width .brand > :not(img) {
-  margin-top: 16px;
+  margin: 15px 0;
+  padding: 0 15px;
 }
 nav.full-width > * {
   margin: 0;
@@ -1369,6 +1370,12 @@ h6 {
 }
 .visible {
   opacity: 1;
+}
+.box-glow {
+  box-shadow: 0px 2px 10px rgba(255,255,255,0.85), 0px -3px 15px rgba(255,255,255,0.85), 0px 5px 15px rgba(255,255,255,0.85), 0px -5px 15px rgba(255,255,255,0.85);
+}
+.text-glow {
+  text-shadow: 0px 2px 15px rgba(255,255,255,0.85), -2px 0px 15px rgba(255,255,255,0.85), 0px -2px 15px rgba(255,255,255,0.85), 2px 0px 15px rgba(255,255,255,0.85);
 }
 @media screen and (min-width: 0px) {
   .xs-left {
@@ -17643,10 +17650,12 @@ h6 {
 [class*='-text-'] > * {
   display: inline-block;
   float: none;
-  padding: 0;
   vertical-align: top;
 }
-[class*='-text-'] > * > * {
+[class*='-text-'] > *:not(.no-pad) {
+  padding: 0;
+}
+[class*='-text-'] > * > *:not(.no-pad) {
   padding: 0 !important;
 }
 .inline {

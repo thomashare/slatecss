@@ -1,0 +1,25 @@
+I am the best candidate for this position, as I have experience working in a fast-paced WordPress development environment. I have extensive knowledge in css, design software, git, responsive design and I love to code. I use Bootstrap as a foundation for my responsive website layouts and I have recently began to learn and even contribute to Bootstrap v4. As an artist, I love the idea of turning a vision or mockup into a fully-functional website that clients are able to add to and edit. When build WordPress themes, I ensure that my designs are fully customizable for the client. 
+
+My current job position is assembler for an electronics manufacturer in Chandler, Arizona called Avnet. I spend most of my days building large server racks, cabling servers and integrating hardware into smaller components such as Cisco blades. 
+
+I build websites and tools for web designers. I like to think of myself as an architect in web design, rather than simply a web designer. I have built a framework for static websites called Majesti, along with a similar setup incorporated into a chrome extension boilerplate known as Majesti-Ext. As a web designer I have ran into certain things using Bootstrap and other similar css frameworks. Such as being writing several media queries to get around code breakage in pixel perfect web designs and specific client requests. This lead me to begin work on a new css framework using the Stylus css preprocessor known as slate.css (as seen at slatecss.com). I have always been fond of creating things for others to use to make things easier for them, so that is what I enjoy doing in my free time.
+
+I am most proud of getting into the honor society in the community college I attended. Going into college, I had an average GPA so seeing my efforts pay off was most rewarding.
+
+I would plan out the people that are best suited for each task and assign accordingly. I would then break down which tasks need to be completed in order from first to last. I would then allot time for each given task and ensure that whomever assigned would be capable of the given time frame. Then, it would simply be a matter of completing each task by the designated time frame and working together as a team to complete the project.
+
+I would allow them to speak their mind and try to understand where they are coming from. Then I would discuss why I chose to do things in a different fashion. If I saw that their process was more efficient, I would try to incorporate their ideas into my future projects and thank them for their advice.
+
+If a client did not accept my designs, I would make whichever changes they would like. As a web designer, the client is always right and my work should reflect their vision.
+
+I am not an expert, however I did spend the majority of my time in high school taking art, animation and graphic design classes. I would say that I obtain higher than average graphic design skills, but by no means expert level. I have experience in designing company logos, banners, business cards, billboards and flyers.
+
+I know my way around Photoshop and Illustrator very well. I have used nearly every tool and effect in each platform. I am familiar with creating drop shadows, editing opacities, color effects, patterns and 3d effects.
+
+I have experience in taking PSDs and turning them into full websites. I have some experience in designing responsive website mockups in Sketch and Illustrator.
+
+Salary Requirement: $60,000
+
+interview response:
+
+At Colatition, I hope that I can _____ and _____ will be an aid to the team. I have experience in designing websites with best SEO practices in mind such as ______ and _____
