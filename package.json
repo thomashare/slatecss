@@ -1,6 +1,6 @@
 {
   "name": "slatecss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "CSS framework for beautiful website creation.",
   "main": "index.js",
   "scripts": {

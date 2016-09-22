@@ -3,28 +3,35 @@ if grid == standard
 
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
-    
+
     // set gutters for all required containers
     [class*=\'{screen-size}-\']
       float: left
       min-height: 5px
       &:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a)
         padding: gutter*0.5
-      
-      &:not(.full-width):not([class*=\'-left\']):not([class*=\'-right\'])
-        margin: gutter gutter 0 gutter
-
-    // full-screen columns, either *-full or *-max-columns set
-    .{screen-size}-{max_columns}:not(.full-width), .{screen-size}-full:not(.full-width)
-      width: 'calc(%s - %s)' % (100% gutter*2)
 
     // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
     width = mobile-first? 'min-width' : 'max-width'
 
     // setup screen sizes for each column size
     @media screen and ({width}: screen-size+'_width')
+      
+      .{screen-size}-{max_columns},.{screen-size}-full
+        margin: gutter gutter 0 gutter
+        width: 'calc(%s - %s)' % (100% gutter*2)
+        
       for i in (1..max_columns)
         .{screen-size}-{i}:not(.full-width)
+          
+          // set gutter for each screen size setting
+          if screen-size+'-gutter' = true
+            gutter = screen-size+'-gutter'
+            
+          &:not(.full-width):not([class*=\'-left\']):not([class*=\'-right\'])
+            margin: gutter gutter 0 gutter
+            
+          // calculate width of column
           percentage = (100%/max_columns)*i
           width: 'calc(%s - %s)' % (percentage gutter*2)
 
