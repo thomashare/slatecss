@@ -1581,47 +1581,43 @@ nav a.active:not(.brand) {
   background-color: #f7f7f7;
   color: rgba(0,0,0,0.85);
 }
+nav:not(.md):not(.lg) img {
+  max-height: 30px;
+}
 nav:not(.md):not(.lg) .brand {
   font-size: 1.25em;
-  padding: 8px 5px;
-}
-nav:not(.md):not(.lg) .brand > img {
-  max-height: 28px;
+  line-height: 30px;
+  padding: 1px 5px;
 }
 nav:not(.md):not(.lg) .brand > :not(img):not(.no-y-margin):not(.no-margin) {
-  margin: 6px 0;
-}
-nav:not(.md):not(.lg) .brand > :not(img):not(.no-pad) {
-  padding: 0 5px;
+  margin: 0 3px;
 }
 nav:not(.md):not(.lg) a:not(.no-pad):not(.brand) {
   padding: 8px 10px;
 }
-nav.md .brand {
-  font-size: 1.5em;
-  padding: 4px 5px;
-}
-nav.md .brand > img {
+nav.md img {
   max-height: 38px;
 }
-nav.md .brand > :not(img):not(.no-y-margin):not(.no-margin) {
-  margin: 11px 3px;
+nav.md .brand {
+  font-size: 1.5em;
+  line-height: 38px;
+  padding: 4px 5px;
 }
-nav.md .brand > :not(img):not(.no-pad) {
-  padding: 0 5px;
+nav.md .brand > :not(img):not(.no-y-margin):not(.no-margin) {
+  margin: 0 3px;
 }
 nav.md a:not(.no-pad):not(.brand) {
   padding: 15px 15px;
+}
+nav.lg img {
+  max-height: 52px;
 }
 nav.lg .brand {
   font-size: 2em;
   line-height: 50px;
   padding: 7px;
 }
-nav.lg .brand > img {
-  max-height: 52px;
-}
-nav.lg .brand > :not(img) {
+nav.lg .brand > :not(img):not(.no-y-margin):not(.no-margin) {
   margin: 0 7px;
 }
 nav.lg a:not(.no-pad):not(.brand) {

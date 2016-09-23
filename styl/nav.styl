@@ -1,6 +1,7 @@
 // define nav styles
 nav
-  background-color: #FFF
+  bg = #FFF
+  background-color: bg
   line-height: line-height
   padding: 0
 
@@ -22,17 +23,16 @@ nav
         
   // define standard nav style
   &:not(.md):not(.lg)
+    img
+      max-height: gutter*1.5
     .brand
       font-size: 1.25em
-      padding: gutter*0.4 gutter*0.25
+      line-height: gutter*1.5
+      padding: gutter*0.05 gutter*0.25
       
-      & > img
-        max-height: gutter*1.4
       & > :not(img)
         &:not(.no-y-margin):not(.no-margin)
-          margin: gutter*0.3 0
-        &:not(.no-pad)
-          padding: 0 gutter*0.25
+          margin: 0 gutter*0.15
 
     a
       &:not(.no-pad):not(.brand)
@@ -40,17 +40,16 @@ nav
       
   // define medium nav styles
   &.md
+    img
+      max-height: gutter*1.9
     .brand
       font-size: 1.5em
+      line-height: gutter*1.9
       padding: gutter*0.2 gutter*0.25
       
-      & > img
-        max-height: gutter*1.9
       & > :not(img)
         &:not(.no-y-margin):not(.no-margin)
-          margin: gutter*0.55 gutter*0.15
-        &:not(.no-pad)
-          padding: 0 gutter*0.25
+          margin: 0 gutter*0.15
 
     a
       &:not(.no-pad):not(.brand)
@@ -58,15 +57,16 @@ nav
         
   // define large nav styles
   &.lg
+    img
+      max-height: gutter*2.6
     .brand
       font-size: 2em
       line-height: gutter*2.5
       padding: gutter*0.35
       
-      & > img
-        max-height: gutter*2.6
       & > :not(img)
-        margin: 0 gutter*0.35
+        &:not(.no-y-margin):not(.no-margin)
+          margin: 0 gutter*0.35
 
     a
       &:not(.no-pad):not(.brand)
