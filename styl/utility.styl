@@ -2,11 +2,17 @@
 h1,h2,h3,h4,h5,h6
   font-size: initial
   font-weight: normal
-// no padding
+  
+// no padding elements
 .no-pad
   padding: 0
-//no margin
-.no-margin
+  
+// no margin elements
+.no-x-margin:not(.no-margin)
+  margin: gutter 0 0 0
+.no-y-margin:not(.no-margin)
+  margin: 0 gutter
+.no-margin:not(.no-x-margin):not(.no-y-margin)
   margin: 0
   
 // element visibility
@@ -20,8 +26,17 @@ h1,h2,h3,h4,h5,h6
 // element effects
 .box-glow
   box-shadow: 0px 2px 10px rgba(255,255,255,0.85), 0px -3px 15px rgba(255,255,255,0.85), 0px 5px 15px rgba(255,255,255,0.85), 0px -5px 15px rgba(255,255,255,0.85)
+.box-shadow
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.85), 0px -3px 15px rgba(0,0,0,0.85), 0px 5px 15px rgba(0,0,0,0.85), 0px -5px 15px rgba(0,0,0,0.85)
 .text-glow
-  text-shadow: 0px 2px 15px rgba(255,255,255,0.85),-2px 0px 15px rgba(255,255,255,0.85),0px -2px 15px rgba(255,255,255,0.85),2px 0px 15px rgba(255,255,255,0.85)
+  text-shadow: 0px 2px 5px rgba(255,255,255,0.85),-2px 0px 5px rgba(255,255,255,0.85),0px -2px 5px rgba(255,255,255,0.85),2px 0px 5px rgba(255,255,255,0.85)
+.text-shadow
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.85),-2px 0px 5px rgba(0,0,0,0.85),0px -2px 5px rgba(0,0,0,0.85),2px 0px 5px rgba(0,0,0,0.85)
+
+// border radius
+for i in (0..15)
+  .radius-{i}
+    border-radius: i*1px
 
 // pull classes (left, center and right)
 for screen-size in screen-sizes

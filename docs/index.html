@@ -12,9 +12,9 @@
     </style>
   </head>
   <body>
-    <nav class="full-width no-margin">
+    <nav class="lg xs-12 no-margin">
       <div class="xs-left">
-        <a class="brand" href="#"><img alt="Slate css logo" class="box-glow" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png"><span>Slate</span></a>
+        <a class="brand" href="#"><img alt="Slate css logo" class="box-glow radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png"><span>Slate</span></a>
       </div>
       <div class="xs-right">
         <a class="active" href="#">Home</a>
@@ -23,25 +23,40 @@
         <a href="#">Contact Us</a>
       </div>
     </nav>
-    <div class="full-width no-margin xs-pad-2-1 md-pad-3-1 bg-tertiary xs-text-center">
-      <img alt="Slate css logo" class="xs-left no-pad box-glow" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
+    <div class="xs-12 no-margin xs-pad-2-1 md-pad-3-1 bg-tertiary xs-text-center">
+      <img alt="Slate css logo" class="xs-left no-pad box-glow radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
       <div class="bg-transparent no-pad xs-pad-1 md-pad-0-1 xs-text-center sm-text-left">
         <span class="font-size-8 block text-glow">Slate</span>
-        <span class="faded font-size-2 block text-glow">An Easy To Work With CSS Framework</span>
+        <span class="faded font-size-2 block text-glow">The Easy To Work With CSS Framework</span>
       </div>
     </div>
-    <div class="xs-12">
-      <p>xs-12</p>
-    </div>
-    <div class="xs-full">
-      <p>xs-full</p>
-    </div>
-    <div class="full-width xs-5">
-      <p>full-width xs-5</p>
-    </div>
-    <h3 class="xs-12">Buttons</h3>
-    <div class="xs-full sm-4 md-8 lg-9 xl-12">
-      <p>xs-full sm-4 md-8 lg-9 xl-14</p>
+    <h3>Navigation</h3>
+    <nav>
+      <a class="brand text-secondary" href="xs-left">Small</a>
+      <div class="xs-right">
+        <a href="#">More Info</a>
+        <a href="#">More Info</a>
+        <a href="#">More Info</a>
+      </div>
+    </nav>
+    <nav class="md">
+      <a class="brand text-primary" href="xs-left">Medium</a>
+      <div class="xs-right">
+        <a href="#">More Info</a>
+        <a href="#">More Info</a>
+        <a href="#">More Info</a>
+      </div>
+    </nav>
+    <nav class="lg">
+      <a class="brand text-success" href="xs-left">Large</a>
+      <div class="xs-right">
+        <a href="#">More Info</a>
+        <a href="#">More Info</a>
+        <a href="#">More Info</a>
+      </div>
+    </nav>
+    <h3>Buttons</h3>
+    <div class="xs-full sm-4 md-8 lg-9 xl-12 bg-transparent">
       <button class="btn-primary">Primary Button</button>
       <button class="btn-secondary">Secondary Button</button>
       <button class="btn-tertiary">Tertiary Button</button>
@@ -50,6 +65,13 @@
       <button class="btn-success">Success Button</button>
       <button class="btn-unknown">Default Button</button>
       <button class="btn-link">Link Button</button>
+    </div>
+    <h3>Columns</h3>
+    <div class="xs-12 xs-text-center">
+      <p>xs-12</p>
+    </div>
+    <div class="no-x-margin xs-12 xs-text-center">
+      <p>no-x-margin xs-12</p>
     </div>
     <div class="xs-12 sm-4 md-9">
       <p>xs-12 sm-4 md-9</p>
@@ -70,12 +92,13 @@
       <p>xs-5 sm-12 md-3</p>
     </div>
     <h3>Pulling center, left and right.</h3>
-    <div class="xs-full">
+    <div class="xs-12">
       <div class="xs-4 sm-left md-right lg-center">
-        <p>xs-4</p>
+        <p class="xs-12 xs-text-center">xs-4</p>
       </div>
     </div>
     <h3>Divided We Fall</h3>
+    <p>sm-divided-2 md-divided-4 lg-divided-6 - (Small devices will display 2 columns while large devices will display 6)</p>
     <div class="xs-12 sm-divided-2 md-divided-4 lg-divided-6" id="photo-stream">
       <img alt="my photo" src="http://placehold.it/600x200">
       <img alt="my photo" src="http://placehold.it/300x200">

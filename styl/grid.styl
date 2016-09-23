@@ -1,43 +1,43 @@
 // grid setting: Standard
 if grid == standard
+  
+  // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
+  width = mobile-first? 'min-width' : 'max-width'
+
+  // set the default gutter
+  gutter = default-gutter
 
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
 
-    // set gutters for all required containers
-    [class*=\'{screen-size}-\']
-      float: left
-      min-height: 5px
-      &:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a)
-        padding: gutter*0.5
-
-    // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
-    width = mobile-first? 'min-width' : 'max-width'
-
     // setup screen sizes for each column size
     @media screen and ({width}: screen-size+'_width')
-      
-      .{screen-size}-{max_columns},.{screen-size}-full
-        margin: gutter gutter 0 gutter
-        width: 'calc(%s - %s)' % (100% gutter*2)
-        
+
+      // set the gutter to the gutter setting for the specific screen size
+      gutter = screen-size+'-gutter'
+  
+      // set gutters for all required containers. Due to being standard grid, set the column to float
+      [class*={screen-size}-]
+        float: left
+        min-height: 5px
+        &:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a)
+          padding: gutter*0.5
+
+      // for each column in screen size
       for i in (1..max_columns)
-        .{screen-size}-{i}:not(.full-width)
+        .{screen-size}-{i}
           
-          // set gutter for each screen size setting
-          if screen-size+'-gutter' = true
-            gutter = screen-size+'-gutter'
-            
-          &:not(.full-width):not([class*=\'-left\']):not([class*=\'-right\'])
+          // set margin for each column, as long as it's not set to a no-margin element
+          &:not([class*=\'-left\']):not([class*=\'-right\']):not(.no-x-margin):not(.no-y-margin):not(.no-margin)
             margin: gutter gutter 0 gutter
             
           // calculate width of column
-          percentage = (100%/max_columns)*i
-          width: 'calc(%s - %s)' % (percentage gutter*2)
-
-  // full width column with no margin
-  .full-width
-    float: left
-    width: 100%
-    &:not(.no-margin)
-      margin-top: gutter
+          &:not(.no-x-margin):not(.no-margin)
+            percentage = (100%/max_columns)*i
+            width: 'calc(%s - %s)' % (percentage gutter*2)
+            
+          // edit width to compensate lack of margin in no-margin elements
+          &.no-margin,&.no-x-margin
+            percentage = (100%/max_columns)*i
+            width: percentage
+            
