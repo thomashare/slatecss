@@ -4,12 +4,13 @@ nav
   background-color: bg
   line-height: line-height
   padding: 0
+  
+  .brand
+    display: inline
+    &.has-icon > *
+      vertical-align: middle
 
   // default nav styles
-  .brand
-    & > *:not([class$='-left']):not([class$='-right'])
-      float: left
-
   a
     &:not([class*='text-'])
       color: rgba(0,0,0,0.65)
@@ -22,12 +23,13 @@ nav
       color: rgba(0,0,0,0.85)
         
   // define standard nav style
-  &:not(.md):not(.lg)
+  &.sm,&:not(.md):not(.lg)
     img
       max-height: gutter*1.5
     .brand
       font-size: 1.25em
-      line-height: gutter*1.5
+      &:not(.has-icon)
+        line-height: gutter*1.5
       padding: gutter*0.05 gutter*0.25
       
       & > :not(img)
@@ -44,7 +46,8 @@ nav
       max-height: gutter*1.9
     .brand
       font-size: 1.5em
-      line-height: gutter*1.9
+      &:not(.has-icon)
+        line-height: gutter*1.9
       padding: gutter*0.2 gutter*0.25
       
       & > :not(img)
@@ -61,7 +64,8 @@ nav
       max-height: gutter*2.6
     .brand
       font-size: 2em
-      line-height: gutter*2.5
+      &:not(.has-icon)
+        line-height: gutter*2.5
       padding: gutter*0.35
       
       & > :not(img)

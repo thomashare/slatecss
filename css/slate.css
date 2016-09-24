@@ -1564,8 +1564,11 @@ nav {
   line-height: 1em;
   padding: 0;
 }
-nav .brand > *:not([class$='-left']):not([class$='-right']) {
-  float: left;
+nav .brand {
+  display: inline;
+}
+nav .brand.has-icon > * {
+  vertical-align: middle;
 }
 nav a {
   float: left;
@@ -1581,17 +1584,24 @@ nav a.active:not(.brand) {
   background-color: #f7f7f7;
   color: rgba(0,0,0,0.85);
 }
+nav.sm img,
 nav:not(.md):not(.lg) img {
   max-height: 30px;
 }
+nav.sm .brand,
 nav:not(.md):not(.lg) .brand {
   font-size: 1.25em;
-  line-height: 30px;
   padding: 1px 5px;
 }
+nav.sm .brand:not(.has-icon),
+nav:not(.md):not(.lg) .brand:not(.has-icon) {
+  line-height: 30px;
+}
+nav.sm .brand > :not(img):not(.no-y-margin):not(.no-margin),
 nav:not(.md):not(.lg) .brand > :not(img):not(.no-y-margin):not(.no-margin) {
   margin: 0 3px;
 }
+nav.sm a:not(.no-pad):not(.brand),
 nav:not(.md):not(.lg) a:not(.no-pad):not(.brand) {
   padding: 8px 10px;
 }
@@ -1600,8 +1610,10 @@ nav.md img {
 }
 nav.md .brand {
   font-size: 1.5em;
-  line-height: 38px;
   padding: 4px 5px;
+}
+nav.md .brand:not(.has-icon) {
+  line-height: 38px;
 }
 nav.md .brand > :not(img):not(.no-y-margin):not(.no-margin) {
   margin: 0 3px;
@@ -1614,8 +1626,10 @@ nav.lg img {
 }
 nav.lg .brand {
   font-size: 2em;
-  line-height: 50px;
   padding: 7px;
+}
+nav.lg .brand:not(.has-icon) {
+  line-height: 50px;
 }
 nav.lg .brand > :not(img):not(.no-y-margin):not(.no-margin) {
   margin: 0 7px;
