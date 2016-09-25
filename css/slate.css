@@ -1573,16 +1573,26 @@ nav .brand.has-icon > * {
 nav a {
   float: left;
   text-decoration: none;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
 }
 nav a:not([class*='text-']) {
   color: rgba(0,0,0,0.65);
 }
-nav a:hover:not(.brand),
-nav a.active:not(.brand) {
+nav .brand a,
+nav :not(.brand) a {
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav .brand a:hover:not(.brand),
+nav :not(.brand) a:hover:not(.brand),
+nav .brand a.active:not(.brand),
+nav :not(.brand) a.active:not(.brand) {
   background-color: #f7f7f7;
   color: rgba(0,0,0,0.85);
+}
+nav .brand a:active:not(.brand),
+nav :not(.brand) a:active:not(.brand) {
+  background-color: #fff;
+  color: #000;
 }
 nav.sm img,
 nav:not(.md):not(.lg) img {

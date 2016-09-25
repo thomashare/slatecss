@@ -11,17 +11,21 @@ nav
       vertical-align: middle
 
   // default nav styles
-  a
+  a 
     &:not([class*='text-'])
       color: rgba(0,0,0,0.65)
     float: left
     text-decoration: none
+  .brand a
+    
+  :not(.brand) a
     transition: background-color 0.3s ease, color 0.3s ease
-
-    &:hover:not(.brand), &.active:not(.brand)
+    &:hover:not(.brand),&.active:not(.brand)
       background-color: darken(#FFF, 3%)
       color: rgba(0,0,0,0.85)
-        
+    &:active:not(.brand)
+      background-color: lighten(#FFF, 3%)
+      color: rgba(0,0,0,1)  
   // define standard nav style
   &.sm,&:not(.md):not(.lg)
     img
