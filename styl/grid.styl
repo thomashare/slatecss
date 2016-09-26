@@ -32,7 +32,7 @@ if grid == standard
             margin: gutter gutter 0 gutter
             
           // calculate width of column
-          &:not(.no-x-margin):not(.no-margin)
+          &:not(.no-margin):not(.no-x-margin)
             percentage = (100%/max_columns)*i
             width: 'calc(%s - %s)' % (percentage gutter*2)
             

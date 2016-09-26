@@ -432,7 +432,7 @@ textarea {
   .xs-1:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-1:not(.no-x-margin):not(.no-margin) {
+  .xs-1:not(.no-margin):not(.no-x-margin) {
     width: calc(8.333333333333334% - 20px);
   }
   .xs-1.no-margin,
@@ -442,7 +442,7 @@ textarea {
   .xs-2:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-2:not(.no-x-margin):not(.no-margin) {
+  .xs-2:not(.no-margin):not(.no-x-margin) {
     width: calc(16.666666666666668% - 20px);
   }
   .xs-2.no-margin,
@@ -452,7 +452,7 @@ textarea {
   .xs-3:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-3:not(.no-x-margin):not(.no-margin) {
+  .xs-3:not(.no-margin):not(.no-x-margin) {
     width: calc(25% - 20px);
   }
   .xs-3.no-margin,
@@ -462,7 +462,7 @@ textarea {
   .xs-4:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-4:not(.no-x-margin):not(.no-margin) {
+  .xs-4:not(.no-margin):not(.no-x-margin) {
     width: calc(33.333333333333336% - 20px);
   }
   .xs-4.no-margin,
@@ -472,7 +472,7 @@ textarea {
   .xs-5:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-5:not(.no-x-margin):not(.no-margin) {
+  .xs-5:not(.no-margin):not(.no-x-margin) {
     width: calc(41.66666666666667% - 20px);
   }
   .xs-5.no-margin,
@@ -482,7 +482,7 @@ textarea {
   .xs-6:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-6:not(.no-x-margin):not(.no-margin) {
+  .xs-6:not(.no-margin):not(.no-x-margin) {
     width: calc(50% - 20px);
   }
   .xs-6.no-margin,
@@ -492,7 +492,7 @@ textarea {
   .xs-7:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-7:not(.no-x-margin):not(.no-margin) {
+  .xs-7:not(.no-margin):not(.no-x-margin) {
     width: calc(58.333333333333336% - 20px);
   }
   .xs-7.no-margin,
@@ -502,7 +502,7 @@ textarea {
   .xs-8:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-8:not(.no-x-margin):not(.no-margin) {
+  .xs-8:not(.no-margin):not(.no-x-margin) {
     width: calc(66.66666666666667% - 20px);
   }
   .xs-8.no-margin,
@@ -512,7 +512,7 @@ textarea {
   .xs-9:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-9:not(.no-x-margin):not(.no-margin) {
+  .xs-9:not(.no-margin):not(.no-x-margin) {
     width: calc(75% - 20px);
   }
   .xs-9.no-margin,
@@ -522,7 +522,7 @@ textarea {
   .xs-10:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-10:not(.no-x-margin):not(.no-margin) {
+  .xs-10:not(.no-margin):not(.no-x-margin) {
     width: calc(83.33333333333334% - 20px);
   }
   .xs-10.no-margin,
@@ -532,7 +532,7 @@ textarea {
   .xs-11:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-11:not(.no-x-margin):not(.no-margin) {
+  .xs-11:not(.no-margin):not(.no-x-margin) {
     width: calc(91.66666666666667% - 20px);
   }
   .xs-11.no-margin,
@@ -542,7 +542,7 @@ textarea {
   .xs-12:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .xs-12:not(.no-x-margin):not(.no-margin) {
+  .xs-12:not(.no-margin):not(.no-x-margin) {
     width: calc(100% - 20px);
   }
   .xs-12.no-margin,
@@ -561,7 +561,7 @@ textarea {
   .sm-1:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-1:not(.no-x-margin):not(.no-margin) {
+  .sm-1:not(.no-margin):not(.no-x-margin) {
     width: calc(8.333333333333334% - 20px);
   }
   .sm-1.no-margin,
@@ -571,7 +571,7 @@ textarea {
   .sm-2:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-2:not(.no-x-margin):not(.no-margin) {
+  .sm-2:not(.no-margin):not(.no-x-margin) {
     width: calc(16.666666666666668% - 20px);
   }
   .sm-2.no-margin,
@@ -581,7 +581,7 @@ textarea {
   .sm-3:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-3:not(.no-x-margin):not(.no-margin) {
+  .sm-3:not(.no-margin):not(.no-x-margin) {
     width: calc(25% - 20px);
   }
   .sm-3.no-margin,
@@ -591,7 +591,7 @@ textarea {
   .sm-4:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-4:not(.no-x-margin):not(.no-margin) {
+  .sm-4:not(.no-margin):not(.no-x-margin) {
     width: calc(33.333333333333336% - 20px);
   }
   .sm-4.no-margin,
@@ -601,7 +601,7 @@ textarea {
   .sm-5:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-5:not(.no-x-margin):not(.no-margin) {
+  .sm-5:not(.no-margin):not(.no-x-margin) {
     width: calc(41.66666666666667% - 20px);
   }
   .sm-5.no-margin,
@@ -611,7 +611,7 @@ textarea {
   .sm-6:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-6:not(.no-x-margin):not(.no-margin) {
+  .sm-6:not(.no-margin):not(.no-x-margin) {
     width: calc(50% - 20px);
   }
   .sm-6.no-margin,
@@ -621,7 +621,7 @@ textarea {
   .sm-7:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-7:not(.no-x-margin):not(.no-margin) {
+  .sm-7:not(.no-margin):not(.no-x-margin) {
     width: calc(58.333333333333336% - 20px);
   }
   .sm-7.no-margin,
@@ -631,7 +631,7 @@ textarea {
   .sm-8:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-8:not(.no-x-margin):not(.no-margin) {
+  .sm-8:not(.no-margin):not(.no-x-margin) {
     width: calc(66.66666666666667% - 20px);
   }
   .sm-8.no-margin,
@@ -641,7 +641,7 @@ textarea {
   .sm-9:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-9:not(.no-x-margin):not(.no-margin) {
+  .sm-9:not(.no-margin):not(.no-x-margin) {
     width: calc(75% - 20px);
   }
   .sm-9.no-margin,
@@ -651,7 +651,7 @@ textarea {
   .sm-10:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-10:not(.no-x-margin):not(.no-margin) {
+  .sm-10:not(.no-margin):not(.no-x-margin) {
     width: calc(83.33333333333334% - 20px);
   }
   .sm-10.no-margin,
@@ -661,7 +661,7 @@ textarea {
   .sm-11:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-11:not(.no-x-margin):not(.no-margin) {
+  .sm-11:not(.no-margin):not(.no-x-margin) {
     width: calc(91.66666666666667% - 20px);
   }
   .sm-11.no-margin,
@@ -671,7 +671,7 @@ textarea {
   .sm-12:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 10px 10px 0 10px;
   }
-  .sm-12:not(.no-x-margin):not(.no-margin) {
+  .sm-12:not(.no-margin):not(.no-x-margin) {
     width: calc(100% - 20px);
   }
   .sm-12.no-margin,
@@ -690,7 +690,7 @@ textarea {
   .md-1:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-1:not(.no-x-margin):not(.no-margin) {
+  .md-1:not(.no-margin):not(.no-x-margin) {
     width: calc(8.333333333333334% - 30px);
   }
   .md-1.no-margin,
@@ -700,7 +700,7 @@ textarea {
   .md-2:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-2:not(.no-x-margin):not(.no-margin) {
+  .md-2:not(.no-margin):not(.no-x-margin) {
     width: calc(16.666666666666668% - 30px);
   }
   .md-2.no-margin,
@@ -710,7 +710,7 @@ textarea {
   .md-3:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-3:not(.no-x-margin):not(.no-margin) {
+  .md-3:not(.no-margin):not(.no-x-margin) {
     width: calc(25% - 30px);
   }
   .md-3.no-margin,
@@ -720,7 +720,7 @@ textarea {
   .md-4:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-4:not(.no-x-margin):not(.no-margin) {
+  .md-4:not(.no-margin):not(.no-x-margin) {
     width: calc(33.333333333333336% - 30px);
   }
   .md-4.no-margin,
@@ -730,7 +730,7 @@ textarea {
   .md-5:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-5:not(.no-x-margin):not(.no-margin) {
+  .md-5:not(.no-margin):not(.no-x-margin) {
     width: calc(41.66666666666667% - 30px);
   }
   .md-5.no-margin,
@@ -740,7 +740,7 @@ textarea {
   .md-6:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-6:not(.no-x-margin):not(.no-margin) {
+  .md-6:not(.no-margin):not(.no-x-margin) {
     width: calc(50% - 30px);
   }
   .md-6.no-margin,
@@ -750,7 +750,7 @@ textarea {
   .md-7:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-7:not(.no-x-margin):not(.no-margin) {
+  .md-7:not(.no-margin):not(.no-x-margin) {
     width: calc(58.333333333333336% - 30px);
   }
   .md-7.no-margin,
@@ -760,7 +760,7 @@ textarea {
   .md-8:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-8:not(.no-x-margin):not(.no-margin) {
+  .md-8:not(.no-margin):not(.no-x-margin) {
     width: calc(66.66666666666667% - 30px);
   }
   .md-8.no-margin,
@@ -770,7 +770,7 @@ textarea {
   .md-9:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-9:not(.no-x-margin):not(.no-margin) {
+  .md-9:not(.no-margin):not(.no-x-margin) {
     width: calc(75% - 30px);
   }
   .md-9.no-margin,
@@ -780,7 +780,7 @@ textarea {
   .md-10:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-10:not(.no-x-margin):not(.no-margin) {
+  .md-10:not(.no-margin):not(.no-x-margin) {
     width: calc(83.33333333333334% - 30px);
   }
   .md-10.no-margin,
@@ -790,7 +790,7 @@ textarea {
   .md-11:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-11:not(.no-x-margin):not(.no-margin) {
+  .md-11:not(.no-margin):not(.no-x-margin) {
     width: calc(91.66666666666667% - 30px);
   }
   .md-11.no-margin,
@@ -800,7 +800,7 @@ textarea {
   .md-12:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 15px 15px 0 15px;
   }
-  .md-12:not(.no-x-margin):not(.no-margin) {
+  .md-12:not(.no-margin):not(.no-x-margin) {
     width: calc(100% - 30px);
   }
   .md-12.no-margin,
@@ -819,7 +819,7 @@ textarea {
   .lg-1:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-1:not(.no-x-margin):not(.no-margin) {
+  .lg-1:not(.no-margin):not(.no-x-margin) {
     width: calc(8.333333333333334% - 40px);
   }
   .lg-1.no-margin,
@@ -829,7 +829,7 @@ textarea {
   .lg-2:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-2:not(.no-x-margin):not(.no-margin) {
+  .lg-2:not(.no-margin):not(.no-x-margin) {
     width: calc(16.666666666666668% - 40px);
   }
   .lg-2.no-margin,
@@ -839,7 +839,7 @@ textarea {
   .lg-3:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-3:not(.no-x-margin):not(.no-margin) {
+  .lg-3:not(.no-margin):not(.no-x-margin) {
     width: calc(25% - 40px);
   }
   .lg-3.no-margin,
@@ -849,7 +849,7 @@ textarea {
   .lg-4:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-4:not(.no-x-margin):not(.no-margin) {
+  .lg-4:not(.no-margin):not(.no-x-margin) {
     width: calc(33.333333333333336% - 40px);
   }
   .lg-4.no-margin,
@@ -859,7 +859,7 @@ textarea {
   .lg-5:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-5:not(.no-x-margin):not(.no-margin) {
+  .lg-5:not(.no-margin):not(.no-x-margin) {
     width: calc(41.66666666666667% - 40px);
   }
   .lg-5.no-margin,
@@ -869,7 +869,7 @@ textarea {
   .lg-6:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-6:not(.no-x-margin):not(.no-margin) {
+  .lg-6:not(.no-margin):not(.no-x-margin) {
     width: calc(50% - 40px);
   }
   .lg-6.no-margin,
@@ -879,7 +879,7 @@ textarea {
   .lg-7:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-7:not(.no-x-margin):not(.no-margin) {
+  .lg-7:not(.no-margin):not(.no-x-margin) {
     width: calc(58.333333333333336% - 40px);
   }
   .lg-7.no-margin,
@@ -889,7 +889,7 @@ textarea {
   .lg-8:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-8:not(.no-x-margin):not(.no-margin) {
+  .lg-8:not(.no-margin):not(.no-x-margin) {
     width: calc(66.66666666666667% - 40px);
   }
   .lg-8.no-margin,
@@ -899,7 +899,7 @@ textarea {
   .lg-9:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-9:not(.no-x-margin):not(.no-margin) {
+  .lg-9:not(.no-margin):not(.no-x-margin) {
     width: calc(75% - 40px);
   }
   .lg-9.no-margin,
@@ -909,7 +909,7 @@ textarea {
   .lg-10:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-10:not(.no-x-margin):not(.no-margin) {
+  .lg-10:not(.no-margin):not(.no-x-margin) {
     width: calc(83.33333333333334% - 40px);
   }
   .lg-10.no-margin,
@@ -919,7 +919,7 @@ textarea {
   .lg-11:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-11:not(.no-x-margin):not(.no-margin) {
+  .lg-11:not(.no-margin):not(.no-x-margin) {
     width: calc(91.66666666666667% - 40px);
   }
   .lg-11.no-margin,
@@ -929,7 +929,7 @@ textarea {
   .lg-12:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .lg-12:not(.no-x-margin):not(.no-margin) {
+  .lg-12:not(.no-margin):not(.no-x-margin) {
     width: calc(100% - 40px);
   }
   .lg-12.no-margin,
@@ -948,7 +948,7 @@ textarea {
   .xl-1:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-1:not(.no-x-margin):not(.no-margin) {
+  .xl-1:not(.no-margin):not(.no-x-margin) {
     width: calc(8.333333333333334% - 40px);
   }
   .xl-1.no-margin,
@@ -958,7 +958,7 @@ textarea {
   .xl-2:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-2:not(.no-x-margin):not(.no-margin) {
+  .xl-2:not(.no-margin):not(.no-x-margin) {
     width: calc(16.666666666666668% - 40px);
   }
   .xl-2.no-margin,
@@ -968,7 +968,7 @@ textarea {
   .xl-3:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-3:not(.no-x-margin):not(.no-margin) {
+  .xl-3:not(.no-margin):not(.no-x-margin) {
     width: calc(25% - 40px);
   }
   .xl-3.no-margin,
@@ -978,7 +978,7 @@ textarea {
   .xl-4:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-4:not(.no-x-margin):not(.no-margin) {
+  .xl-4:not(.no-margin):not(.no-x-margin) {
     width: calc(33.333333333333336% - 40px);
   }
   .xl-4.no-margin,
@@ -988,7 +988,7 @@ textarea {
   .xl-5:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-5:not(.no-x-margin):not(.no-margin) {
+  .xl-5:not(.no-margin):not(.no-x-margin) {
     width: calc(41.66666666666667% - 40px);
   }
   .xl-5.no-margin,
@@ -998,7 +998,7 @@ textarea {
   .xl-6:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-6:not(.no-x-margin):not(.no-margin) {
+  .xl-6:not(.no-margin):not(.no-x-margin) {
     width: calc(50% - 40px);
   }
   .xl-6.no-margin,
@@ -1008,7 +1008,7 @@ textarea {
   .xl-7:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-7:not(.no-x-margin):not(.no-margin) {
+  .xl-7:not(.no-margin):not(.no-x-margin) {
     width: calc(58.333333333333336% - 40px);
   }
   .xl-7.no-margin,
@@ -1018,7 +1018,7 @@ textarea {
   .xl-8:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-8:not(.no-x-margin):not(.no-margin) {
+  .xl-8:not(.no-margin):not(.no-x-margin) {
     width: calc(66.66666666666667% - 40px);
   }
   .xl-8.no-margin,
@@ -1028,7 +1028,7 @@ textarea {
   .xl-9:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-9:not(.no-x-margin):not(.no-margin) {
+  .xl-9:not(.no-margin):not(.no-x-margin) {
     width: calc(75% - 40px);
   }
   .xl-9.no-margin,
@@ -1038,7 +1038,7 @@ textarea {
   .xl-10:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-10:not(.no-x-margin):not(.no-margin) {
+  .xl-10:not(.no-margin):not(.no-x-margin) {
     width: calc(83.33333333333334% - 40px);
   }
   .xl-10.no-margin,
@@ -1048,7 +1048,7 @@ textarea {
   .xl-11:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-11:not(.no-x-margin):not(.no-margin) {
+  .xl-11:not(.no-margin):not(.no-x-margin) {
     width: calc(91.66666666666667% - 40px);
   }
   .xl-11.no-margin,
@@ -1058,7 +1058,7 @@ textarea {
   .xl-12:not([class*='-left']):not([class*='-right']):not(.no-x-margin):not(.no-y-margin):not(.no-margin) {
     margin: 20px 20px 0 20px;
   }
-  .xl-12:not(.no-x-margin):not(.no-margin) {
+  .xl-12:not(.no-margin):not(.no-x-margin) {
     width: calc(100% - 40px);
   }
   .xl-12.no-margin,
