@@ -12,4 +12,8 @@ body
     display: inline-block
     margin: gutter gutter 0 gutter
     width: 'calc(%s - %s)' % (100% gutter*2)
-      
+
+  // debug setting. Gives divs an opaque background color.
+  &.dev > div, &.dev > div > div {
+    background-color: rgba(255,255,255,0.5);
+  }

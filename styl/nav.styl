@@ -13,19 +13,16 @@ nav
   // default nav styles
   a 
     &:not([class*='text-'])
-      color: rgba(0,0,0,0.65)
+      color: rgba(link-color, 0.54)
     float: left
     text-decoration: none
-  .brand a
     
   :not(.brand) a
     transition: background-color 0.3s ease, color 0.3s ease
     &:hover:not(.brand),&.active:not(.brand)
       background-color: darken(#FFF, 3%)
-      color: rgba(0,0,0,0.85)
     &:active:not(.brand)
-      background-color: lighten(#FFF, 3%)
-      color: rgba(0,0,0,1)  
+      background-color: lighten(#FFF, 3%) 
   // define standard nav style
   &.sm,&:not(.md):not(.lg)
     img
@@ -41,6 +38,8 @@ nav
           margin: 0 gutter*0.15
 
     a
+      &:not(.brand)
+        font-size: 0.85em
       &:not(.no-pad):not(.brand)
         padding: gutter*0.4 gutter*0.5
       
@@ -79,24 +78,4 @@ nav
     a
       &:not(.no-pad):not(.brand)
         padding: gutter*1.25 gutter
-        
-        
-    /* define large nav styles
-  &.lg
-    .brand
-      font-size: 2em
-      padding: gutter*0.35
-      
-      & > img
-        max-height: gutter*2.6
-      & > :not(img)
-        line-height: gutter*2.5
-        &:not(.no-y-margin):not(.no-margin)
-          margin: 0 gutter*0.25
-        &:not(.no-pad)
-          padding: 0 gutter*0.25
-
-    a
-      &:not(.no-pad):not(.brand)
-        padding: gutter*1.25 gutter*/
         

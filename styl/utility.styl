@@ -9,18 +9,18 @@ h1,h2,h3,h4,h5,h6
   
 // no margin elements
 .no-x-margin:not(.no-margin)
-  margin: gutter 0 0 0
-.no-y-margin:not(.no-margin)
+  margin-top: gutter 0 0 0
+.no-y-margin:not(.no-margin):not([class*='-push-'])
   margin: 0 gutter
-.no-margin:not(.no-x-margin):not(.no-y-margin)
+.no-margin:not(.no-x-margin):not(.no-y-margin):not([class*='-push-'])
   margin: 0
   
 // element visibility
-.hidden
+.hide
   opacity: 0
 .faded
   opacity: 0.5
-.visible
+.show
   opacity: 1
 
 // element effects
@@ -38,7 +38,6 @@ for i in (0..15)
   .radius-{i}
     border-radius: i*1px
 
-// pull classes (left, center and right)
 for screen-size in screen-sizes
   
   // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
@@ -46,47 +45,57 @@ for screen-size in screen-sizes
 
   // setup screen sizes for each column size
   @media screen and ({width}: screen-size+'_width')
-    for i in (1..max_columns)
-      // div alignment
-      .{screen-size}-left
-        float: left
-      .{screen-size}-right
-        float: right
-      .{screen-size}-center
-        float: none
-        margin: 0 auto
+    
+    // text alignment
+    .{screen-size}-text-left
+      text-align: left
+    .{screen-size}-text-right
+      text-align: right
+    .{screen-size}-text-center
+      text-align: center
         
-      // text alignment
-      .{screen-size}-text-left
-        text-align: left
-      .{screen-size}-text-right
-        text-align: right
-      .{screen-size}-text-center
-        text-align: center
+    // pull classes (left, center and right)
+    .{screen-size}-left
+      float: left
+    .{screen-size}-right
+      float: right
+    .{screen-size}-center
+      float: none
+      margin: 0 auto
         
-      // padding levels
-      for level in (0..5)
-        .{screen-size}-pad-{level}
-          padding: level*10px
-        .{screen-size}-margin-{level}
-          margin: level*10px
-        for level2 in (0..5)
-          .{screen-size}-pad-{level}-{level2}
-            padding: level*20px level2*20px
-          .{screen-size}-margin-{level}-{level2}
-            margin: level*20px level2*20px
+    // padding levels
+    for level in (0..5)
+      .{screen-size}-pad-{level}
+        padding: level*10px
+      .{screen-size}-margin-{level}
+        margin: level*10px
+      for level2 in (0..5)
+        .{screen-size}-pad-{level}-{level2}
+          padding: level*20px level2*20px
+        .{screen-size}-margin-{level}-{level2}
+          margin: level*20px level2*20px
+    
+    // hide on different screen sizes
+    .{screen-size}-hide
+      display: none
+      
+    // show on different screen sizes
+    .{screen-size}-show
+      display: block
+      
 
 // text alignment defaults
-[class*='-text-']
-  & > *
-    display: inline-block
-    float: none
-    &:not(.no-pad)
-      padding: 0
-    vertical-align: top
+:not(.sidebar)
+  [class*='-text-']
     & > *
+      display: inline-block
+      float: none
       &:not(.no-pad)
-        padding: 0 !important
+        padding: 0
+      vertical-align: top
+      & > *
+        &:not(.no-pad)
+          padding: 0 !important
       
 // element formation: inline or block
 .inline

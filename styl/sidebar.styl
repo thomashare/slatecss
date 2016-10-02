@@ -1,0 +1,43 @@
+.sidebar
+  ul 
+    list-style: none
+    margin: 0
+    padding: 0
+
+    li 
+      display: inline-block
+      width: 100%
+
+  a
+    border-top: solid blue 1px
+    color: rgba(link-color, 0.75)
+    display: block
+    text-decoration: none
+    transition: background-color 0.3s ease, color 0.3s ease
+    &:hover
+      color: rgba(link-hover, 0.75)
+    &:active
+      color: rgba(link-active, 0.75)
+    &:focus
+      color: rgba(link-focus, 0.75)
+    
+for screen-size in screen-sizes
+  
+    // one level padding
+    for level-1 in (0..20)
+      .{screen-size}-item-pad-{level-1}
+        li
+          padding: level-1*1px
+      .{screen-size}-link-pad-{level-1}
+        a 
+          padding: level-1*1px
+          
+      // two level padding
+      for level-2 in (0..20)
+        .{screen-size}-item-pad-{level-1}-{level-2}
+          &:not([class*='-item-link-pad-'])
+            padding: level-1*1px level-2*1px
+          &[class*='-item-link-pad-']
+            a
+              padding: level-1*1px level-2*1px
+            
