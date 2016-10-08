@@ -1,12 +1,10 @@
 // font-sizes
-for size in (1..10)
+for size in (1..25)
   .font-size-{size}
-    font-size: size*0.5em
-    if size < 3
-      line-height: size*0.5em
-    else 
-      line-height: 1em
-
+    font-size: size*0.25rem
+    letter-spacing: size*0.01rem
+    line-height: size*0.3rem
+        
 // font weights
 .font-weight-normal
   font-weight: normal
@@ -17,3 +15,66 @@ for size in (1..10)
 for color_name in colors
   .text-{color_name}
     color: color_name+'-color'
+
+// text elements that aren't part of a custom element
+div:not(.nav):not(.sidebar)
+  p,li
+    &:not([class*='font-size-'])
+      font-size: 0.8rem
+      letter-spacing: 0.01em
+    line-height: 1.3rem
+    vertical-align: middle
+    
+// heading text default styles
+for i in (1..6)
+  h{i}
+    font-size: initial
+    font-weight: normal
+    margin: 0
+    
+// paragraph styles
+p:not([class*='-margin-'])
+  margin: gutter 0 0 0
+    
+// note styles
+[class*='note']
+  &:not([class*='note-'])
+    border-left-color: primary-color
+  border-left-style: solid
+  border-left-width: 5px
+  padding-left: 25px
+  
+for color in colors
+  .note-{color}
+    border-left-color: color+'-color'
+
+// code text
+code
+  color: rgba(slateblue, 0.85)
+  float: left
+  &:not([class*='-pad-'])
+    padding: gutter*.02
+  
+  pre
+    &:not([class*='-margin-'])
+      margin: 0
+    white-space: pre-wrap
+    word-wrap: break-word
+
+// for each screen size, set following styles
+for screen-size in screen-sizes
+  
+  // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
+  width = mobile-first? 'min-width' : 'max-width'
+
+  // setup screen sizes for each column size
+  @media screen and ({width}: screen-size+'_width')
+    
+    // text alignment
+    .{screen-size}-text-left
+      text-align: left
+    .{screen-size}-text-right
+      text-align: right
+    .{screen-size}-text-center
+      text-align: center
+      

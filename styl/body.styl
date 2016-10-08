@@ -1,7 +1,5 @@
 // default body styles
-body
-  background-color: tertiary-color
-  
+body  
   & > *:not([class*='xs-']):not(.full-width):not(.no-margin)
     &:before
       content: "";
@@ -14,6 +12,15 @@ body
     width: 'calc(%s - %s)' % (100% gutter*2)
 
   // debug setting. Gives divs an opaque background color.
-  &.dev > div, &.dev > div > div {
-    background-color: rgba(255,255,255,0.5);
-  }
+  &.dev
+    level-1 = tertiary-color
+    level-2 = lighten(tertiary-color, 50%)
+    level-3 = lighten(tertiary-color, 75%)
+    level-4 = lighten(tertiary-color, 100%)
+    background-color: level-1
+    & > div:not([class*='bg-'])
+      background-color: level-2
+      & > div:not([class*='bg-'])
+        background-color: level-3
+        & > div:not([class*='bg-'])
+          background-color: level-4

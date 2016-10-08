@@ -1,6 +1,10 @@
 // grid setting: Standard
 if grid == standard
   
+  // set default styles for elements
+  nav 
+    float: left
+  
   // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
   width = mobile-first? 'min-width' : 'max-width'
   
@@ -25,7 +29,7 @@ if grid == standard
         .{screen-size}-{i}
           
           // set margin for each column, as long as it's not set to a no-margin element
-          &:not([class*=\'-left\']):not([class*=\'-right\']):not(.no-x-margin):not(.no-y-margin):not(.no-margin)&:not([class*='-push-'])
+          &:not([class*=\'-left\']):not([class*=\'-right\']):not([class*='margin'])
             margin: gutter gutter 0 gutter
             
           // calculate width of column

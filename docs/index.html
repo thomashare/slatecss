@@ -11,7 +11,8 @@
       }
     </style>
   </head>
-  <body>
+  <body class="dev">
+   
     <nav class="lg xs-12 no-margin">
       <div class="xs-left">
         <a class="brand has-icon" href="#"><img alt="Slate css logo" class="box-glow radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png"><span>Slate</span></a>
@@ -23,89 +24,73 @@
         <a href="#">Contact Us</a>
       </div>
     </nav>
-    <div class="xs-12 no-margin xs-pad-2-1 md-pad-3-1 bg-tertiary xs-text-center">
-      <img alt="Slate css logo" class="xs-left no-pad box-glow radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
-      <div class="bg-transparent no-pad xs-pad-1 md-pad-0-1 xs-text-center sm-text-left">
-        <span class="font-size-8 block text-glow">Slate</span>
-        <span class="faded font-size-2 block text-glow">The Easy To Work With CSS Framework</span>
+    
+    <div class="xs-12 bg-tertiary no-margin xs-pad-2-1 md-pad-3-1 xs-text-center">
+      <img alt="Slate css logo" class="no-pad box-glow xs-margin-3-2 radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
+      <div class="no-pad xs-pad-1 xs-text-center sm-text-left">
+        <span class="font-size-15 block text-glow">Slate</span>
+        <span class="faded font-size-5 block text-glow">The Easy To Work With CSS Framework</span>
+      </div>       
+    </div>
+
+    <div class="sidebar xs-12 md-4 lg-3 xl-2 xs-link-pad-12">
+      <ul>
+        <li><a class="active" href="#">Introduction</a></li>
+        <li><a href="#">Nav Menus</a></li>
+        <li><a href="#">Columns</a></li>
+        <li><a href="#">Fonts</a></li>
+        <li><a href="#">Text Effects</a></li>
+        <li><a href="#">Margins and Padding</a></li>
+      </ul>
+    </div>
+    <div class="bg-default xs-12 md-8 lg-9 xl-9 xs-pad-2">
+    
+      <p class="font-size-4 xs-12 xs-text-center">key terms: SS=screen size, X=number range</p>
+     
+      <h2 class="font-size-5 xs-margin-3-0 xs-12 xs-text-center">Slate is the easy to work css framework for building responsive, gluten-free, developer friendly websites.</h2>
+      
+      <div class="xs-margin-4-0 xs-12">
+        <div class="md-8 no-margin">
+          <h2 class="font-size-6">The Basics</h2>
+
+          <p class="font-size-5">columns:</p>
+          <p class="no-margin">xs=extra-small, sm=small, md=medium, lg=large and xl=extra-large</p>
+          <div class="note">
+            <p>By default, columns range from 0-12. 0 meaning hidden, 12 meaning full width. Each column level is equal to 100% of screen width, divided by the 'max-columns' setting. By default 'max-columns' is set to 12. Ex: 'xs-4 sm-8 md-12'.</p>
+            <p>By giving the 'xs' screen size a level of 0, the element on that specific screen size will become hidden. Alternatively, you can use 'xs-hide' or 'md-hide' etc. In addition, each column level will increase by 100% / 'max-columns'.</p>
+          </div>
+
+          <p><span class="font-size-5">Nav Menus:</span></p>
+          <p class="no-margin">sm=small nav menu, md=medium, lg=large</p>
+          <p class="no-margin">ex: &lt;nav class="sm"&gt;</p>
+          <p class="note-primary">Use by adding the 'sm' 'md' or 'lg' class to your nav element. These classes help define the importance of a nav.</p>
+
+          <p><span class="font-size-5">Fonts:</span></p>
+          <p class="no-margin">font-size: format 'font-size-X'</p>
+          <p class="no-margin">ex: &lt;div class="font-size-5"&gt;</p>
+          <p>'X' represents a level amount. Each level of font size is incremented by 0.25rem and levels go up to 25.</p>
+          <p class="note-primary">Font sizes help define importance in textual elements. Use 'font-size-2' to give a smaller font size or 'font-size-7' to give a larger font size to an element.</p>
+
+          <p><span class="font-size-5">Text Effects:</span></p>
+          <ul>
+            <li>text-glow: Adds a light text shadow to text elements in order to help better distinguish dark text on a slightly dark or grey background.</li>
+            <li>text-shadow: Adds a dark text shadow to text elements in order to help better distinguish light text on a lighter background.</li>
+          </ul>
+
+          <p><span class="font-size-5">Margins:</span> in format 'SS-margin-X'</p>
+          <p class="no-margin">ex: &lt;div class="xs-margin-2"&gt;</p>
+          <p>'X' represents a level amount. Each level of margin is incremented by 5px and levels go up to 20.</p>
+          <p class="note-primary">Margins help space out your content. Use 'xs-margin-2' to give a margin level of two all around the object. Use 'xs-margin-2-0' to give a margin level of two on the top and bottom of the object. Take it a step further and add an extra -3 to that class to give a margin level of three on the left and right of the object (Ex: 'xs-margin-2-3').</p>
+
+          <p><span class="font-size-5">Padding:</span> in format 'SS-pad-X'</p>
+          <p class="no-margin">ex: &lt;div class="xs-pad-2"&gt;</p>
+          <p>As with margins, this class adds a padding to an object in a similar fashion of 'SS-pad-X-X'. Padding levels go up to 20.</p>
+        </div>
       </div>
+      
+      <p class="xs-text-center xs-12 no-margin font-size-3 xs-pad-2-1">&copy; Copyright 2016 Slatecss. All rights reserved.</p>
+      
     </div>
-    <h3>Navigation</h3>
-    <nav>
-      <a class="brand text-secondary" href="xs-left">Small - (sm)</a>
-      <div class="xs-right">
-        <a href="#">More Info</a>
-        <a href="#">More Info</a>
-        <a href="#">More Info</a>
-      </div>
-    </nav>
-    <nav class="md">
-      <a class="brand text-primary" href="xs-left">Medium - (md)</a>
-      <div class="xs-right">
-        <a href="#">More Info</a>
-        <a href="#">More Info</a>
-        <a href="#">More Info</a>
-      </div>
-    </nav>
-    <nav class="lg">
-      <a class="brand text-success" href="xs-left">Large - (lg)</a>
-      <div class="xs-right">
-        <a href="#">More Info</a>
-        <a href="#">More Info</a>
-        <a href="#">More Info</a>
-      </div>
-    </nav>
-    <h3>Buttons</h3>
-    <div class="xs-12 md-12 bg-transparent">
-      <button class="btn-primary">Primary Button</button>
-      <button class="btn-secondary">Secondary Button</button>
-      <button class="btn-tertiary">Tertiary Button</button>
-      <button class="btn-alert">Alert Button</button>
-      <button class="btn-warning">Warning Button</button>
-      <button class="btn-success">Success Button</button>
-      <button class="btn-unknown">Default Button</button>
-      <button class="btn-link">Link Button</button>
-    </div>
-    <h3>Columns</h3>
-    <div class="xs-12 xs-text-center">
-      <p>xs-12</p>
-    </div>
-    <div class="no-x-margin xs-12 xs-text-center">
-      <p>no-x-margin xs-12</p>
-    </div>
-    <div class="xs-12 sm-4 md-9">
-      <p>xs-12 sm-4 md-9</p>
-    </div>
-    <div class="xs-8 sm-4 md-3">
-      <p>xs-8 sm-4 md-3</p>
-    </div>
-    <div class="xs-4 sm-4 md-3">
-      <p>xs-4 sm-4 md-3</p>
-    </div>
-    <div class="xs-3 sm-12 md-3">
-      <p>xs-3 sm-12 md-3</p>
-    </div>
-    <div class="xs-5 sm-12 md-3">
-      <p>xs-5 sm-12 md-3</p>
-    </div>
-    <div class="xs-5 sm-12 md-3">
-      <p>xs-5 sm-12 md-3</p>
-    </div>
-    <h3>Pulling center, left and right.</h3>
-    <div class="xs-12">
-      <div class="xs-4 sm-left md-right lg-center">
-        <p class="xs-12 xs-text-center xs-pad-2 no-margin">xs-4</p>
-      </div>
-    </div>
-    <h3>Divided We Fall</h3>
-    <p>sm-divided-2 md-divided-4 lg-divided-6 - (Small devices will display 2 columns while large devices will display 6)</p>
-    <div class="xs-12 sm-divided-2 md-divided-4 lg-divided-6" id="photo-stream">
-      <img alt="my photo #1" src="http://placehold.it/600x200">
-      <img alt="my photo #2" src="http://placehold.it/300x200">
-      <img alt="my photo #3" src="http://placehold.it/900x200">
-      <img alt="my photo #4" src="http://placehold.it/600x200">
-      <img alt="my photo #5" src="http://placehold.it/300x200">
-      <img alt="my photo #6" src="http://placehold.it/300x200">
-    </div>
+    
   </body>
 </html>

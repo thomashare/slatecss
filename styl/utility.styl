@@ -1,8 +1,3 @@
-// remove font style defaults from headings
-h1,h2,h3,h4,h5,h6
-  font-size: initial
-  font-weight: normal
-  
 // no padding elements
 .no-pad
   padding: 0
@@ -27,7 +22,7 @@ h1,h2,h3,h4,h5,h6
 .box-glow
   box-shadow: 0px 2px 10px rgba(255,255,255,0.85), 0px -3px 15px rgba(255,255,255,0.85), 0px 5px 15px rgba(255,255,255,0.85), 0px -5px 15px rgba(255,255,255,0.85)
 .box-shadow
-  box-shadow: 0px 2px 10px rgba(0,0,0,0.85), 0px -3px 15px rgba(0,0,0,0.85), 0px 5px 15px rgba(0,0,0,0.85), 0px -5px 15px rgba(0,0,0,0.85)
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.1), 0px -3px 15px rgba(0,0,0,0.1), 0px 5px 15px rgba(0,0,0,0.1), 0px -5px 15px rgba(0,0,0,0.1)
 .text-glow
   text-shadow: 0px 2px 5px rgba(255,255,255,0.85),-2px 0px 5px rgba(255,255,255,0.85),0px -2px 5px rgba(255,255,255,0.85),2px 0px 5px rgba(255,255,255,0.85)
 .text-shadow
@@ -45,14 +40,6 @@ for screen-size in screen-sizes
 
   // setup screen sizes for each column size
   @media screen and ({width}: screen-size+'_width')
-    
-    // text alignment
-    .{screen-size}-text-left
-      text-align: left
-    .{screen-size}-text-right
-      text-align: right
-    .{screen-size}-text-center
-      text-align: center
         
     // pull classes (left, center and right)
     .{screen-size}-left
@@ -63,20 +50,20 @@ for screen-size in screen-sizes
       float: none
       margin: 0 auto
         
-    // padding levels
-    for level in (0..5)
+    // padding and margin levels
+    for level in (0..20)
       .{screen-size}-pad-{level}
-        padding: level*10px
+        padding: level*5px
       .{screen-size}-margin-{level}
-        margin: level*10px
-      for level2 in (0..5)
+        margin: level*5px
+      for level2 in (0..20)
         .{screen-size}-pad-{level}-{level2}
-          padding: level*20px level2*20px
+          padding: level*5px level2*5px
         .{screen-size}-margin-{level}-{level2}
-          margin: level*20px level2*20px
+          margin: level*5px level2*5px
     
     // hide on different screen sizes
-    .{screen-size}-hide
+    .{screen-size}-hide, .{screen-size}-0
       display: none
       
     // show on different screen sizes
@@ -85,17 +72,15 @@ for screen-size in screen-sizes
       
 
 // text alignment defaults
-:not(.sidebar)
+*:not(.sidebar)
   [class*='-text-']
     & > *
-      display: inline-block
+      &:not(.block):not(.inline)
+        display: inline-block
       float: none
       &:not(.no-pad)
         padding: 0
       vertical-align: top
-      & > *
-        &:not(.no-pad)
-          padding: 0 !important
       
 // element formation: inline or block
 .inline
@@ -104,3 +89,25 @@ for screen-size in screen-sizes
   display: inline-block
 .block
   display: block
+ 
+// item-pad and link-pad parent classes  
+for screen-size in screen-sizes
+  
+  // one level padding
+  for level-1 in (0..20)
+    // item padding
+    .{screen-size}-item-pad-{level-1}
+      li
+        padding: level-1*1px
+    .{screen-size}-link-pad-{level-1}
+      a 
+        padding: level-1*1px
+
+    // two level padding
+    for level-2 in (0..20)
+      .{screen-size}-item-pad-{level-1}-{level-2}
+        li 
+          padding: level-1*1px level-2*1px
+      .{screen-size}-link-pad-{level-1}-{level-2}
+        a
+          padding: level-1*1px level-2*1px

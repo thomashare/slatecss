@@ -31,7 +31,8 @@ nav
       font-size: 1.25em
       &:not(.has-icon)
         line-height: gutter*1.5
-      padding: gutter*0.05 gutter*0.25
+      &:not([class*='-pad-'])
+        padding: gutter*0.05 gutter*0.25
       
       & > :not(img)
         &:not(.no-y-margin):not(.no-margin)
@@ -40,7 +41,7 @@ nav
     a
       &:not(.brand)
         font-size: 0.85em
-      &:not(.no-pad):not(.brand)
+      &:not(.no-pad):not(.brand)&:not([class*='-pad-'])
         padding: gutter*0.4 gutter*0.5
       
   // define medium nav styles
@@ -51,14 +52,15 @@ nav
       font-size: 1.5em
       &:not(.has-icon)
         line-height: gutter*1.9
-      padding: gutter*0.2 gutter*0.25
+      &:not([class*='-pad-'])
+        padding: gutter*0.2 gutter*0.25
       
       & > :not(img)
-        &:not(.no-y-margin):not(.no-margin)
+        &:not(.no-y-margin):not(.no-margin):not([class*='-margin-'])
           margin: 0 gutter*0.15
 
     a
-      &:not(.no-pad):not(.brand)
+      &:not(.no-pad):not(.brand):not([class*='-pad-'])
         padding: gutter*0.75 gutter*0.75        
         
   // define large nav styles
@@ -69,13 +71,14 @@ nav
       font-size: 2em
       &:not(.has-icon)
         line-height: gutter*2.5
-      padding: gutter*0.35
+      &:not([class*='-pad-'])
+        padding: gutter*0.35
       
       & > :not(img)
-        &:not(.no-y-margin):not(.no-margin)
+        &:not(.no-y-margin):not(.no-margin):not([class*='-margin-'])
           margin: 0 gutter*0.35
 
     a
-      &:not(.no-pad):not(.brand)
+      &:not(.no-pad):not(.brand):not([class*='-pad-'])
         padding: gutter*1.25 gutter
         
