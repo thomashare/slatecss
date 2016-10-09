@@ -50,17 +50,21 @@ for screen-size in screen-sizes
       float: none
       margin: 0 auto
         
-    // padding and margin levels
-    for level in (0..20)
-      .{screen-size}-pad-{level}
-        padding: level*5px
+    // margin levels
+    for level in (0..max-margin)
       .{screen-size}-margin-{level}
         margin: level*5px
-      for level2 in (0..20)
-        .{screen-size}-pad-{level}-{level2}
-          padding: level*5px level2*5px
+      for level2 in (0..max-margin)
         .{screen-size}-margin-{level}-{level2}
           margin: level*5px level2*5px
+          
+    // padding levels
+    for level in (0..max-padding)
+      .{screen-size}-pad-{level}
+        padding: level*5px
+      for level2 in (0..max-padding)
+        .{screen-size}-pad-{level}-{level2}
+          padding: level*5px level2*5px
     
     // hide on different screen sizes
     .{screen-size}-hide, .{screen-size}-0
@@ -94,7 +98,7 @@ for screen-size in screen-sizes
 for screen-size in screen-sizes
   
   // one level padding
-  for level-1 in (0..20)
+  for level-1 in (0..max-padding)
     // item padding
     .{screen-size}-item-pad-{level-1}
       li
@@ -104,7 +108,7 @@ for screen-size in screen-sizes
         padding: level-1*1px
 
     // two level padding
-    for level-2 in (0..20)
+    for level-2 in (0..max-padding)
       .{screen-size}-item-pad-{level-1}-{level-2}
         li 
           padding: level-1*1px level-2*1px

@@ -41,10 +41,15 @@ if grid == standard
             width: 'calc(%s - %s)' % (percentage gutter*2)
             
           // edit width to compensate lack of margin in no-margin elements
-          // set correct width for 'margin-X-0' elements
           &.no-margin,&.no-x-margin
             percentage = (100%/max-columns)*i
             width: percentage
+          
+          // set correct width for 'margin-X-0' elements
+          for x in (1..max-margin)
+            &.{screen-size}-margin-{x}-0:not(.no-margin):not(.no-x-margin)
+              percentage = (100%/max-columns)*i
+              width: percentage
             
       // push columns
       for i in (1..max-columns)
