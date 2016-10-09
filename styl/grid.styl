@@ -35,24 +35,30 @@ if grid == standard
           &:not([class*=\'-left\']):not([class*=\'-right\']):not([class*='margin'])
             margin: gutter gutter 0 gutter
             
-          // calculate width of column
+          // calculate width of columns with no x axis margin removal set
           &:not(.no-margin):not(.no-x-margin)
             percentage = (100%/max-columns)*i
             width: 'calc(%s - %s)' % (percentage gutter*2)
             
           // edit width to compensate lack of margin in no-margin elements
+          // set correct width for 'margin-X-0' elements
           &.no-margin,&.no-x-margin
             percentage = (100%/max-columns)*i
             width: percentage
             
       // push columns
       for i in (1..max-columns)
-        .{screen-size}-push-{i}:not(.no-margin):not(.no-x-margin)
+        .{screen-size}-push-{i}
             
           // set margin left for a defined amount of columns
-          push_percentage = (100%/max-columns)*i
-          &:not(.no-y-margin)
-            margin: gutter gutter 0 push_percentage
+          push-percentage = (100%/max-columns)*i
+            
+          &:not(.no-margin),&:not(.no-x-margin)&:not(.no-y-margin)
+            margin-left: push-percentage
+          &.no-margin
+            margin-left: push-percentage
+          &.no-x-margin
+            margin-left: push-percentage
           &.no-y-margin
-            margin: 0 gutter 0 push_percentage
+            margin-left: push-percentage
             
