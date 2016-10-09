@@ -21,7 +21,7 @@ if grid == standard
       [class*={screen-size}-]
         float: left
         min-height: 5px
-        &:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a)
+        &:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a):not(.sidebar *)
           padding: gutter*0.5
 
       // for each column in screen size
@@ -32,11 +32,11 @@ if grid == standard
           box-sizing: box-sizing
           
           // set margin for each column, as long as it's not set to a no-margin element
-          &:not([class*=\'-left\']):not([class*=\'-right\']):not([class*='margin'])
+          &:not([class*=\'-left\']):not([class*=\'-right\']):not([class*={screen-size}-margin-])
             margin: gutter gutter 0 gutter
             
           // calculate width of columns with no x axis margin removal set
-          &:not(.no-margin):not(.no-x-margin)
+          &:not(.no-margin):not(.no-x-margin):not([class*={screen-size}-margin-])
             percentage = (100%/max-columns)*i
             width: 'calc(%s - %s)' % (percentage gutter*2)
             
@@ -44,12 +44,6 @@ if grid == standard
           &.no-margin,&.no-x-margin
             percentage = (100%/max-columns)*i
             width: percentage
-          
-          // set correct width for 'margin-X-0' elements
-          for x in (1..max-margin)
-            &.{screen-size}-margin-{x}-0:not(.no-margin):not(.no-x-margin)
-              percentage = (100%/max-columns)*i
-              width: percentage
             
       // push columns
       for i in (1..max-columns)

@@ -39,7 +39,7 @@ for screen-size in screen-sizes
   width = mobile-first? 'min-width' : 'max-width'
 
   // setup screen sizes for each column size
-  @media screen and ({width}: screen-size+'_width')
+  @media screen and ({width}: screen-size+'-width')
         
     // pull classes (left, center and right)
     .{screen-size}-left
@@ -51,20 +51,28 @@ for screen-size in screen-sizes
       margin: 0 auto
         
     // margin levels
-    for level in (0..max-margin)
-      .{screen-size}-margin-{level}
-        margin: level*5px
-      for level2 in (0..max-margin)
-        .{screen-size}-margin-{level}-{level2}
-          margin: level*5px level2*5px
+    for y-margin in (1..max-margin)
+      .{screen-size}-margin-{y-margin}
+        margin: y-margin*5px
+        width: 'calc(%s - %s)' % (100% (y-margin*5*2)*1px)
+      for x-margin in (1..max-margin)
+        .{screen-size}-margin-{y-margin}-{x-margin}
+          margin: y-margin*5px x-margin*5px
+          
+        // overwrite width of elements with a set margin
+        [class*={screen-size}-margin-]
+          div.{screen-size}-margin-{x-margin},div.{screen-size}-margin-{y-margin}-{x-margin}
+            x-margin-gutter = (x-margin*2)*5px
+            width: 100% !important
+    
           
     // padding levels
-    for level in (0..max-padding)
-      .{screen-size}-pad-{level}
-        padding: level*5px
-      for level2 in (0..max-padding)
-        .{screen-size}-pad-{level}-{level2}
-          padding: level*5px level2*5px
+    for y-padding in (0..max-padding)
+      .{screen-size}-pad-{y-padding}
+        padding: y-padding*5px
+      for x-padding in (0..max-padding)
+        .{screen-size}-pad-{y-padding}-{x-padding}
+          padding: y-padding*5px x-padding*5px
     
     // hide on different screen sizes
     .{screen-size}-hide, .{screen-size}-0
