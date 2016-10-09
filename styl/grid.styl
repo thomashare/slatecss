@@ -28,6 +28,9 @@ if grid == standard
       for i in (1..max-columns)
         .{screen-size}-{i}
           
+          // set style defaults
+          box-sizing: box-sizing
+          
           // set margin for each column, as long as it's not set to a no-margin element
           &:not([class*=\'-left\']):not([class*=\'-right\']):not([class*='margin'])
             margin: gutter gutter 0 gutter
