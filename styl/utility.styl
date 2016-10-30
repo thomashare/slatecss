@@ -2,14 +2,6 @@
 .no-pad
   padding: 0
   
-// no margin elements
-.no-x-margin:not(.no-margin)
-  margin-top: gutter 0 0 0
-.no-y-margin:not(.no-margin):not([class*='-push-'])
-  margin: 0 gutter
-.no-margin:not(.no-x-margin):not(.no-y-margin):not([class*='-push-'])
-  margin: 0
-  
 // element visibility
 .hide
   opacity: 0
@@ -50,30 +42,6 @@ for screen-size in screen-sizes
       float: none
       margin: 0 auto
         
-    // margin levels
-    for y-margin in (1..max-margin)
-      .{screen-size}-margin-{y-margin}
-        margin: y-margin*5px
-        width: 'calc(%s - %s)' % (100% (y-margin*5*2)*1px)
-      for x-margin in (1..max-margin)
-        .{screen-size}-margin-{y-margin}-{x-margin}
-          margin: y-margin*5px x-margin*5px
-          
-        // overwrite width of elements with a set margin
-        [class*={screen-size}-margin-]
-          div.{screen-size}-margin-{x-margin},div.{screen-size}-margin-{y-margin}-{x-margin}
-            x-margin-gutter = (x-margin*2)*5px
-            width: 100% !important
-    
-          
-    // padding levels
-    for y-padding in (0..max-padding)
-      .{screen-size}-pad-{y-padding}
-        padding: y-padding*5px
-      for x-padding in (0..max-padding)
-        .{screen-size}-pad-{y-padding}-{x-padding}
-          padding: y-padding*5px x-padding*5px
-    
     // hide on different screen sizes
     .{screen-size}-hide, .{screen-size}-0
       display: none
@@ -123,3 +91,4 @@ for screen-size in screen-sizes
       .{screen-size}-link-pad-{level-1}-{level-2}
         a
           padding: level-1*1px level-2*1px
+          

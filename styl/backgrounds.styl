@@ -1,46 +1,6 @@
 // background container colors
-.bg-primary
-  bg = primary-color
-  background-color: bg
-  if dark(darken(primary-color, 15%))
-    color: rgba(255,255,255,0.85)
-  
-.bg-secondary
-  bg = secondary-color
-  background-color: bg
-  if dark(darken(secondary-color, 15%))
-    color: rgba(255,255,255,0.85)
-  
-.bg-tertiary
-  bg = tertiary-color
-  background-color: bg
-  if dark(darken(tertiary-color, 15%))
-    color: rgba(255,255,255,0.85)
-  
-.bg-warning
-  bg = warning-color
-  background-color: bg
-  if dark(darken(warning-color, 15%))
-    color: rgba(255,255,255,0.85)
-  
-.bg-alert
-  bg = alert-color
-  background-color: bg
-  if dark(darken(alert-color, 15%))
-    color: rgba(255,255,255,0.85)
-  
-.bg-success
-  bg = success-color
-  background-color: bg
-  if dark(darken(success-color, 15%))
-    color: rgba(255,255,255,0.85)
-    
-.bg-default
-  bg = default-color
-  background-color: bg
-  if dark(darken(default-color, 15%))
-    color: rgba(255,255,255,0.85)
-    
-.bg-transparent
-  background-color: transparent
-    
+for color in colors
+  .bg-{color}
+    background-color: color+'-color'
+    if dark(darken(color+'-color', 15%))
+      color: rgba(255,255,255,0.85)

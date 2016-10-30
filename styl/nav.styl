@@ -1,84 +1,198 @@
 // define nav styles
 nav
   bg = #FFF
+  link-color = rgba(0,0,0,0.65)
   background-color: bg
-  line-height: line-height
   padding: 0
   
   .brand
-    display: inline
-    &.has-icon > *
-      vertical-align: middle
-
-  // default nav styles
-  a 
-    &:not([class*='text-'])
-      color: rgba(link-color, 0.54)
-    float: left
+    color: link-color    
+    img:not([class*='-left']):not([class*='-right']) 
+      float: left
+    &.has-icon
+      :not(img)
+        float: left
+        
+  a
+    color: link-color
     text-decoration: none
-    
-  :not(.brand) a
-    transition: background-color 0.3s ease, color 0.3s ease
-    &:hover:not(.brand),&.active:not(.brand)
-      background-color: darken(#FFF, 3%)
-    &:active:not(.brand)
-      background-color: lighten(#FFF, 3%) 
-  // define standard nav style
-  &.sm,&:not(.md):not(.lg)
+        
+  *:not(.brand)
+    & > a:not(.brand)
+      background-color: bg
+      &:hover,&.active
+        background-color: darken(bg, 2%)
+        color: darken(link-color, 2%)
+  
+  // define small nav styles
+  &.sm:not(.md):not(.lg)
+    font-size: 0.8rem
     img
-      max-height: gutter*1.5
+      float: left
+      margin-top: 1px
+      max-height: 26px
+    *:not(.brand)
+      a:not(.brand)
+        float: left
+        padding: 6px 10px
+        text-decoration: none
     .brand
-      font-size: 1.25em
+      &.has-icon
+        float: left
+        &:not([class*='font-size-'])
+          font-size: 1.25em
+          &:not([class*='-right'])
+            margin-left: 5px
+          &[class*='-right']
+            margin-right: 5px
+        *:not(img)
+          &:not([class*='font-size-'])
+            font-size: 1em
+          margin-top: 6px
+          &:not([class*='-right'])
+            margin-left: 5px
+          &[class*='-right']
+            margin-right: 5px
+        & > *:not(img):not(a)
+          float: left
+          margin-top: 6px
       &:not(.has-icon)
-        line-height: gutter*1.5
-      &:not([class*='-pad-'])
-        padding: gutter*0.05 gutter*0.25
-      
-      & > :not(img)
-        &:not(.no-y-margin):not(.no-margin)
-          margin: 0 gutter*0.15
+        float: left
+        & > *
+          float: left
+        a
+          &:not([class*='font-size-'])
+            font-size: 1em
 
-    a
-      &:not(.brand)
-        font-size: 0.85em
-      &:not(.no-pad):not(.brand)&:not([class*='-pad-'])
-        padding: gutter*0.4 gutter*0.5
-      
   // define medium nav styles
-  &.md
+  &.md:not(.sm):not(.lg):not(.xl)
+    font-size: 0.9rem
     img
-      max-height: gutter*1.9
+      margin-top: 1px
+      max-height: 36px
+    *:not(.brand)
+      a:not(.brand)
+        float: left
+        font-size: 1em
+        padding: 11px
+        text-decoration: none
     .brand
-      font-size: 1.5em
+      &.has-icon
+        float: left
+        &:not([class*='font-size-'])
+          font-size: 1.5em
+          &:not([class*='-right'])
+            margin-left: 5px
+          &[class*='-right']
+            margin-right: 5px
+        *:not(img)
+          &:not([class*='font-size-'])
+            font-size: 1em
+          margin-top: 12px
+          &:not([class*='-right'])
+            margin-left: 5px
+          &[class*='-right']
+            margin-right: 5px
+        & > *:not(img):not(a)
+          float: left
+          margin-top: 11px
       &:not(.has-icon)
-        line-height: gutter*1.9
-      &:not([class*='-pad-'])
-        padding: gutter*0.2 gutter*0.25
-      
-      & > :not(img)
-        &:not(.no-y-margin):not(.no-margin):not([class*='-margin-'])
-          margin: 0 gutter*0.15
-
-    a
-      &:not(.no-pad):not(.brand):not([class*='-pad-'])
-        padding: gutter*0.75 gutter*0.75        
+        float: left
+        & > *
+          float: left
+        a
+          &:not([class*='font-size-'])
+            font-size: 1.5em
         
   // define large nav styles
-  &.lg
+  &.lg:not(.sm):not(.md):not(.xl)
+    font-size: 0.9rem
     img
-      max-height: gutter*2.6
+      margin-top: 5px
+      max-height: 45px
+    *:not(.brand)
+      & > a:not(.brand)
+        float: left
+        font-size: 1.03em
+        padding: 20px
+        text-decoration: none
+    a.brand:not(.has-icon)
+      &:not([class*='font-size-'])
+        font-size: 1.5em
+      margin-top: 20px
     .brand
-      font-size: 2em
+      &:not([class*='margin-x-'])
+        margin-left: 5px
+        margin-right: 5px
+      &.has-icon
+        float: left
+        &:not([class*='font-size-'])
+          font-size: 1.5em
+        *:not(img)
+          &:not([class*='font-size-'])
+            font-size: 1.25em
+          margin-top: 12px
+          &:not([class*='-right'])
+            margin-left: 10px
+          &[class*='-right']
+            margin-right: 5px
+          & > a
+            padding: 20px 5px
+        & > *:not(img):not(a)
+          float: left
+          margin-top: 20px
       &:not(.has-icon)
-        line-height: gutter*2.5
-      &:not([class*='-pad-'])
-        padding: gutter*0.35
-      
-      & > :not(img)
-        &:not(.no-y-margin):not(.no-margin):not([class*='-margin-'])
-          margin: 0 gutter*0.35
+        float: left
+        & > *
+          float: left
+        a
+          &:not([class*='font-size-'])
+            font-size: 1.5em
+          padding: 20px 5px
 
-    a
-      &:not(.no-pad):not(.brand):not([class*='-pad-'])
-        padding: gutter*1.3 gutter
+  // define large nav styles
+  &.xl:not(.sm):not(.md):not(.lg)
+    font-size: 0.9rem
+    img
+      margin-top: 8px
+      max-height: 50px
+    *:not(.brand)
+      & > a:not(.brand)
+        float: left
+        font-size: 1.08em
+        padding: 25px 20px
+        text-decoration: none
+    a.brand:not(.has-icon)
+      &:not([class*='font-size-'])
+        font-size: 1.65em
+      margin-top: 25px
+    .brand
+      &:not([class*='margin-x-'])
+        margin-left: 8px
+        margin-right: 5px
+      &.has-icon
+        float: left
+        &:not([class*='font-size-'])
+          font-size: 1.25em
+        *:not(img)
+          &:not([class*='font-size-'])
+            font-size: 1.65em
+          margin-top: 17px
+          &:not([class*='-right'])
+            margin-left: 10px
+          &[class*='-right']
+            margin-right: 5px
+          & > a
+            padding: 25px 5px
+        & > *:not(img):not(a)
+          float: left
+          margin-top: 25px
+      &:not(.has-icon)
+        float: left
+        & > *
+          float: left
+        a
+          &:not([class*='font-size-'])
+            font-size: 1.65em
+          padding: 25px 5px
         

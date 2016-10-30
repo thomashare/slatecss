@@ -1,0 +1,30 @@
+// margin setting accross screen sizes
+for screen-size in screen-sizes
+  
+  // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
+  width = mobile-first? 'min-width' : 'max-width'
+
+  // setup screen sizes for each column size
+  @media screen and ({width}: screen-size+'-width')
+    
+    for x in (0..25)
+      for y in (0..25)
+        .{screen-size}-margin-{x}
+          margin: x*margin-step
+
+        .{screen-size}-margin-{x}-{y}
+          margin: x*margin-step y*margin-step
+          
+      // top bottom left and right margin specifics
+      sides = ( top right bottom left )
+      for side in sides
+        .{screen-size}-margin-{side}-{x}
+          margin-{side}: x*margin-step
+          
+    // no margin elements
+    .{screen-size}-no-x-margin:not(.{screen-size}-no-margin)
+      margin-top: gutter 0 0 0
+    .{screen-size}-no-y-margin:not(.{screen-size}-no-margin):not([class*='-push-'])
+      margin: 0 gutter
+    .{screen-size}-no-margin:not(.{screen-size}-no-x-margin):not(.{screen-size}-no-y-margin):not([class*='-push-'])
+      margin: 0

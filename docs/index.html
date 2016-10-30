@@ -13,7 +13,7 @@
   </head>
   <body class="dev">
    
-    <nav class="lg xs-12 no-margin">
+    <nav class="xl xs-12 xs-no-margin">
       <div class="xs-left">
         <a class="brand has-icon" href="#"><img alt="Slate css logo" class="box-glow radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png"><span>Slate</span></a>
       </div>
@@ -25,15 +25,15 @@
       </div>
     </nav>
     
-    <div class="xs-12 bg-tertiary no-margin xs-pad-2-1 md-pad-3-1 xs-text-center">
-      <img alt="Slate css logo" class="no-pad box-glow xs-margin-3-2 radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
-      <div class="bg-transparent no-pad xs-pad-1 xs-text-center sm-text-left">
+    <div class="xs-12 bg-tertiary xs-pad-top-1 xs-text-center">
+      <img alt="Slate css logo" class="no-pad box-glow xs-margin-2 radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
+      <div class="bg-transparent xs-pad-1 xs-text-center sm-text-left">
         <span class="font-size-15 block text-glow">Slate</span>
-        <span class="faded font-size-5 block text-glow">The Easy To Work With CSS Framework</span>
+        <span class="faded font-size-5 block text-glow no-margin">The Easy To Work With CSS Framework</span>
       </div>       
     </div>
 
-    <div class="sidebar xs-12 xs-margin-1 sm-margin-1 sm-margin-3 sm-12 md-3 lg-3 xl-2 xs-link-pad-12">
+    <div class="sidebar xs-12 xs-margin-1 sm-margin-3 sm-12 md-3 lg-3 xl-2 xs-link-pad-12">
       <ul>
         <li><a class="active" href="#">Introduction</a></li>
         <li><a href="#">Nav Menus</a></li>
@@ -43,8 +43,8 @@
         <li><a href="#">Margins and Padding</a></li>
       </ul>
     </div>
-    <div class="bg-default xs-12 xs-margin-2-1 sm-margin-3 sm-margin-1-1 sm-12 md-9 lg-9 xl-10 xs-pad-2">
-    
+    <div class="bg-default xs-12 xs-pad-left-4 xs-margin-2-1 sm-margin-3 sm-margin-1-1 sm-12 md-9 lg-9 xl-10 xs-pad-2">
+      
       <p class="font-size-4 xs-12 xs-text-center">key terms: SS=screen size, X=number range</p>
      
       <h2 class="font-size-5 xs-margin-3 xs-12 xs-text-center">Slate is the easy to work css framework for building responsive, gluten-free, developer friendly websites.</h2>
@@ -55,15 +55,15 @@
 
           <p class="font-size-5">columns:</p>
           <p class="no-margin">xs=extra-small, sm=small, md=medium, lg=large and xl=extra-large</p>
-          <div class="note">
+          <div class="note-primary">
             <p>By default, columns range from 0-12. 0 meaning hidden, 12 meaning full width. Each column level is equal to 100% of screen width, divided by the 'max-columns' setting. By default 'max-columns' is set to 12. Ex: 'xs-4 sm-8 md-12'.</p>
             <p>By giving the 'xs' screen size a level of 0, the element on that specific screen size will become hidden. Alternatively, you can use 'xs-hide' or 'md-hide' etc. In addition, each column level will increase by 100% / 'max-columns'.</p>
           </div>
 
           <p><span class="font-size-5">Nav Menus:</span></p>
-          <p class="no-margin">sm=small nav menu, md=medium, lg=large</p>
+          <p class="no-margin">sm=small nav menu, md=medium, lg=large, xl=Extra Large</p>
           <p class="no-margin">ex: &lt;nav class="sm"&gt;</p>
-          <p class="note-primary">Use by adding the 'sm' 'md' or 'lg' class to your nav element. These classes help define the importance of a nav.</p>
+          <p class="note-primary">Use by adding the 'sm' 'md' 'lg' or 'xl' class to your nav element. These classes help define the importance of a nav.</p>
 
           <p><span class="font-size-5">Fonts:</span></p>
           <p class="no-margin">font-size: format 'font-size-X'</p>
@@ -79,13 +79,21 @@
 
           <p><span class="font-size-5">Margins:</span> in format 'SS-margin-X'</p>
           <p class="no-margin">ex: &lt;div class="xs-margin-2"&gt;</p>
-          <p>'X' represents a level amount. Each level of margin is incremented by 5px and levels go up to 20.</p>
-          <p class="note-primary">Margins help space out your content. Use 'xs-margin-2' to give a margin level of two all around the object. Use 'xs-margin-2' to give a margin level of two on the top and bottom of the object. Take it a step further and add an extra -3 to that class to give a margin level of three on the left and right of the object (Ex: 'xs-margin-2-3').</p>
+          <p>'X' represents a level amount. Each level of margin is incremented by 5px and levels go up to 25.</p>
+          <div class="note-primary">
+            <p>Margins help space out your content. Use 'xs-margin-2' to give a margin level of two all around the object. Use 'xs-margin-2' to give a margin level of two on the top and bottom of the object. Take it a step further and add an extra -3 to that class to give a margin level of three on the left and right of the object (Ex: 'xs-margin-2-3').</p>
+            <p>Specify top, bottom, left or right margin with class  (Ex: 'xs-margin-top-3').</p>
+            <p>Don't want any margin? Use class (Ex: 'xs-no-margin'). *Useful when a full-screen navigation menu is desired.</p>
+          </div>
           <p class="note-secondary">Margins range from 1-20.</p>
 
           <p><span class="font-size-5">Padding:</span> in format 'SS-pad-X'</p>
           <p class="no-margin">ex: &lt;div class="xs-pad-2"&gt;</p>
-          <p>As with margins, this class adds a padding to an object in a similar fashion of 'SS-pad-X-X'. Padding levels go up to 20.</p>
+          <div class="note-primary">
+            <p>As with margins, this class adds a padding to an object in a similar fashion of 'SS-pad-X-X'. Padding levels go up to 25.</p>
+            <p class="no-margin">Specify top, bottom, left or right padding with class  (Ex: 'xs-pad-top-3').</p>
+            <p>Don't want any padding? Use class (Ex: 'xs-no-padding').</p>
+          </div>
         </div>
       </div>
       
