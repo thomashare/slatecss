@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp = require('gulp4');
+var gulp = require('gulp');
 var stylus = require('gulp-stylus');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
