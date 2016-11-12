@@ -2,7 +2,6 @@
   "name": "slatecss",
   "version": "1.0.3",
   "description": "CSS framework for beautiful website creation.",
-  "main": "index.js",
   "scripts": {
     "build": "gulp default",
     "watch": "gulp watch"
@@ -30,7 +29,7 @@
     "url": "https://github.com/thomashare/slatecss/issues"
   },
   "homepage": "https://github.com/thomashare/slatecss#readme",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cssnano": "^2.1.2",
