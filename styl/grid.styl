@@ -47,6 +47,9 @@ if grid == standard
           &[class*='-no-margin'],&[class*='-no-x-margin']
             percentage = (100%/max-columns)*i
             width: percentage
+            
+          // set transition effect for resizing
+          transition: all 0.3s ease
 
       // push columns
       for i in (1..max-columns)
