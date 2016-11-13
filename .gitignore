@@ -43,3 +43,6 @@ Contact GitHub API Training Shop Blog About
 
 # Test index.html file
 index.html
+
+# Code editor caches
+.vscode
