@@ -1,11 +1,16 @@
 // margin setting accross screen sizes
 for screen-size in screen-sizes
-  
-  // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
-  width = mobile-first? 'min-width' : 'max-width'
+
+  // media query settings
+  min-width-size = screen-size+'-min-width'
+  max-width-size = screen-size+'-max-width'
+  min-width = 'min-width: '+min-width-size
+  max-width = 'max-width: '+max-width-size
 
   // setup screen sizes for each column size
-  @media screen and ({width}: screen-size+'-width')
+  @media screen and ({min-width})
+    
+    gutter = screen-size+'-gutter'
     
     for x in (0..25)
       for y in (0..25)

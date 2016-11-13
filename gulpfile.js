@@ -7,13 +7,13 @@ var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
 var sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', ['slate']);
+gulp.task('default', ['slate-min']);
 
 gulp.task('watch', function () {
   return gulp.watch(['styl/**/*.styl', 'custom/**/*.styl'], ['slate']);
 });
 
-gulp.task('slate', ['slate-min'], function () {
+gulp.task('slate', function () {
   return gulp.src('./styl/slate.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus().on('error', function () {
@@ -24,7 +24,7 @@ gulp.task('slate', ['slate-min'], function () {
     .pipe(gulp.dest('./css'));
 });
 
-gulp.task('slate-min', function () {
+gulp.task('slate-min', ['slate'], function () {
   return gulp.src('./styl/slate.styl')
     .pipe(sourcemaps.init())
     .pipe(stylus())

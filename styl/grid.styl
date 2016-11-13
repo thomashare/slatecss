@@ -4,16 +4,19 @@ if grid == standard
   // set default styles for elements
   nav 
     float: left
-  
-  // get min or max-width from config. Mobile first will set a min-width rather than a max-width.
-  width = mobile-first? 'min-width' : 'max-width'
 
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
     
+    // media query settings
+    min-width-size = screen-size+'-min-width'
+    max-width-size = screen-size+'-max-width'
+    min-width = 'min-width: '+min-width-size
+    max-width = 'max-width: '+max-width-size
+    
     // setup screen sizes for each column size
-    @media screen and ({width}: screen-size+'-width')
-  
+    @media screen and ({min-width})
+
       // set gutter
       gutter = screen-size+'-gutter'
 
@@ -30,28 +33,28 @@ if grid == standard
 
           // set style defaults
           box-sizing: box-sizing
-          
+
           // set margin for each column, as long as it's not set to a no-margin element
           &:not([class*=\'-left\']):not([class*=\'-right\']):not([class*={screen-size}-margin-])
             margin: gutter gutter 0 gutter
-            
+
           // calculate width of columns with no x axis margin removal set
           &:not([class*='-no-margin']):not([class*='-no-x-margin']):not([class*={screen-size}-margin-])
             percentage = (100%/max-columns)*i
             width: 'calc(%s - %s)' % (percentage gutter*2)
-            
+
           // edit width to compensate lack of margin in no-margin elements
           &[class*='-no-margin'],&[class*='-no-x-margin']
             percentage = (100%/max-columns)*i
             width: percentage
-            
+
       // push columns
       for i in (1..max-columns)
         .{screen-size}-push-{i}
-            
+
           // set margin left for a defined amount of columns
           push-percentage = (100%/max-columns)*i
-            
+
           &:not(.no-margin),&:not(.no-x-margin)&:not(.no-y-margin)
             margin-left: push-percentage
           &.no-margin
@@ -60,4 +63,3 @@ if grid == standard
             margin-left: push-percentage
           &.no-y-margin
             margin-left: push-percentage
-            
