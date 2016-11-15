@@ -1,0 +1,13 @@
+# folders
+custom
+img
+docs
+node_modules
+styl
+
+# files
+.gitignore
+.npmignore
+gulpfile.js
+index.html
+yarn.lock
