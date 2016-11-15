@@ -1,6 +1,6 @@
 {
   "name": "slatecss",
-  "version": "1.0.85",
+  "version": "1.0.86",
   "description": "CSS framework for beautiful website creation.",
   "scripts": {
     "build": "gulp default",

@@ -16,7 +16,7 @@ gulp.task('watch', function () {
 gulp.task('slate', function () {
   return gulp.src('./styl/slate.styl')
     .pipe(sourcemaps.init())
-    .pipe(stylus().on('error', function () {
+    .pipe(stylus({ 'include css': true }).on('error', function () {
       this.end();
     }))
     .pipe(autoprefixer())
