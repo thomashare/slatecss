@@ -1,198 +1,252 @@
-// define nav styles
+// define base nav styles
+for screen-size in screen-sizes
+  nav
+    & > *
+      float: left
+    & > .{screen-size}-right
+      float: right
+    
 nav
-  bg = #FFF
-  link-color = rgba(0,0,0,0.5)
-  background-color: bg
   padding: 0
   
+  a
+    transition: padding 0.3s ease, font-size 0.3s ease
   .brand
-    color: link-color    
+    transition: padding 0.3s ease, font-size 0.3s ease, max-height 0.3s ease
+  img
+    transition: margin 0.3s ease, max-height 0.3s ease
+
+  img
+    float: left
+  *:not(.brand)
+    a:not(.brand)
+      float: left
+      text-decoration: none
+
+  .brand  
     img:not([class*='-left']):not([class*='-right']) 
       float: left
     &.has-icon
       :not(img)
         float: left
-        
+
   a
-    color: link-color
     text-decoration: none
-        
+
   *:not(.brand)
     & > a:not(.brand)
-      background-color: bg
       &:hover,&.active
-        background-color: darken(bg, 2%)
-        color: darken(link-color, 2%)
-  
-  // define small nav styles
-  &.sm:not(.md):not(.lg)
-    font-size: 0.8rem
-    img
-      float: left
-      margin-top: 1px
-      max-height: 26px
-    *:not(.brand)
-      a:not(.brand)
-        float: left
-        padding: 6px 10px
         text-decoration: none
-    .brand
-      &.has-icon
-        float: left
-        &:not([class*='font-size-'])
-          font-size: 1.25em
-          &:not([class*='-right'])
-            margin-left: 5px
-          &[class*='-right']
-            margin-right: 5px
-        *:not(img)
-          &:not([class*='font-size-'])
-            font-size: 1em
-          margin-top: 6px
-          &:not([class*='-right'])
-            margin-left: 5px
-          &[class*='-right']
-            margin-right: 5px
-        & > *:not(img):not(a)
-          float: left
-          margin-top: 6px
-      &:not(.has-icon)
-        float: left
-        & > *
-          float: left
-        a
-          &:not([class*='font-size-'])
-            font-size: 1em
+         
+// for each screen size in the screen-sizes array
+for screen-size in screen-sizes
+  for color in colors
+    
+    // media query settings
+    min-width-size = screen-size+'-min-width'
+    max-width-size = screen-size+'-max-width'
+    min-width = 'min-width: '+min-width-size
+    max-width = 'max-width: '+max-width-size
 
-  // define medium nav styles
-  &.md:not(.sm):not(.lg):not(.xl)
-    font-size: 0.9rem
-    img
-      margin-top: 1px
-      max-height: 36px
-    *:not(.brand)
-      a:not(.brand)
-        float: left
-        font-size: 1em
-        padding: 11px
-        text-decoration: none
-    .brand
-      &.has-icon
-        float: left
-        &:not([class*='font-size-'])
-          font-size: 1.5em
-          &:not([class*='-right'])
-            margin-left: 5px
-          &[class*='-right']
-            margin-right: 5px
-        *:not(img)
-          &:not([class*='font-size-'])
-            font-size: 1em
-          margin-top: 12px
-          &:not([class*='-right'])
-            margin-left: 5px
-          &[class*='-right']
-            margin-right: 5px
-        & > *:not(img):not(a)
-          float: left
-          margin-top: 11px
-      &:not(.has-icon)
-        float: left
-        & > *
-          float: left
+    // setup screen sizes for each column size
+    @media screen and ({min-width})
+      nav.{screen-size}-bg-{color}
+        bg = color+'-color'
+        link-color = dark(darken(bg, 15%)) ? rgba(255,255,255,0.85) : rgba(0,0,0,0.8)
+        background-color: bg
+
+        .brand
+          color: link-color    
+
         a
-          &:not([class*='font-size-'])
-            font-size: 1.5em
-        
-  // define large nav styles
-  &.lg:not(.sm):not(.md):not(.xl)
-    font-size: 0.9rem
-    img
-      margin-top: 5px
-      max-height: 45px
-    *:not(.brand)
-      & > a:not(.brand)
-        float: left
-        font-size: 1.03em
-        padding: 20px
-        text-decoration: none
-    a.brand:not(.has-icon)
-      &:not([class*='font-size-'])
-        font-size: 1.5em
-      margin-top: 20px
-    .brand
-      &:not([class*='margin-x-'])
-        margin-left: 5px
-        margin-right: 5px
-      &.has-icon
-        float: left
-        &:not([class*='font-size-'])
-          font-size: 1.5em
-        *:not(img)
+          color: link-color
+
+        *:not(.brand)
+          & > a:not(.brand)
+            background-color: bg
+            &:hover,&.active
+              background-color: dark(darken(bg, 15%)) ? lighten(bg, 8%) : darken(bg, 2%) 
+              color: dark(darken(bg, 15%)) ? lighten(link-color, 8%) : darken(link-color, 2%)
+
+
+// for each screen size in the screen-sizes array
+for screen-size in screen-sizes
+
+  // media query settings
+  min-width-size = screen-size+'-min-width'
+  max-width-size = screen-size+'-max-width'
+  min-width = 'min-width: '+min-width-size
+  max-width = 'max-width: '+max-width-size
+
+  // setup screen sizes for each column size
+  @media screen and ({min-width})
+
+    // define small nav styles
+    &.{screen-size}-sm:not(.{screen-size}-md):not(.{screen-size}-lg):not(.{screen-size}-xl)
+      font-size: 0.8rem
+      img
+        margin-top: 1px
+        max-height: 26px
+      *:not(.brand)
+        a:not(.brand)
+          padding: 6px 10px
+          text-decoration: none
+      .brand
+        &.has-icon
+          float: left
           &:not([class*='font-size-'])
             font-size: 1.25em
-          margin-top: 12px
-          &:not([class*='-right'])
-            margin-left: 10px
-          &[class*='-right']
-            margin-right: 5px
-          & > a
-            padding: 20px 5px
-        & > *:not(img):not(a)
+            &:not([class*='-right'])
+              margin-left: 5px
+            &[class*='-right']
+              margin-right: 5px
+          *:not(img)
+            &:not([class*='font-size-'])
+              font-size: 1em
+            margin-top: 6px
+            &:not([class*='-right'])
+              margin-left: 5px
+            &[class*='-right']
+              margin-right: 5px
+          & > *:not(img):not(a)
+            float: left
+            margin-top: 6px
+        &:not(.has-icon)
           float: left
-          margin-top: 20px
-      &:not(.has-icon)
-        float: left
-        & > *
+          & > *
+            float: left
+          a
+            &:not([class*='font-size-'])
+              font-size: 1em
+
+    // define medium nav styles
+    &.{screen-size}-md:not(.{screen-size}-sm):not(.{screen-size}-lg):not(.{screen-size}-xl)
+      font-size: 0.9rem
+      img
+        margin-top: 1px
+        max-height: 36px
+      *:not(.brand)
+        a:not(.brand)
           float: left
-        a
+          font-size: 1em
+          padding: 11px
+          text-decoration: none
+      .brand
+        &.has-icon
+          float: left
           &:not([class*='font-size-'])
             font-size: 1.5em
-          padding: 20px 5px
+            &:not([class*='-right'])
+              margin-left: 5px
+            &[class*='-right']
+              margin-right: 5px
+          *:not(img)
+            &:not([class*='font-size-'])
+              font-size: 1em
+            margin-top: 12px
+            &:not([class*='-right'])
+              margin-left: 5px
+            &[class*='-right']
+              margin-right: 5px
+          & > *:not(img):not(a)
+            float: left
+            margin-top: 11px
+        &:not(.has-icon)
+          float: left
+          & > *
+            float: left
+          a
+            &:not([class*='font-size-'])
+              font-size: 1.5em
 
-  // define large nav styles
-  &.xl:not(.sm):not(.md):not(.lg)
-    font-size: 0.9rem
-    img
-      margin-top: 8px
-      max-height: 50px
-    *:not(.brand)
-      & > a:not(.brand)
-        float: left
-        font-size: 1.08em
-        padding: 25px 20px
-        text-decoration: none
-    a.brand:not(.has-icon)
-      &:not([class*='font-size-'])
-        font-size: 1.7em
-      margin-bottom: 25px
-      margin-top: 25px
-      &:not([class*='margin-x-'])
-        margin-left: 15px
-        margin-right: 5px
-      &.has-icon
-        float: left
+    // define large nav styles
+    &.{screen-size}-lg:not(.{screen-size}-sm):not(.{screen-size}-md):not(.{screen-size}-xl)
+      font-size: 0.9rem
+      img
+        margin-top: 5px
+        max-height: 45px
+      *:not(.brand)
+        & > a:not(.brand)
+          float: left
+          font-size: 1.03em
+          padding: 20px
+          text-decoration: none
+      a.brand:not(.has-icon)
         &:not([class*='font-size-'])
-          font-size: 1.25em
-        *:not(img)
+          font-size: 1.5em
+        margin-top: 20px
+      .brand
+        &:not([class*='margin-x-'])
+          margin-left: 5px
+          margin-right: 5px
+        &.has-icon
+          float: left
           &:not([class*='font-size-'])
-            font-size: 1.7em
-          margin-top: 17px
-          &:not([class*='-right'])
-            margin-left: 10px
-          &[class*='-right']
-            margin-right: 5px
-          & > a
+            font-size: 1.5em
+          *:not(img)
+            &:not([class*='font-size-'])
+              font-size: 1.25em
+            margin-top: 12px
+            &:not([class*='-right'])
+              margin-left: 10px
+            &[class*='-right']
+              margin-right: 5px
+            & > a
+              padding: 20px 5px
+          & > *:not(img):not(a)
+            float: left
+            margin-top: 20px
+        &:not(.has-icon)
+          float: left
+          & > *
+            float: left
+          a
+            &:not([class*='font-size-'])
+              font-size: 1.5em
+            padding: 20px 5px
+
+    // define large nav styles
+    &.{screen-size}-xl:not(.{screen-size}-sm):not(.{screen-size}-md):not(.{screen-size}-lg)
+      font-size: 0.9rem
+      img
+        margin-top: 8px
+        max-height: 50px
+      *:not(.brand)
+        & > a:not(.brand)
+          float: left
+          font-size: 1.08em
+          padding: 25px 20px
+          text-decoration: none
+      a.brand:not(.has-icon)
+        &:not([class*='font-size-'])
+          font-size: 1.7em
+        margin-bottom: 25px
+        margin-top: 25px
+        &:not([class*='margin-x-'])
+          margin-left: 15px
+          margin-right: 5px
+        &.has-icon
+          float: left
+          &:not([class*='font-size-'])
+            font-size: 1.25em
+          *:not(img)
+            &:not([class*='font-size-'])
+              font-size: 1.7em
+            margin-top: 17px
+            &:not([class*='-right'])
+              margin-left: 10px
+            &[class*='-right']
+              margin-right: 5px
+            & > a
+              padding: 25px 5px
+          & > *:not(img):not(a)
+            float: left
+            margin-top: 25px
+        &:not(.has-icon)
+          float: left
+          & > *
+            float: left
+          a
+            &:not([class*='font-size-'])
+              font-size: 1.7em
             padding: 25px 5px
-        & > *:not(img):not(a)
-          float: left
-          margin-top: 25px
-      &:not(.has-icon)
-        float: left
-        & > *
-          float: left
-        a
-          &:not([class*='font-size-'])
-            font-size: 1.7em
-          padding: 25px 5px
-        

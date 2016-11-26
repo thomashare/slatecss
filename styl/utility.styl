@@ -9,6 +9,14 @@
   opacity: 0.5
 .show
   opacity: 1
+  
+// break element to clear from both sides
+[class*='break']
+  display: block
+.break, .break-left
+  clear: left
+.break-right
+  clear: right
 
 // element effects
 .box-glow
@@ -76,6 +84,7 @@ for screen-size in screen-sizes
 // item-pad and link-pad parent classes  
 for screen-size in screen-sizes
   
+  // element padding
   // one level padding
   for level-1 in (0..max-padding)
     // item padding
@@ -93,5 +102,20 @@ for screen-size in screen-sizes
           padding: level-1*1px level-2*1px
       .{screen-size}-link-pad-{level-1}-{level-2}
         a
-          padding: level-1*1px level-2*1px
-          
+          padding: level-1*1px level-2*1px    
+
+  // pushing elements
+  for i in (1..max-columns)
+    .{screen-size}-push-{i}
+
+      // set margin left for a defined amount of columns
+      push-percentage = (100%/max-columns)*i
+
+      &:not(.no-margin),&:not(.no-x-margin)&:not(.no-y-margin)
+        margin-left: push-percentage
+      &.no-margin
+        margin-left: push-percentage
+      &.no-x-margin
+        margin-left: push-percentage
+      &.no-y-margin
+        margin-left: push-percentage

@@ -50,19 +50,3 @@ if grid == standard
             
           // set transition effect for resizing
           transition: all 0.3s ease
-
-      // push columns
-      for i in (1..max-columns)
-        .{screen-size}-push-{i}
-
-          // set margin left for a defined amount of columns
-          push-percentage = (100%/max-columns)*i
-
-          &:not(.no-margin),&:not(.no-x-margin)&:not(.no-y-margin)
-            margin-left: push-percentage
-          &.no-margin
-            margin-left: push-percentage
-          &.no-x-margin
-            margin-left: push-percentage
-          &.no-y-margin
-            margin-left: push-percentage

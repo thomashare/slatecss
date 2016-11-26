@@ -17,7 +17,7 @@ for color-name in colors
     color: color-name+'-color'
 
 // text elements that aren't part of a custom element
-div:not(.nav):not(.sidebar)
+div:not(.nav):not(.sidebar):not(.docs)
   p,li
     &:not([class*='font-size-'])
       font-size: 0.8rem
@@ -27,8 +27,11 @@ div:not(.nav):not(.sidebar)
     
 // heading text default styles
 for i in (1..6)
+  &:not([class*='font-size'])
+    h{i}
+      &:not([class*='font-size'])
+        font-size: initial
   h{i}
-    font-size: initial
     font-weight: normal
     margin: 0
     
