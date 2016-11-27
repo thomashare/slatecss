@@ -8,6 +8,9 @@
     "watch": "gulp watch",
     "test": "mocha"
   },
+  "engines": {
+    "node": ">= 4.2.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thomashare/slatecss.git"
