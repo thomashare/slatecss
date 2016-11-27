@@ -65,7 +65,7 @@ This will give extra-small (xs) devices such as smaller phones, a column size of
 
 ### Nav
 
-> \# = size of nav. Size settings are 'sm', 'md', and 'lg'</p>
+**\#** = size of nav. Size settings are 'sm', 'md', and 'lg'</p>
 
 **SS-nav-#**: Sets the size of the nav for each specified screen size.</p>
 
