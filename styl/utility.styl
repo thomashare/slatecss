@@ -84,38 +84,47 @@ for screen-size in screen-sizes
 // item-pad and link-pad parent classes  
 for screen-size in screen-sizes
   
-  // element padding
-  // one level padding
-  for level-1 in (0..max-padding)
-    // item padding
-    .{screen-size}-item-pad-{level-1}
-      li
-        padding: level-1*1px
-    .{screen-size}-link-pad-{level-1}
-      a 
-        padding: level-1*1px
+  // media query settings
+  min-width-size = screen-size+'-min-width'
+  max-width-size = screen-size+'-max-width'
+  min-width = 'min-width: '+min-width-size
+  max-width = 'max-width: '+max-width-size
 
-    // two level padding
-    for level-2 in (0..max-padding)
-      .{screen-size}-item-pad-{level-1}-{level-2}
-        li 
-          padding: level-1*1px level-2*1px
-      .{screen-size}-link-pad-{level-1}-{level-2}
-        a
-          padding: level-1*1px level-2*1px    
+  // setup screen sizes for each column size
+  @media screen and ({min-width})
 
-  // pushing elements
-  for i in (1..max-columns)
-    .{screen-size}-push-{i}
+    // element padding
+    // one level padding
+    for level-1 in (0..max-padding)
+      // item padding
+      .{screen-size}-item-pad-{level-1}
+        li
+          padding: level-1*1px
+      .{screen-size}-link-pad-{level-1}
+        a 
+          padding: level-1*1px
 
-      // set margin left for a defined amount of columns
-      push-percentage = (100%/max-columns)*i
+      // two level padding
+      for level-2 in (0..max-padding)
+        .{screen-size}-item-pad-{level-1}-{level-2}
+          li 
+            padding: level-1*1px level-2*1px
+        .{screen-size}-link-pad-{level-1}-{level-2}
+          a
+            padding: level-1*1px level-2*1px    
 
-      &:not(.no-margin),&:not(.no-x-margin)&:not(.no-y-margin)
-        margin-left: push-percentage
-      &.no-margin
-        margin-left: push-percentage
-      &.no-x-margin
-        margin-left: push-percentage
-      &.no-y-margin
-        margin-left: push-percentage
+    // pushing elements
+    for i in (1..max-columns)
+      .{screen-size}-push-{i}
+
+        // set margin left for a defined amount of columns
+        push-percentage = (100%/max-columns)*i
+
+        &:not(.no-margin),&:not(.no-x-margin)&:not(.no-y-margin)
+          margin-left: push-percentage
+        &.no-margin
+          margin-left: push-percentage
+        &.no-x-margin
+          margin-left: push-percentage
+        &.no-y-margin
+          margin-left: push-percentage

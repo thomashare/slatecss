@@ -4,6 +4,9 @@ if grid == standard
   // set default styles for elements
   nav 
     float: left
+    
+  div
+    transition: width 0.3s ease
 
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
@@ -47,6 +50,3 @@ if grid == standard
           &[class*='-no-margin'],&[class*='-no-x-margin']
             percentage = (100%/max-columns)*i
             width: percentage
-            
-          // set transition effect for resizing
-          transition: all 0.3s ease

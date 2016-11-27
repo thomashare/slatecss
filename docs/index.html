@@ -4,98 +4,103 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slate CSS Demo</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://cdn.rawgit.com/thomashare/slate.css/master/css/slate.min.css" rel="stylesheet">
   </head>
-  <body class="dev">
-   
-    <nav class="xl xs-12 xs-no-margin">
-      <div class="xs-left">
-        <img alt="Slate css logo" class="no-pad box-glow xs-margin-2 radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
-        <a class="brand no-x-padding" href="#"><span class="font-family-Pacifico">Slate</span></a>
-      </div>
-      <div class="xs-right">
-        <a class="active" href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Services</a>
-        <a href="#">Contact Us</a>
-      </div>
-    </nav>
-    
-    <div class="xs-12 bg-tertiary xs-pad-top-2 lg-pad-top-5 xs-text-center">
-      <img alt="Slate css logo" class="no-pad box-glow xs-margin-2 radius-10" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png">
-      <div class="bg-transparent xs-pad-1 xs-text-center sm-text-left">
-        <span class="font-size-15 block text-glow">Slate</span>
-        <span class="faded font-size-5 block text-glow no-margin">The Easy To Work With CSS Framework</span>
-      </div>       
-    </div>
+  <body>
+    <div class="xs-12 md-8 lg-6 xl-5 md-push-2 lg-push-3">
 
-    <div class="sidebar xs-12 md-3 lg-3 xl-2 xs-link-pad-12">
-      <ul>
-        <li><a class="active" href="#">Introduction</a></li>
-        <li><a href="#">Nav Menus</a></li>
-        <li><a href="#">Columns</a></li>
-        <li><a href="#">Fonts</a></li>
-        <li><a href="#">Text Effects</a></li>
-        <li><a href="#">Margins and Padding</a></li>
-      </ul>
-    </div>
-    <div class="bg-default xs-12 md-9 xl-10">
-      
-      <p class="font-size-4 xs-12 xs-text-center">key terms: SS=screen size, X=number range</p>
-     
-      <h2 class="font-size-5 xs-12 xs-text-center">Slate is the easy to work css framework for building responsive, gluten-free, developer friendly websites.</h2>
+      <div class="xs-12">
+        <img alt="Slate.css icon" class="xs-left" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png" style="width: 58px;">
+        <h1 class="font-size-12 xs-margin-0-1">Slate</h1>
+        <h2 class="xs-margin-2-0 break">The easy to modify framework that works with you.</h2>
+      </div>
       
       <div class="xs-12">
-        <div class="md-9 lg-7 no-margin">
-          <h2 class="font-size-6">The Basics</h2>
-
-          <p class="font-size-5">columns:</p>
-          <p class="no-margin">xs=extra-small, sm=small, md=medium, lg=large and xl=extra-large</p>
-          <div class="note-primary">
-            <p>By default, columns range from 0-12. 0 meaning hidden, 12 meaning full width. Each column level is equal to 100% of screen width, divided by the 'max-columns' setting. By default 'max-columns' is set to 12. Ex: 'xs-4 sm-8 md-12'.</p>
-            <p>By giving the 'xs' screen size a level of 0, the element on that specific screen size will become hidden. Alternatively, you can use 'xs-hide' or 'md-hide' etc. In addition, each column level will increase by 100% / 'max-columns'.</p>
-          </div>
-
-          <p><span class="font-size-5">Nav Menus:</span></p>
-          <p class="no-margin">sm=small nav menu, md=medium, lg=large</p>
-          <p class="no-margin">ex: &lt;nav class="sm"&gt;</p>
-          <p class="note-primary">Use by adding the 'sm' 'md' 'lg' or 'xl' class to your nav element. These classes help define the importance of a nav.</p>
-
-          <p><span class="font-size-5">Fonts:</span></p>
-          <p class="no-margin">font-size: format 'font-size-X'</p>
-          <p class="no-margin">ex: &lt;div class="font-size-5"&gt;</p>
-          <p>'X' represents a level amount. Each level of font size is incremented by 0.25rem and levels go up to 25.</p>
-          <p class="note-primary">Font sizes help define importance in textual elements. Use 'font-size-2' to give a smaller font size or 'font-size-7' to give a larger font size to an element.</p>
-
-          <p><span class="font-size-5">Text Effects:</span></p>
-          <ul>
-            <li>text-glow: Adds a light text shadow to text elements in order to help better distinguish dark text on a slightly dark or grey background.</li>
-            <li>text-shadow: Adds a dark text shadow to text elements in order to help better distinguish light text on a lighter background.</li>
-          </ul>
-
-          <p><span class="font-size-5">Margins:</span> in format 'SS-margin-X'</p>
-          <p class="no-margin">ex: &lt;div class="xs-margin-2"&gt;</p>
-          <p>'X' represents a level amount. Each level of margin is incremented by 5px and levels go up to 25.</p>
-          <div class="note-primary">
-            <p>Margins help space out your content. Use 'xs-margin-2' to give a margin level of two all around the object. Use 'xs-margin-2' to give a margin level of two on the top and bottom of the object. Take it a step further and add an extra -3 to that class to give a margin level of three on the left and right of the object (Ex: 'xs-margin-2-3').</p>
-            <p>Specify top, bottom, left or right margin with class  (Ex: 'xs-margin-top-3').</p>
-            <p>Don't want any margin? Use class (Ex: 'xs-no-margin'). *Useful when a full-screen navigation menu is desired.</p>
-          </div>
-          <p class="note-secondary">Margins range from 1-20.</p>
-
-          <p><span class="font-size-5">Padding:</span> in format 'SS-pad-X'</p>
-          <p class="no-margin">ex: &lt;div class="xs-pad-2"&gt;</p>
-          <div class="note-primary">
-            <p>As with margins, this class adds a padding to an object in a similar fashion of 'SS-pad-X-X'. Padding levels go up to 25.</p>
-            <p class="no-margin">Specify top, bottom, left or right padding with class  (Ex: 'xs-pad-top-3').</p>
-            <p>Don't want any padding? Use class (Ex: 'xs-no-padding').</p>
-          </div>
+        <span class="xs-left md-margin-2-0">Copy the CDN link:</span>
+        <div class="xs-12 xs-pad-1-0 md-pad-0-0 xs-no-margin">
+          <input class="xs-12 sm-12 xs-pad-1 xs-no-margin break" onclick="select()" type="text" value="https://cdn.rawgit.com/thomashare/slate.css/master/css/slate.min.css">
         </div>
       </div>
+      <div class="xs-12">
+        <a class="btn-primary xs-margin-2-0" download href="https://github.com/thomashare/slate.css/raw/master/css/slate.min.css"><i class="fa fa-download"></i> Download Slate.css v1</a>
+      </div>
       
-      <p class="xs-text-center xs-12 no-margin font-size-3">&copy; Copyright 2016 Slatecss. All rights reserved.</p>
+      <div class="xs-12">
+
+        <div class="section">
+          <p class="title font-size-6"><i class="fa fa-tablet"></i> Screen sizes</p>
+          <div class="description">
+            <p>Default device screen sizes:</p>
+            <ul>
+              <li>xs = extra-small (0px up to 543px)</li>
+              <li>sm = small (544px up to 767px)</li>
+              <li>md = medium (768px up to 992px)</li>
+              <li>lg = large (992px up to 1139px)</li>
+              <li>xl = extra-large (1140px and up)</li>
+            </ul>
+
+            <p>Slate.css is mobile-first with a standard floating grid. The default maximum column size value is 12 (or 100%) for the specified device screen size.</p>
+            <p>Note: Because Slate is mobile-first, setting the columns 'xs' column size value will affect all screen sizes up until the next screen-size column size value is set.</p>
+            <p class="note-primary">Ex: If 'xs-4' is set, medium devices up to extra-large devices will have a column size value of 4 also. If you set 'xs-4' and 'lg-6', small and medium devices will retain the size of 4, while xl and up will retain the size of 6.</p>
+            <p>Column sizes are set by screen size and value</p>
+            <p class="note-primary">Ex: &lt;div class='xs-12 md-6 xl-4'&gt;</p>
+            <p class="note-primary">This will give extra-small (xs) devices such as smaller phones, a column size of 12. While medium screen size devices will have a column size of 6 and an extra-large device will have a column size of 4.</p>
+          </div>
+        </div>
+        <div class="section">
+          <p class="title font-size-6"><i class="fa fa-cogs"></i> Utilities</p>
+          <div class="description">
+            <p>break or break-left: Will force an element to clear the current line and drop to the left of its parent.</p>
+            <p>break-right: Will force an element to clear the current line and drop to the right of its parent.</p>
+            <p>push: Columns can be pushed from the left a set amount of columns.</p>
+            <p class="note-primary">Ex: 'md-push-2' will push the column over 2 columns on medium size devices and up.</p>
+            <p>pull: Columns can be pulled left and right for each screen size.</p>
+            <p class="note-primary">Ex: 'md-right lg-left' will cause the element to pull to the right of its parent on medium size devices, while large screen sizes and up will pull the element back to the left of its parent.</p>
+          </div>
+        </div>
+        <div class="section">
+          <p class="title font-size-6"><i class="fa fa-code"></i> Margins</p>
+          <div class="description">
+            <p class="note-tertiary">SS = Screen Size, X = X-axis (left and right), Y = Y-axis (top and bottom)</p>
+            <p class="note-tertiary"># = level of margin. By default the max margin level is 25.</p>
+            <p>SS-margin-Y-X: Adds a specified level of margin to the top and bottom and left and right of an element. Y and X are equal to the level set, times the set margin-step. By default, the margin step is equal to 5px.</p>
+            <p class="note-primary">Ex: xs-margin-2-8 will give the element a margin of 10px on the top and bottom, and a margin of 40px on its left and right sides.</p>
+            <p class="note-primary">Margins from xs and up will be affected, unless a larger device margin size is set.</p>
+            <p>SS-margin-x-#: Adds a specified level of margin to the left and right of an element.</p>
+            <p class="note-primary">Ex: 'xs-margin-y-5' will add a 25px margin to the top and bottom of the element on extra small devices and up.</p>
+            <p>SS-margin-y-#: Adds a specified level of margin to the top and bottom of an element.</p>
+          </div>
+        </div>
+        <div class="section">
+          <p class="title font-size-6"><i class="fa fa-code"></i> Padding</p>
+          <div class="description">
+           <p class="note-tertiary"># = level of padding. By default the max padding level is 25.</p>
+            <p>SS-pad-Y-X: Adds a specified level of padding to the top and bottom and left and right of an element. Y and X are equal to the level set, times the set margin-step. By default, the pad step is equal to 5px.</p>
+            <p class="note-primary">Ex: xs-pad-2-0 lg-pad-3-2</p>
+            <p class="note-primary xs-pad-y-1">'xs-pad-2-0' will give the element a padding of 10px on the top and bottom, and a padding of 0px on its left and right sides. Because there is a padding setting for large devices, the element will only hold the setting for extra-small devices until it hits the large device.</p>
+            <p class="note-primary">'lg-pad-3-2' will give the element a padding of 15px on the top and bottom, and a padding of 10px on its left and right sides.</p>
+            <p>SS-pad-x-#: Adds a specified level of padding to the left and right of an element.</p>
+            <p>SS-pad-y-#: Adds a specified level of padding to the top and bottom of an element.</p>
+          </div>
+        </div>
+        <div class="section">
+          <p class="title font-size-6"><i class="fa fa-bars"></i> Nav</p>
+          <div class="description">
+           <p class="note-tertiary"># = size of nav. Size settings are 'sm', 'md', and 'lg'</p>
+            <p>SS-nav-#: Sets the size of the nav for each specified screen size.</p>
+          </div>
+        </div>
+        <div class="section">
+          <p class="title font-size-6"><i class="fa fa-exclamation-circle"></i> Keep in mind</p>
+          <div class="description">
+            <p>slate.css is currently in Beta development. Use at your own risk.</p>
+            <p>License MIT</p>
+          </div>
+        </div>
+        
+      </div>
       
     </div>
-    
   </body>
 </html>
