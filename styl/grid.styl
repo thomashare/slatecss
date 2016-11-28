@@ -17,11 +17,10 @@ if grid == standard
     min-width = 'min-width: '+min-width-size
     max-width = 'max-width: '+max-width-size
     
+    gutter = default-gutter
+
     // setup screen sizes for each column size
     @media screen and ({min-width})
-
-      // set gutter
-      gutter = screen-size+'-gutter'
 
       // set gutters for all required containers. Due to being standard grid, set the column to float
       [class*={screen-size}-]
@@ -33,6 +32,9 @@ if grid == standard
       // for each column in screen size
       for i in (1..max-columns)
         .{screen-size}-{i}
+
+          // set gutter
+          gutter = screen-size+'-gutter'
 
           // set style defaults
           box-sizing: box-sizing
