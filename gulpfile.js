@@ -27,7 +27,7 @@ gulp.task('slate', function () {
 gulp.task('slate-min', ['slate'], function () {
   return gulp.src('./styl/slate.styl')
     .pipe(sourcemaps.init())
-    .pipe(stylus())
+    .pipe(stylus({ 'include css': true }))
     .pipe(autoprefixer())
     .pipe(cssnano())
     .pipe(rename({
