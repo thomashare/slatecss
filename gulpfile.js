@@ -1,11 +1,11 @@
 'use strict';
 
-var gulp = require('gulp');
-var stylus = require('gulp-stylus');
-var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
+let gulp = require('gulp');
+let stylus = require('gulp-stylus');
+let autoprefixer = require('gulp-autoprefixer');
+let cssnano = require('gulp-cssnano');
+let rename = require('gulp-rename');
+let sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('default', ['slate-min']);
 
