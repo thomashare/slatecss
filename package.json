@@ -5,7 +5,11 @@
   "scripts": {
     "build": "gulp default",
     "slate": "gulp slate",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">= 4.2.0"
   },
   "repository": {
     "type": "git",
@@ -36,6 +40,12 @@
     "gulp-cssnano": "^2.1.2",
     "gulp-rename": "^1.2.2",
     "gulp-sourcemaps": "^1.6.0",
+    "gulp-stylus": "^2.6.0",
     "normalize.css": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "fs-extra": "^1.0.0",
+    "mocha": "^3.2.0"
   }
 }
