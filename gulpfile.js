@@ -7,7 +7,7 @@ let cssnano = require('gulp-cssnano');
 let rename = require('gulp-rename');
 let sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', ['slate','slate-min']);
+gulp.task('default', ['slate-min', 'slate']);
 
 gulp.task('watch', function () {
   return gulp.watch(['styl/**/*.styl', 'custom/**/*.styl'], ['slate']);
