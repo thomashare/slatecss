@@ -72,4 +72,5 @@ This will give extra-small (xs) devices such as smaller phones, a column size of
 ### Keep in mind
 
 slate.css is currently in Beta development. Use at your own risk.
+
 License MIT
