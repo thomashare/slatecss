@@ -46,6 +46,8 @@ for screen-size in screen-sizes
             width: 'calc(%s / %s)' % (100% divided)
 
         &.masonry
+          &:before
+            display: none !important
           column-count: divided
           column-gap: gutter
           
