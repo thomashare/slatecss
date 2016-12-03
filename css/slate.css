@@ -1088,7 +1088,7 @@ div {
     width: 100%;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   [class*=xl-] {
     float: left;
     min-height: 5px;
@@ -4061,7 +4061,7 @@ div {
     width: 100%;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .xl-divided-1:not(.masonry) {
     text-align: center;
   }
@@ -5548,7 +5548,7 @@ nav *:not(.brand) > a:not(.brand).active {
     color: rgba(0,0,0,0.8);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   nav.xl-bg-primary {
     background-color: #2196f3;
   }
@@ -5567,7 +5567,7 @@ nav *:not(.brand) > a:not(.brand).active {
     color: rgba(255,255,255,0.85);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   nav.xl-bg-secondary {
     background-color: #9c27b0;
   }
@@ -5586,7 +5586,7 @@ nav *:not(.brand) > a:not(.brand).active {
     color: rgba(255,255,255,0.85);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   nav.xl-bg-tertiary {
     background-color: #eee;
   }
@@ -5605,7 +5605,7 @@ nav *:not(.brand) > a:not(.brand).active {
     color: rgba(0,0,0,0.8);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   nav.xl-bg-alert {
     background-color: #f44336;
   }
@@ -5624,7 +5624,7 @@ nav *:not(.brand) > a:not(.brand).active {
     color: rgba(255,255,255,0.85);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   nav.xl-bg-warning {
     background-color: #ffc107;
   }
@@ -5643,7 +5643,7 @@ nav *:not(.brand) > a:not(.brand).active {
     color: rgba(255,255,255,0.85);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   nav.xl-bg-success {
     background-color: #4caf50;
   }
@@ -5662,7 +5662,7 @@ nav *:not(.brand) > a:not(.brand).active {
     color: rgba(255,255,255,0.85);
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   nav.xl-bg-default {
     background-color: #fff;
   }
@@ -6565,7 +6565,7 @@ nav *:not(.brand) > a:not(.brand).active {
     font-size: 1.7em;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .xl-sm:not(.xl-md):not(.xl-lg):not(.xl-xl) {
     font-size: 0.8rem;
   }
@@ -7050,42 +7050,42 @@ div:not(.nav):not(.sidebar):not(.docs) li:not([class*='font-size-']) {
   letter-spacing: 0.01em;
 }
 :not([class*='font-size']) h1:not([class*='font-size']) {
-  font-size: initial;
+  font-size: inherit;
 }
 h1 {
   font-weight: normal;
   margin: 0;
 }
 :not([class*='font-size']) h2:not([class*='font-size']) {
-  font-size: initial;
+  font-size: inherit;
 }
 h2 {
   font-weight: normal;
   margin: 0;
 }
 :not([class*='font-size']) h3:not([class*='font-size']) {
-  font-size: initial;
+  font-size: inherit;
 }
 h3 {
   font-weight: normal;
   margin: 0;
 }
 :not([class*='font-size']) h4:not([class*='font-size']) {
-  font-size: initial;
+  font-size: inherit;
 }
 h4 {
   font-weight: normal;
   margin: 0;
 }
 :not([class*='font-size']) h5:not([class*='font-size']) {
-  font-size: initial;
+  font-size: inherit;
 }
 h5 {
   font-weight: normal;
   margin: 0;
 }
 :not([class*='font-size']) h6:not([class*='font-size']) {
-  font-size: initial;
+  font-size: inherit;
 }
 h6 {
   font-weight: normal;
@@ -7182,7 +7182,7 @@ code pre:not([class*='-margin-']) {
     text-align: center;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .xl-text-left {
     text-align: left;
   }
@@ -7351,7 +7351,7 @@ code pre:not([class*='-margin-']) {
     display: block;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .xl-left {
     float: left;
   }
@@ -7377,7 +7377,7 @@ code pre:not([class*='-margin-']) {
 *:not(.sidebar) [class*='-text-'] > *:not(.block):not(.inline) {
   display: inline-block;
 }
-*:not(.sidebar) [class*='-text-'] > *:not(.no-pad) {
+*:not(.sidebar) [class*='-text-'] > *:not([class*='pad']) {
   padding: 0;
 }
 .inline {
@@ -24869,7 +24869,7 @@ code pre:not([class*='-margin-']) {
     margin-left: 100%;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .xl-item-pad-0 li {
     padding: 0px;
   }
@@ -47587,7 +47587,7 @@ code pre:not([class*='-margin-']) {
     margin: 0;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .xl-margin-x-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -70486,7 +70486,7 @@ code pre:not([class*='-margin-']) {
     padding-top: 125px;
   }
 }
-@media screen and (min-width: 1140px) {
+@media screen and (min-width: 1200px) {
   .xl-pad-x-0 {
     padding-left: 0px;
     padding-right: 0px;
