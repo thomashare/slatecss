@@ -13,24 +13,31 @@ for screen-size in screen-sizes
     gutter = screen-size+'-gutter'
     
     for x in (0..max-margin)
+      
+      .{screen-size}-margin-{x}
+          margin-bottom: x*margin-step
+          margin-left: x*margin-step
+          margin-right: x*margin-step
+          margin-top: x*margin-step
+          
       .{screen-size}-margin-x-{x}
           margin-left: x*margin-step
           margin-right: x*margin-step
           
-      for y in (0..25)
+      for y in (1..max-margin)
         .{screen-size}-margin-{x}
           margin: x*margin-step
 
         .{screen-size}-margin-{x}-{y}
           margin: x*margin-step y*margin-step
           
-      // top bottom left and right margin specifics
-      sides = ( top right bottom left )
-      for side in sides
-        .{screen-size}-margin-{side}-{x}
-          margin-{side}: x*margin-step
-          
-    for y in (0..25)
+    // top bottom left and right margin specifics
+    sides = ( top right bottom left )
+    for side in sides
+      .{screen-size}-margin-{side}-{x}
+        margin-{side}: x*margin-step
+
+    for y in (0..max-margin)
         .{screen-size}-margin-y-{y}
           margin-bottom: y*margin-step
           margin-top: y*margin-step

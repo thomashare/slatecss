@@ -31,7 +31,8 @@ if grid == standard
 
       // for each column in screen size
       for i in (1..max-columns)
-        .{screen-size}-{i}
+        .{screen-size}-{i}     
+          display: inline-block
 
           // set gutter
           gutter = screen-size+'-gutter'
@@ -40,15 +41,33 @@ if grid == standard
           box-sizing: box-sizing
 
           // set margin for each column, as long as it's not set to a no-margin element
-          &:not([class*=\'-left\']):not([class*=\'-right\']):not([class*={screen-size}-margin-])
-            margin: gutter gutter 0 gutter
+          &:not([class*=-left]):not([class*=-right]):not([class*={screen-size}-margin])
+            margin: gutter gutter gutter gutter
 
           // calculate width of columns with no x axis margin removal set
-          &:not([class*='-no-margin']):not([class*='-no-x-margin']):not([class*={screen-size}-margin-])
+          &:not([class*=-no-margin]):not([class*=-no-x-margin]):not([class*={screen-size}-margin])
             percentage = (100%/max-columns)*i
             width: 'calc(%s - %s)' % (percentage gutter*2)
 
           // edit width to compensate lack of margin in no-margin elements
-          &[class*='-no-margin'],&[class*='-no-x-margin']
+          &[class*=-no-margin],&[class*=-no-x-margin]
             percentage = (100%/max-columns)*i
             width: percentage
+          
+    // setup screen sizes for each column size
+    @media screen and ({min-width}) and ({max-width})
+
+      // for each column in screen size
+      for i in (1..max-columns)
+        .{screen-size}-{i}
+
+          &:not([class*=-no-margin]):not([class*=-no-x-margin])
+            for x in (0..max-margin)
+              
+              &[class*={screen-size}-margin-{x}], &.{screen-size}-margin-x-{x}
+                percentage = (100%/max-columns)*i
+                gutter = x*margin-step
+                &:not([class*=-left]):not([class*=-right])
+                  margin: gutter gutter gutter gutter
+                width: 'calc(%s - %s)' % (percentage gutter*2+10)
+                
