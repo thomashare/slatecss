@@ -61,13 +61,15 @@ if grid == standard
       for i in (1..max-columns)
         .{screen-size}-{i}
 
+          // if a 'no-margin' class is not set, continue
           &:not([class*=-no-margin]):not([class*=-no-x-margin])
             for x in (0..max-margin)
               
+              // set width to compensate for the set margin space
               &[class*={screen-size}-margin-{x}], &.{screen-size}-margin-x-{x}
                 percentage = (100%/max-columns)*i
                 gutter = x*margin-step
                 &:not([class*=-left]):not([class*=-right])
                   margin: gutter gutter gutter gutter
-                width: 'calc(%s - %s)' % (percentage gutter*2+10)
+                width: 'calc(%s - %s)' % (percentage gutter*2)
                 
