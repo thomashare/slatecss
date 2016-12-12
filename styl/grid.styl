@@ -19,38 +19,27 @@ if grid == standard
     
     gutter = default-gutter
 
-    // setup screen sizes for each column size
+    // setup mobile first screen sizes for each column size
     @media screen and ({min-width})
-
-      // set gutters for all required containers. Due to being standard grid, set the column to float
-      [class*={screen-size}-]
-        float: left
-        min-height: 5px
-        &:not(nav) *:not([class*='btn']):not(.no-pad):not(.brand):not(.brand > *):not(a):not(.sidebar *)
-          padding: gutter*0.5
 
       // for each column in screen size
       for i in (1..max-columns)
-        .{screen-size}-{i}     
+        .{screen-size}-{i}
           display: inline-block
-
-          // set gutter
-          gutter = screen-size+'-gutter'
-
+          float: left
+          
           // set style defaults
           box-sizing: box-sizing
+          
+          // set screen size gutter
+          gutter = screen-size+'-gutter'
+          
+          &:not([class*={screen-size}-pad])
+            padding: gutter
 
           // set margin for each column, as long as it's not set to a no-margin element
-          &:not([class*=-left]):not([class*=-right]):not([class*={screen-size}-margin])
-            margin: gutter gutter gutter gutter
+          margin: 0
 
-          // calculate width of columns with no x axis margin removal set
-          &:not([class*=-no-margin]):not([class*=-no-x-margin]):not([class*={screen-size}-margin])
-            percentage = (100%/max-columns)*i
-            width: 'calc(%s - %s)' % (percentage gutter*2)
-
-          // edit width to compensate lack of margin in no-margin elements
-          &[class*=-no-margin],&[class*=-no-x-margin]
-            percentage = (100%/max-columns)*i
-            width: percentage
-                
+          percentage = (100%/max-columns)*i
+          width: 'calc(%s - %s)' % (percentage gutter*2)
+                  

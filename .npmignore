@@ -10,4 +10,5 @@ styl
 .npmignore
 gulpfile.js
 index.html
+playground.html
 yarn.lock

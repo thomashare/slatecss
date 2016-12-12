@@ -10,33 +10,25 @@ for screen-size in screen-sizes
   // setup screen sizes for each column size
   @media screen and ({min-width})
     
-    for x in (0..25)
+    for x in (0..max-padding)
       .{screen-size}-pad-x-{x}
         padding-left: x*pad-step
         padding-right: x*pad-step
         
-      for y in (0..25)        
+      for y in (0..max-padding)        
         .{screen-size}-pad-{x}
           padding: x*pad-step
 
-        .{screen-size}-pad-{x}-{y}
-          padding: x*pad-step y*pad-step
+        .{screen-size}-pad-{y}-{x}
+          padding: y*pad-step x*pad-step
           
       // top bottom left and right padding specifics
-      sides = ( top right bottom left )
       for side in sides
         .{screen-size}-pad-{side}-{x}
           padding-{side}: x*pad-step
         
-    for y in (0..25)
+    for y in (0..max-padding)
       .{screen-size}-pad-y-{y}
         padding-bottom: y*pad-step
         padding-top: y*pad-step
-          
-// no padding elements
-.no-x-padding:not(.no-padding)
-  padding-top: gutter 0 0 0
-.no-y-padding:not(.no-padding):not([class*='-push-'])
-  padding: 0 gutter
-.no-padding:not(.no-x-padding):not(.no-y-padding):not([class*='-push-'])
-  padding: 0
+        

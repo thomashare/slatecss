@@ -33,13 +33,16 @@ for i in (1..6)
         font-size: inherit
   h{i}
     font-weight: normal
-    margin: 0
+    &:not([class*='margin'])
+      margin: 0
     
 // paragraph styles
 p:first-child
-  margin: 0
-p:not(:first-child):not([class*='-margin-'])
-  margin: 10px 0 0 0
+  :not([class*='margin'])
+    margin: 0
+p:not(:first-child)
+  :not([class*='margin'])
+    margin: 10px 0 0 0
     
 // note styles
 [class*='note']
@@ -47,8 +50,10 @@ p:not(:first-child):not([class*='-margin-'])
     border-left-color: primary-color
   border-left-style: solid
   border-left-width: 5px
-  margin: 0
-  padding: 0 0 0 25px
+  &:not([class*='margin'])
+    margin: 0
+  &:not([class*='pad'])
+    padding: 0 0 0 25px
   
 for color in colors
   .note-{color}

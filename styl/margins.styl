@@ -1,70 +1,68 @@
-// margin setting accross screen sizes
-for screen-size in screen-sizes
+ // grid setting: Standard
+if grid == standard
 
-  // media query settings
-  min-width-size = screen-size+'-min-width'
-  max-width-size = screen-size+'-max-width'
-  min-width = 'min-width: '+min-width-size
-  max-width = 'max-width: '+max-width-size
-
-  // setup screen sizes for each column size
-  @media screen and ({min-width})
+  // for each screen size in the screen-sizes array
+  for screen-size in screen-sizes
     
-    gutter = screen-size+'-gutter'
+    // media query settings
+    min-width-size = screen-size+'-min-width'
+    max-width-size = screen-size+'-max-width'
+    min-width = 'min-width: '+min-width-size
+    max-width = 'max-width: '+max-width-size
     
-    for x in (0..max-margin)
-      
-      .{screen-size}-margin-{x}
-          margin-bottom: x*margin-step
-          margin-left: x*margin-step
-          margin-right: x*margin-step
-          margin-top: x*margin-step
-          
-      .{screen-size}-margin-x-{x}
-          margin-left: x*margin-step
-          margin-right: x*margin-step
-          
-      for y in (1..max-margin)
-        .{screen-size}-margin-{x}
-          margin: x*margin-step
+    gutter = default-gutter
+    
+    // setup strict screen sizes for each column size
+    // create x margin class
+    @media screen and ({min-width}) and ({max-width})
 
-        .{screen-size}-margin-{x}-{y}
-          margin: x*margin-step y*margin-step
-          
-    // top bottom left and right margin specifics
-    sides = ( top right bottom left )
-    for side in sides
-      .{screen-size}-margin-{side}-{x}
-        margin-{side}: x*margin-step
+      // for each column in screen size
+      for i in (1..max-columns)
+        .{screen-size}-{i}
 
-    for y in (0..max-margin)
-        .{screen-size}-margin-y-{y}
-          margin-bottom: y*margin-step
-          margin-top: y*margin-step
-          
-    // no margin elements
-    .{screen-size}-no-x-margin:not(.{screen-size}-no-margin)
-      margin-top: gutter 0 0 0
-    .{screen-size}-no-y-margin:not(.{screen-size}-no-margin):not([class*='-push-'])
-      margin: 0 gutter
-    .{screen-size}-no-margin:not(.{screen-size}-no-x-margin):not(.{screen-size}-no-y-margin):not([class*='-push-'])
-      margin: 0
-      
-  // setup screen sizes for each column size
-  @media screen and ({min-width}) and ({max-width})
-
-    // for each column in screen size
-    for i in (1..max-columns)
-      .{screen-size}-{i}
-
-        // if a 'no-margin' class is not set, continue
-        &:not([class*=-no-margin]):not([class*=-no-x-margin])
           for x in (0..max-margin)
+            x-margin = x*margin-step
 
-            // set width to compensate for the set margin space
-            &[class*={screen-size}-margin-{x}], &.{screen-size}-margin-x-{x}
-              percentage = (100%/max-columns)*i
-              gutter = x*margin-step
+            &.{screen-size}-margin-{x}, &.{screen-size}-margin-x-{x}
+
+              // set margin for each column, as long as it's not set to a no-margin element
               &:not([class*=-left]):not([class*=-right])
-                margin: gutter gutter gutter gutter
-              width: 'calc(%s - %s)' % (percentage gutter*2)
+                margin-left: x-margin
+                margin-right: x-margin
+                percentage = (100%/max-columns)*i
+                width: 'calc(%s - %s)' % (percentage x-margin*2)
+
+    // setup strict screen sizes for each column size
+    // create y margin classes
+    @media screen and ({min-width}) and ({max-width})
+
+      // for each column in screen size
+      for i in (1..max-columns)
+        .{screen-size}-{i}
+
+          for y in (0..max-margin)
+            y-margin = y*margin-step
+
+            &.{screen-size}-margin-{y}
+              // set margin for each column, as long as it's not set to a no-margin element
+              &:not([class*=-left]):not([class*=-right])
+                margin-bottom: y-margin
+                margin-top: y-margin
+        
+    // setup strict screen sizes for each column size
+    // create y margin classes
+    @media screen and ({min-width})
+
+      for y in (0..max-margin)
+        y-margin = y*margin-step
+
+        .{screen-size}-margin-y-{y}
+          // set margin for each column, as long as it's not set to a no-margin element
+          &:not([class*=-left]):not([class*=-right])
+            margin-bottom: y-margin
+            margin-top: y-margin
+            
+        for side in sides
+          .{screen-size}-margin-{side}-{y}
+            margin-{side}: y-margin
+            
