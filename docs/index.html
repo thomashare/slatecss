@@ -8,22 +8,20 @@
     <link href="https://rawcdn.githack.com/thomashare/slate.css/master/css/slate.min.css" rel="stylesheet">
   </head>
   <body>
+   
     <div class="xs-12 md-8 lg-6 xl-5 md-push-2 lg-push-3">
 
-      <div class="xs-12">
-        <img alt="Slate.css icon" class="xs-left" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png" style="width: 58px;">
-        <h1 class="font-size-12 xs-margin-0-1">Slate</h1>
-        <h2 class="xs-margin-2-0 break">The easy to modify framework that works with you.</h2>
+      <div class="xs-text-center md-text-left">
+          <img alt="Slate.css icon" class="xs-left" src="https://cdn.rawgit.com/thomashare/slate.css/master/img/slatecss-logo.png" style="width: 58px;">
+          <h1 class="xs-left font-size-12 xs-margin-bottom-0 xs-margin-top-0">Slate</h1>
       </div>
-      
-      <div class="xs-12">
-        <span class="xs-left md-margin-2-0">Copy the CDN link:</span>
-        <div class="xs-12 xs-pad-1-0 md-pad-0-0 xs-no-margin">
-          <input class="xs-12 sm-12 xs-pad-1 xs-no-margin break" onclick="select()" type="text" value="https://rawcdn.githack.com/thomashare/slate.css/master/css/slate.min.css">
-        </div>
-      </div>
-      <div class="xs-12">
-        <a class="btn-primary xs-margin-2-0" download href="https://github.com/thomashare/slate.css/raw/master/css/slate.min.css"><i class="fa fa-download"></i> Download Slatecss v1</a>
+      <h2 class="xs-12 xs-pad-0 xs-margin-top-2 xs-margin-bottom-3 xs-text-center md-text-left">The easy to modify framework that works with you.</h2>
+
+      <span class="break xs-text-center md-text-left">Copy the CDN link:</span>
+      <input class="xs-12 xs-margin-y-2 break" onclick="select()" type="text" value="https://rawcdn.githack.com/thomashare/slate.css/master/css/slate.min.css">
+
+      <div class="xs-12 xs-margin-2-0 xs-text-center md-text-left xs-pad-0">
+        <a class="btn-primary" download href="https://github.com/thomashare/slate.css/raw/master/css/slate.min.css"><i class="fa fa-download"></i> Download Slate.css v1</a>
       </div>
       
       <div class="xs-12">
@@ -49,7 +47,7 @@
           </div>
         </div>
         <div class="section">
-          <p class="title font-size-6"><i class="fa fa-cogs"></i> Utilities</p>
+          <p class="title font-size-6 xs-margin-2-0 xs-text-center md-text-left"><i class="fa fa-cogs"></i> Utilities</p>
           <div class="description">
             <p>break or break-left: Will force an element to clear the current line and drop to the left of its parent.</p>
             <p>break-right: Will force an element to clear the current line and drop to the right of its parent.</p>
@@ -60,7 +58,7 @@
           </div>
         </div>
         <div class="section">
-          <p class="title font-size-6"><i class="fa fa-code"></i> Margins</p>
+          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-code"></i> Margins</p>
           <div class="description">
             <p class="note-tertiary">SS = Screen Size, X = X-axis (left and right), Y = Y-axis (top and bottom)</p>
             <p class="note-tertiary"># = level of margin. By default the max margin level is 25.</p>
@@ -73,26 +71,26 @@
           </div>
         </div>
         <div class="section">
-          <p class="title font-size-6"><i class="fa fa-code"></i> Padding</p>
+          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-code"></i> Padding</p>
           <div class="description">
            <p class="note-tertiary"># = level of padding. By default the max padding level is 25.</p>
             <p>SS-pad-Y-X: Adds a specified level of padding to the top and bottom and left and right of an element. Y and X are equal to the level set, times the set margin-step. By default, the pad step is equal to 5px.</p>
             <p class="note-primary">Ex: xs-pad-2-0 lg-pad-3-2</p>
-            <p class="note-primary xs-pad-y-1">'xs-pad-2-0' will give the element a padding of 10px on the top and bottom, and a padding of 0px on its left and right sides. Because there is a padding setting for large devices, the element will only hold the setting for extra-small devices until it hits the large device.</p>
+            <p class="note-primary xs-margin-top-2 xs-margin-bottom-2">'xs-pad-2-0' will give the element a padding of 10px on the top and bottom, and a padding of 0px on its left and right sides. Because there is a padding setting for large devices, the element will only hold the setting for extra-small devices until it hits the large device.</p>
             <p class="note-primary">'lg-pad-3-2' will give the element a padding of 15px on the top and bottom, and a padding of 10px on its left and right sides.</p>
             <p>SS-pad-x-#: Adds a specified level of padding to the left and right of an element.</p>
             <p>SS-pad-y-#: Adds a specified level of padding to the top and bottom of an element.</p>
           </div>
         </div>
         <div class="section">
-          <p class="title font-size-6"><i class="fa fa-bars"></i> Nav</p>
+          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-bars"></i> Nav</p>
           <div class="description">
            <p class="note-tertiary"># = size of nav. Size settings are 'sm', 'md', and 'lg'</p>
             <p>SS-nav-#: Sets the size of the nav for each specified screen size.</p>
           </div>
         </div>
         <div class="section">
-          <p class="title font-size-6"><i class="fa fa-exclamation-circle"></i> Keep in mind</p>
+          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-exclamation-circle"></i> Keep in mind</p>
           <div class="description">
             <p>slate.css is currently in Beta development. Use at your own risk.</p>
             <p>License MIT</p>
@@ -102,5 +100,6 @@
       </div>
       
     </div>
+    
   </body>
 </html>
