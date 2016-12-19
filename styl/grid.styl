@@ -2,9 +2,6 @@
 if grid == standard
   
   // set default styles for elements
-  nav 
-    float: left
-    
   div
     transition: width 0.3s ease
 
@@ -34,12 +31,13 @@ if grid == standard
           // set screen size gutter
           gutter = screen-size+'-gutter'
           
-          &:not([class*={screen-size}-pad])
+          &:not([class*=pad])
             padding: gutter
 
           // set margin for each column, as long as it's not set to a no-margin element
-          margin: 0
+          &:not([class*=margin])
+            margin: 0
 
           percentage = (100%/max-columns)*i
-          width: 'calc(%s - %s)' % (percentage gutter*2)
+          width: percentage
                   

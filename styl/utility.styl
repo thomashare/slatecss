@@ -1,7 +1,3 @@
-// no padding elements
-.no-pad
-  padding: 0
-  
 // element visibility
 .hide
   opacity: 0
@@ -37,9 +33,7 @@ for screen-size in screen-sizes
 
   // media query settings
   min-width-size = screen-size+'-min-width'
-  max-width-size = screen-size+'-max-width'
   min-width = 'min-width: '+min-width-size
-  max-width = 'max-width: '+max-width-size
 
   // setup screen sizes for each column size
   @media screen and ({min-width})
@@ -80,40 +74,21 @@ for screen-size in screen-sizes
   display: inline-block
 .block
   display: block
- 
+
+// set default gutter
+gutter = default-gutter
+
 // item-pad and link-pad parent classes  
 for screen-size in screen-sizes
   
   // media query settings
   min-width-size = screen-size+'-min-width'
-  max-width-size = screen-size+'-max-width'
   min-width = 'min-width: '+min-width-size
-  max-width = 'max-width: '+max-width-size
   
-  gutter = default-gutter
+  gutter = screen-size+'-gutter'
 
   // setup screen sizes for each column size
-  @media screen and ({min-width})
-
-    // element padding
-    // one level padding
-    for level-1 in (0..max-padding)
-      // item padding
-      .{screen-size}-item-pad-{level-1}
-        li
-          padding: level-1*1px
-      .{screen-size}-link-pad-{level-1}
-        a 
-          padding: level-1*1px
-
-      // two level padding
-      for level-2 in (0..max-padding)
-        .{screen-size}-item-pad-{level-1}-{level-2}
-          li 
-            padding: level-1*1px level-2*1px
-        .{screen-size}-link-pad-{level-1}-{level-2}
-          a
-            padding: level-1*1px level-2*1px    
+  @media screen and ({min-width})   
 
     // pushing elements
     for i in (1..max-columns)
@@ -123,7 +98,5 @@ for screen-size in screen-sizes
         push-percentage = (100%/max-columns)*i
         margin-left: 'calc(%s + %s)' % (push-percentage gutter)
 
-// auto width classes 
-for screen-size in screen-sizes
-  .{screen-size}-auto
-    width: auto
+    .{screen-size}-auto
+      width: auto
