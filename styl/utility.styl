@@ -55,6 +55,17 @@ for screen-size in screen-sizes
     .{screen-size}-show
       display: block
       
+    // element formation: inline or block
+    .{screen-size}-inline
+      &:not(.{screen-size}-hide):not(.{screen-size}-show)
+        display: inline
+    .{screen-size}-inline-block
+      &:not(.{screen-size}-hide):not(.{screen-size}-show)
+        display: inline-block
+    .{screen-size}-block
+      &:not(.{screen-size}-hide):not(.{screen-size}-show)
+        display: block
+      
 
 // text alignment defaults
 *:not(.sidebar)
@@ -66,14 +77,6 @@ for screen-size in screen-sizes
       &:not([class*='pad']):not([class*=btn])
         padding: 0
       vertical-align: top
-      
-// element formation: inline or block
-.inline
-  display: inline
-.inline-block
-  display: inline-block
-.block
-  display: block
 
 // set default gutter
 gutter = default-gutter
@@ -97,6 +100,6 @@ for screen-size in screen-sizes
         // set margin left for a defined amount of columns
         push-percentage = (100%/max-columns)*i
         margin-left: 'calc(%s + %s)' % (push-percentage gutter)
-
+        
     .{screen-size}-auto
       width: auto

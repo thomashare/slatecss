@@ -16,6 +16,8 @@ nav
     padding-right: 15px
     text-decoration: none
     transition: padding 0.3s ease, font-size 0.3s ease
+    &:hover
+      background-color: rgba(255,255,255,0.15)
   .brand
     transition: padding 0.3s ease, font-size 0.3s ease, max-height 0.3s ease
   img
@@ -36,29 +38,34 @@ nav
       // extra small
       &:not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
         &.{screen-size}-xs > a, & > a
-          padding-bottom: 3px
-          padding-top: 3px
+          &:not([class*=pad])
+            padding-bottom: xs-nav-pad
+            padding-top: xs-nav-pad
           
       // small and default
       &:not([class*={screen-size}-xs]):not([class*={screen-size}-md]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
         &.{screen-size}-sm > a, & > a
-          padding-bottom: 3px
-          padding-top: 3px
+          &:not([class*=pad])
+            padding-bottom: sm-nav-pad
+            padding-top: sm-nav-pad
           
       // medium
       &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
         &.{screen-size}-md > a
-          padding-bottom: 10px
-          padding-top: 10px
+          &:not([class*=pad])
+            padding-bottom: md-nav-pad
+            padding-top: md-nav-pad
           
       // large
       &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-xl])
         &.{screen-size}-lg > a
-          padding-bottom: 20px
-          padding-top: 20px
+          &:not([class*=pad])
+            padding-bottom: lg-nav-pad
+            padding-top: lg-nav-pad
           
       // extra large
       &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-lg])
         &.{screen-size}-xl > a
-          padding-bottom: 20px
-          padding-top: 20px
+          &:not([class*=pad])
+            padding-bottom: xl-nav-pad
+            padding-top: xl-nav-pad

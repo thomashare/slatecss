@@ -31,7 +31,7 @@ if grid == standard
           // set screen size gutter
           gutter = screen-size+'-gutter'
           
-          &:not([class*=pad])
+          &:not([class*=pad]):not(.no-pad)
             padding: gutter
 
           // set margin for each column, as long as it's not set to a no-margin element
