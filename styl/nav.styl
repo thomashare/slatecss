@@ -15,57 +15,102 @@ nav
     padding-left: 15px
     padding-right: 15px
     text-decoration: none
-    transition: padding 0.3s ease, font-size 0.3s ease
+    transition: background 0.3s ease, font-size 0.3s ease, padding 0.3s ease
+    
+  // active states
+  &.active-glow > a.active:not(.no-active-glow):not(.no-glow)
+    background-color: rgba(255,255,255,0.15)
+  &.active-shade > a.active:not(.no-active-shade):not(.no-shade)
+    background-color: rgba(0,0,0,0.15) 
+  &.active-underline > a.active:not(.no-active-underline):not(.no-underline)
+    text-decoration: underline
+  
+  
+  &.hover-glow > a:not(.no-glow)
     &:hover
       background-color: rgba(255,255,255,0.15)
+  &.hover-shade > a:not(.no-shade)
+    &:hover
+      background-color: rgba(0,0,0,0.15) 
+  &.hover-underline > a:not(.no-underline)
+    &:hover
+      text-decoration: underline
+    
   .brand
     transition: padding 0.3s ease, font-size 0.3s ease, max-height 0.3s ease
   img
+    height: 100%
     transition: margin 0.3s ease, max-height 0.3s ease
   
-  // for each screen size in the screen-sizes array
-  for screen-size in screen-sizes
+  // if nav elements are included in the overscope
+  if nav in overscope
     
-    // media query settings
-    min-width-size = screen-size+'-min-width'
-    max-width-size = screen-size+'-max-width'
-    min-width = 'min-width: '+min-width-size
-    max-width = 'max-width: '+max-width-size
+    // for each screen size in the screen-sizes array
+    for screen-size in screen-sizes
 
-    // setup mobile first screen sizes for each column size
-    @media screen and ({min-width})
+      // media query settings
+      min-width-size = screen-size+'-min-width'
+      max-width-size = screen-size+'-max-width'
+      min-width = 'min-width: '+min-width-size
+      max-width = 'max-width: '+max-width-size
+
+      // setup mobile first screen sizes for each column size
+      @media screen and ({min-width})
+
+        // extra small
+        &:not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
+          &.{screen-size}-xs > a, & > a
+            &:not([class*=pad])
+              padding-bottom: xs-nav-pad
+              padding-top: xs-nav-pad
+
+        // small and default
+        &:not([class*={screen-size}-xs]):not([class*={screen-size}-md]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
+          &.{screen-size}-sm > a, & > a
+            &:not([class*=pad])
+              padding-bottom: sm-nav-pad
+              padding-top: sm-nav-pad
+
+        // medium
+        &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
+          &.{screen-size}-md > a
+            &:not([class*=pad])
+              padding-bottom: md-nav-pad
+              padding-top: md-nav-pad
+
+        // large
+        &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-xl])
+          &.{screen-size}-lg > a
+            &:not([class*=pad])
+              padding-bottom: lg-nav-pad
+              padding-top: lg-nav-pad
+
+        // extra large
+        &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-lg])
+          &.{screen-size}-xl > a
+            &:not([class*=pad])
+              padding-bottom: xl-nav-pad
+              padding-top: xl-nav-pad
+              
+  // if nav elements are included in the overscope
+  else 
+    &.xs > a
+      padding-bottom: xs-nav-pad
+      padding-top: xs-nav-pad
         
-      // extra small
-      &:not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
-        &.{screen-size}-xs > a, & > a
-          &:not([class*=pad])
-            padding-bottom: xs-nav-pad
-            padding-top: xs-nav-pad
-          
-      // small and default
-      &:not([class*={screen-size}-xs]):not([class*={screen-size}-md]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
-        &.{screen-size}-sm > a, & > a
-          &:not([class*=pad])
-            padding-bottom: sm-nav-pad
-            padding-top: sm-nav-pad
-          
-      // medium
-      &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-lg]):not([class*={screen-size}-xl])
-        &.{screen-size}-md > a
-          &:not([class*=pad])
-            padding-bottom: md-nav-pad
-            padding-top: md-nav-pad
-          
-      // large
-      &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-xl])
-        &.{screen-size}-lg > a
-          &:not([class*=pad])
-            padding-bottom: lg-nav-pad
-            padding-top: lg-nav-pad
-          
-      // extra large
-      &:not([class*={screen-size}-xs]):not([class*={screen-size}-sm]):not([class*={screen-size}-md]):not([class*={screen-size}-lg])
-        &.{screen-size}-xl > a
-          &:not([class*=pad])
-            padding-bottom: xl-nav-pad
-            padding-top: xl-nav-pad
+    &.sm > a, & > a
+      padding-bottom: sm-nav-pad
+      padding-top: sm-nav-pad
+        
+    &.md > a
+      padding-bottom: md-nav-pad
+      padding-top: md-nav-pad
+        
+    &.lg > a
+      padding-bottom: lg-nav-pad
+      padding-top: lg-nav-pad
+        
+    &.xl > a
+      padding-bottom: xl-nav-pad
+      padding-top: xl-nav-pad
+        

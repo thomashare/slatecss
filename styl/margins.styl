@@ -1,5 +1,12 @@
- // grid setting: Standard
+@import 'config'
+@import 'devices'
+
+// grid setting: Standard
 if grid == standard
+  
+  // default margin styles
+  [class*=margin]
+    display: inline-block
 
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
@@ -22,8 +29,15 @@ if grid == standard
 
           for x in (0..max-margin)
             x-margin = x*margin-step
+            
+            // all around margin
+            &.{screen-size}-margin-{x}
+              margin: x-margin
+              percentage = (100%/max-columns)*i
+              width: 'calc(%s - %s)' % (percentage x-margin*2)
 
-            &.{screen-size}-margin-{x}, &.{screen-size}-margin-x-{x}
+            // x margin
+            &.{screen-size}-margin-x-{x}
 
               // set margin for each column, as long as it's not set to a no-margin element
               &:not([class*=-left]):not([class*=-right])
@@ -31,39 +45,62 @@ if grid == standard
                 margin-right: x-margin
                 percentage = (100%/max-columns)*i
                 width: 'calc(%s - %s)' % (percentage x-margin*2)
-
-    // setup strict screen sizes for each column size
-    // create y margin classes
-    @media screen and ({min-width}) and ({max-width})
-
+                
       // for each column in screen size
       for i in (1..max-columns)
         .{screen-size}-{i}
+          
+          // x and y margin
+          for x in (0..max-margin)
+            for y in (0..max-margin)
+              x-margin = x*margin-step
+              y-margin = y*margin-step
 
-          for y in (0..max-margin)
-            y-margin = y*margin-step
+              &.{screen-size}-margin-{y}-{x}
 
-            &.{screen-size}-margin-{y}
-              // set margin for each column, as long as it's not set to a no-margin element
-              &:not([class*=-left]):not([class*=-right])
-                margin-bottom: y-margin
-                margin-top: y-margin
+                // set margin for each column, as long as it's not set to a no-margin element
+                &:not([class*=-left]):not([class*=-right])
+                  margin: y-margin x-margin
+
+                  percentage = (100%/max-columns)*i
+                  width: 'calc(%s - %s)' % (percentage x-margin*2)
         
-    // setup strict screen sizes for each column size
-    // create y margin classes
-    @media screen and ({min-width})
+    if margins in overscope
+      // create y margin classes
+      @media screen and ({min-width})
 
+        for y in (0..max-margin)
+          y-margin = y*margin-step
+
+          // y margin
+          .{screen-size}-margin-y-{y}
+            &:not([class*=-left]):not([class*=-right])
+              margin-bottom: y-margin
+              margin-top: y-margin
+
+          // bottom margin
+          .{screen-size}-margin-bottom-{y}
+            margin-bottom: y*margin-step
+
+          // top margin
+          .{screen-size}-margin-top-{y}
+            margin-top: y*margin-step
+            
+    else 
+      
       for y in (0..max-margin)
         y-margin = y*margin-step
 
-        .{screen-size}-margin-y-{y}
-          // set margin for each column, as long as it's not set to a no-margin element
+        // y margin
+        .margin-y-{y}
           &:not([class*=-left]):not([class*=-right])
             margin-bottom: y-margin
             margin-top: y-margin
-            
-        for side in sides
-          .{screen-size}-margin-{side}-{y}
-            display: inline-block
-            margin-{side}: y-margin
-            
+
+        // bottom margin
+        .margin-bottom-{y}
+          margin-bottom: y*margin-step
+
+        // top margin
+        .margin-top-{y}
+          margin-top: y*margin-step

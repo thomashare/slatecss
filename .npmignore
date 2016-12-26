@@ -10,5 +10,6 @@ styl
 .npmignore
 gulpfile.js
 index.html
+overscope.html
 playground.html
 yarn.lock

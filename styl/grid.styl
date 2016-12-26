@@ -10,9 +10,7 @@ if grid == standard
     
     // media query settings
     min-width-size = screen-size+'-min-width'
-    max-width-size = screen-size+'-max-width'
     min-width = 'min-width: '+min-width-size
-    max-width = 'max-width: '+max-width-size
     
     gutter = default-gutter
 
@@ -22,8 +20,10 @@ if grid == standard
       // for each column in screen size
       for i in (1..max-columns)
         .{screen-size}-{i}
-          display: inline-block
+          &:not([class*={screen-size}-inline]):not([class*={screen-size}-block])
+            display: inline-block
           float: left
+          transition: padding 0.3s ease
           
           // set style defaults
           box-sizing: box-sizing
@@ -31,12 +31,8 @@ if grid == standard
           // set screen size gutter
           gutter = screen-size+'-gutter'
           
-          &:not([class*=pad]):not(.no-pad)
+          &:not([class*=pad])
             padding: gutter
-
-          // set margin for each column, as long as it's not set to a no-margin element
-          &:not([class*=margin])
-            margin: 0
 
           percentage = (100%/max-columns)*i
           width: percentage

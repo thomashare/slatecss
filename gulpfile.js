@@ -40,6 +40,14 @@ gulp.task('slate-min', function () {
     .pipe(gulp.dest('./css'));
 });
 
+gulp.task('margins', function () {
+  return gulp.src('./styl/margins.styl')
+    .pipe(stylus())
+    .pipe(autoprefixer())
+    .pipe(cssnano())
+    .pipe(gulp.dest('./css'));
+});
+
 gulp.task('backgrounds', function () {
   return gulp.src('./styl/backgrounds.styl')
     .pipe(stylus())
