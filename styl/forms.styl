@@ -1,0 +1,52 @@
+form
+  display: block
+  float: left
+  width: 100%
+  & + *
+    clear: both
+  .input-group
+    display: block
+    float: left
+    &:not([class*=margin])
+      margin: 6px 20px 0 0
+      &:last-child
+        margin-bottom: 10px
+    label
+      color: rgba(0,0,0,0.5)
+      font-size: 0.9em
+      line-height: 2em
+      &:not([class*=margin])
+        margin-right: 5px
+      &.sr
+        display: none
+    input
+      &:not([class*=bg])
+        background: rgba(255,255,255,0.95)
+      border: 0
+      border-radius: 3px
+      &:not([class*=bg])
+        box-shadow: 0 0 1px rgba(0,0,0,0.3)
+      outline: 0
+      &:not([class*=pad])
+        padding: 5px 8px !important
+      &[type=submit], &[type=button]
+        &:not([class*=bg])
+          background-color: rgba(0,0,0,0.08)
+        font-size: 0.85em
+        line-height: 1.35em
+        vertical-align: top
+        
+  &.vertical
+    .input-group
+      clear: both
+      width: inherit
+      & + .input-group:not([class*=margin])
+        margin-top: 10px
+      
+  .sm-input
+    input:not([class*=pad])
+      padding: 1px 5px !important
+      
+  .lg-input
+    input:not([class*=pad])
+      padding: 10px !important

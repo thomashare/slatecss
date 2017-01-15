@@ -4,6 +4,9 @@ for size in (1..max-font-level)
     font-size: size*0.25rem
     letter-spacing: size*0.01rem
     line-height: size*0.3rem
+    & :not([class*=font-size])
+      font-size: inherit
+      line-height: inherit
         
 // font weights
 .font-weight-normal
@@ -92,3 +95,7 @@ for screen-size in screen-sizes
     .{screen-size}-text-center
       text-align: center
       
+// lists
+ul, ol
+  &:not([class*=margin])
+    margin: 0

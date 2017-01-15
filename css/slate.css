@@ -2038,125 +2038,225 @@ body.dev > div:not([class*='bg-']) > div:not([class*='bg-']) > div:not([class*='
 	letter-spacing: 0.01rem;
 	line-height: 0.3rem;
 }
+.font-size-1 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-2 {
 	font-size: 0.5rem;
 	letter-spacing: 0.02rem;
 	line-height: 0.6rem;
+}
+.font-size-2 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-3 {
 	font-size: 0.75rem;
 	letter-spacing: 0.03rem;
 	line-height: 0.9rem;
 }
+.font-size-3 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-4 {
 	font-size: 1rem;
 	letter-spacing: 0.04rem;
 	line-height: 1.2rem;
+}
+.font-size-4 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-5 {
 	font-size: 1.25rem;
 	letter-spacing: 0.05rem;
 	line-height: 1.5rem;
 }
+.font-size-5 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-6 {
 	font-size: 1.5rem;
 	letter-spacing: 0.06rem;
 	line-height: 1.8rem;
+}
+.font-size-6 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-7 {
 	font-size: 1.75rem;
 	letter-spacing: 0.07rem;
 	line-height: 2.1rem;
 }
+.font-size-7 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-8 {
 	font-size: 2rem;
 	letter-spacing: 0.08rem;
 	line-height: 2.4rem;
+}
+.font-size-8 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-9 {
 	font-size: 2.25rem;
 	letter-spacing: 0.09rem;
 	line-height: 2.7rem;
 }
+.font-size-9 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-10 {
 	font-size: 2.5rem;
 	letter-spacing: 0.1rem;
 	line-height: 3rem;
+}
+.font-size-10 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-11 {
 	font-size: 2.75rem;
 	letter-spacing: 0.11rem;
 	line-height: 3.3rem;
 }
+.font-size-11 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-12 {
 	font-size: 3rem;
 	letter-spacing: 0.12rem;
 	line-height: 3.6rem;
+}
+.font-size-12 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-13 {
 	font-size: 3.25rem;
 	letter-spacing: 0.13rem;
 	line-height: 3.9rem;
 }
+.font-size-13 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-14 {
 	font-size: 3.5rem;
 	letter-spacing: 0.14rem;
 	line-height: 4.2rem;
+}
+.font-size-14 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-15 {
 	font-size: 3.75rem;
 	letter-spacing: 0.15rem;
 	line-height: 4.5rem;
 }
+.font-size-15 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-16 {
 	font-size: 4rem;
 	letter-spacing: 0.16rem;
 	line-height: 4.8rem;
+}
+.font-size-16 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-17 {
 	font-size: 4.25rem;
 	letter-spacing: 0.17rem;
 	line-height: 5.1rem;
 }
+.font-size-17 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-18 {
 	font-size: 4.5rem;
 	letter-spacing: 0.18rem;
 	line-height: 5.399999999999999rem;
+}
+.font-size-18 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-19 {
 	font-size: 4.75rem;
 	letter-spacing: 0.19rem;
 	line-height: 5.7rem;
 }
+.font-size-19 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-20 {
 	font-size: 5rem;
 	letter-spacing: 0.2rem;
 	line-height: 6rem;
+}
+.font-size-20 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-21 {
 	font-size: 5.25rem;
 	letter-spacing: 0.21rem;
 	line-height: 6.3rem;
 }
+.font-size-21 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-22 {
 	font-size: 5.5rem;
 	letter-spacing: 0.22rem;
 	line-height: 6.6rem;
+}
+.font-size-22 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-size-23 {
 	font-size: 5.75rem;
 	letter-spacing: 0.23rem;
 	line-height: 6.899999999999999rem;
 }
+.font-size-23 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-24 {
 	font-size: 6rem;
 	letter-spacing: 0.24rem;
 	line-height: 7.199999999999999rem;
 }
+.font-size-24 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
+}
 .font-size-25 {
 	font-size: 6.25rem;
 	letter-spacing: 0.25rem;
 	line-height: 7.5rem;
+}
+.font-size-25 :not([class*=font-size]) {
+	font-size: inherit;
+	line-height: inherit;
 }
 .font-weight-normal {
 	font-weight: normal;
@@ -2368,6 +2468,9 @@ code pre:not([class*='-margin-']) {
 	}
 }
 
+ul:not([class*=margin]),ol:not([class*=margin]) {
+	margin: 0;
+}
 .hide {
 	opacity: 0;
 }
