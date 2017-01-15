@@ -65,8 +65,7 @@ for screen-size in screen-sizes
     .{screen-size}-block
       &:not(.{screen-size}-hide):not(.{screen-size}-show)
         display: block
-      
-
+        
 // text alignment defaults
 *:not(.sidebar)
   [class*='-text-']
@@ -85,13 +84,11 @@ gutter = default-gutter
 for screen-size in screen-sizes
   
   // media query settings
-  max-width-size = screen-size+'-max-width'
   min-width-size = screen-size+'-min-width'
-  max-width = 'max-width: '+max-width-size
   min-width = 'min-width: '+min-width-size
 
   // setup screen sizes for each column size
-  @media screen and ({min-width}) and ({max-width})   
+  @media screen and ({min-width})  
 
     // pushing elements
     for i in (1..max-columns)
@@ -101,3 +98,6 @@ for screen-size in screen-sizes
         push-percentage = (100%/max-columns)*i
         margin-left: push-percentage
         
+// no margin elements
+.no-margin
+  margin: 0

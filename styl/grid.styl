@@ -1,9 +1,5 @@
 // grid setting: Standard
 if grid == standard
-  
-  // set default styles for elements
-  div
-    transition: width 0.3s ease
 
   // for each screen size in the screen-sizes array
   for screen-size in screen-sizes
@@ -20,20 +16,31 @@ if grid == standard
       // for each column in screen size
       for i in (1..max-columns)
         .{screen-size}-{i}
-          &:not([class*={screen-size}-inline]):not([class*={screen-size}-block])
-            display: inline-block
-          float: left
-          transition: padding 0.3s ease
           
           // set style defaults
           box-sizing: box-sizing
-          
-          // set screen size gutter
-          gutter = screen-size+'-gutter'
-          
-          &:not([class*=pad])
-            padding: gutter
+            
+          &:not(.equal-height)
+            
+            &:not([class*={screen-size}-inline]):not([class*={screen-size}-block])&:not(.equal-height)
+              display: inline-block
+            float: left
 
-          percentage = (100%/max-columns)*i
-          width: percentage
+            // set screen size gutter
+            gutter = screen-size+'-gutter'
+
+            &:not([class*=pad])
+              padding: gutter
+
+            percentage = (100%/max-columns)*i
+            width: percentage
                   
+      .equal-height
+        display: flex
+        flex-wrap: wrap
+        for i in (1..max-columns)
+          & > .{screen-size}-{i}
+            display: flex
+            percentage = (100%/max-columns)*i
+            flex: 1 1 percentage
+            overflow: auto
