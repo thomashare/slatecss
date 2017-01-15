@@ -1578,6 +1578,34 @@ textarea {
 	}
 }
 
+.bg-primary {
+	background-color: #2196f3;
+	color: rgba(255,255,255,0.85);
+}
+.bg-secondary {
+	background-color: #9c27b0;
+	color: rgba(255,255,255,0.85);
+}
+.bg-tertiary {
+	background-color: #eee;
+	color: rgba(0,0,0,0.85);
+}
+.bg-alert {
+	background-color: #f44336;
+	color: rgba(255,255,255,0.85);
+}
+.bg-warning {
+	background-color: #ffc107;
+	color: rgba(255,255,255,0.85);
+}
+.bg-success {
+	background-color: #4caf50;
+	color: rgba(255,255,255,0.85);
+}
+.bg-default {
+	background-color: #fff;
+	color: rgba(0,0,0,0.85);
+}
 .btn-link {
 	background-color: transparent;
 	border-width: 0px;
@@ -1989,8 +2017,8 @@ body.dev > div:not([class*='bg-']) > div:not([class*='bg-']) > div:not([class*='
 .sidebar a {
 	color: rgba(0,0,0,0.75);
 	display: block;
-	-webkit-transition: background-color 0.3s ease, color 0.3s ease;
-	transition: background-color 0.3s ease, color 0.3s ease;
+	-webkit-transition: background-color 0.3s ease, default 0.3s ease;
+	transition: background-color 0.3s ease, default 0.3s ease;
 }
 .sidebar a,.sidebar a:hover {
 	text-decoration: none;

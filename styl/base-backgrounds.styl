@@ -1,0 +1,34 @@
+@import 'config'
+@import 'colors'
+
+if backgrounds in overscope
+
+  // for each screen size in the screen-sizes array
+  for screen-size in screen-sizes
+    
+    // media query settings
+    min-width-size = screen-size+'-min-width'
+    min-width = 'min-width: '+min-width-size
+
+    // setup mobile first screen sizes for each column size
+    @media screen and ({min-width})
+
+      // generate by color name
+      for color in colors
+        .{screen-size}-bg-{color}
+          background-color: color+'-color'
+          if dark(darken(color+'-color', 15%))
+            color: rgba(255,255,255,0.85)
+          else
+            color: rgba(0,0,0,0.85)
+            
+else
+    
+  // generate by color name
+  for color in colors
+    .bg-{color}
+      background-color: color+'-color'
+      if dark(darken(color+'-color', 15%))
+        color: rgba(255,255,255,0.85)
+      else
+        color: rgba(0,0,0,0.85)

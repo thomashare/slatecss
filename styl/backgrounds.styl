@@ -20,15 +20,6 @@ if backgrounds in overscope
     // setup mobile first screen sizes for each column size
     @media screen and ({min-width})
 
-      // generate by color name
-      for color in colors
-        .{screen-size}-bg-{color}
-          background-color: color+'-color'
-          if dark(darken(color+'-color', 15%))
-            color: rgba(255,255,255,0.85)
-          else
-            color: rgba(0,0,0,0.85)
-
       // generate by color value bg-RGB
       for color1 in color-values
         for color2 in color-values
