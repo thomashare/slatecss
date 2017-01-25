@@ -1655,12 +1655,57 @@ form .input-group input[type=submit],form .input-group input[type=button] {
 form .input-group input[type=submit]:not([class*=bg]),form .input-group input[type=button]:not([class*=bg]) {
 	background-color: rgba(0,0,0,0.08);
 }
+form .input-group input.primary {
+	background-color: #f4fafe;
+	box-shadow: 0 0 1px #4dabf5;
+}
+form .input-group input.secondary {
+	background-color: #fbf3fc;
+	box-shadow: 0 0 1px #be3ed4;
+}
+form .input-group input.tertiary {
+	background-color: #fefefe;
+	box-shadow: 0 0 1px #f1f1f1;
+}
+form .input-group input.alert {
+	background-color: #fef6f5;
+	box-shadow: 0 0 1px #f6695e;
+}
+form .input-group input.warning {
+	background-color: #fffcf3;
+	box-shadow: 0 0 1px #ffcd39;
+}
+form .input-group input.success {
+	background-color: #f6fbf6;
+	box-shadow: 0 0 1px #6fc072;
+}
+form .input-group input.default {
+	background-color: #fff;
+	box-shadow: 0 0 1px #fff;
+}
 form.vertical .input-group {
 	clear: both;
+	margin-right: 0;
+	margin-top: 0;
 	width: inherit;
 }
 form.vertical .input-group + .input-group:not([class*=margin]) {
 	margin-top: 10px;
+}
+form.vertical .input-group label {
+	display: block;
+	line-height: 1.6em;
+	margin: 0;
+	width: 100%;
+}
+form.vertical .input-group input {
+	width: 100%;
+}
+form.vertical .input-group input[type=button],form.vertical .input-group input[type=submit] {
+	float: right;
+}
+form.vertical .input-group input[type=button]:not(.block),form.vertical .input-group input[type=submit]:not(.block) {
+	width: auto;
 }
 form .sm-input input:not([class*=pad]) {
 	padding: 1px 5px !important;

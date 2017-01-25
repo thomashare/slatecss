@@ -1,3 +1,5 @@
+@import 'colors'
+
 form
   display: block
   float: left
@@ -36,12 +38,30 @@ form
         line-height: 1.35em
         vertical-align: top
         
+      for color in colors
+        &.{color}
+          background-color: lighten(color+'-color', 95%)
+          box-shadow: 0 0 1px lighten(color+'-color', 20%)
+
   &.vertical
     .input-group
       clear: both
+      margin-right: 0
+      margin-top: 0
       width: inherit
       & + .input-group:not([class*=margin])
         margin-top: 10px
+      label
+        display: block
+        line-height: 1.6em
+        margin: 0
+        width: 100%
+      input
+        width: 100%
+        &[type=button], &[type=submit]
+          float: right
+          &:not(.block)
+            width: auto
       
   .sm-input
     input:not([class*=pad])
