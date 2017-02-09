@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/thomashare/slatecss.svg?branch=master)](https://travis-ci.org/thomashare/slatecss)
+
 ## Screen Sizes
 
 **Default device screen sizes**:
