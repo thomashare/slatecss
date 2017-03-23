@@ -140,6 +140,16 @@ buffer-shims@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
 
+caller-path@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/caller-path/-/caller-path-0.1.0.tgz#94085ef63581ecd3daa92444a8fe94e82577751f"
+  dependencies:
+    callsites "^0.2.0"
+
+callsites@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/callsites/-/callsites-0.2.0.tgz#afab96262910a7f33c19a5775825c69f34e350ca"
+
 camelcase@^1.0.2:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-1.2.1.tgz#9bb5304d2e0b56698b2c758b08a3eaa9daa58a39"
@@ -545,6 +555,16 @@ for-own@^0.1.4:
   resolved "https://registry.yarnpkg.com/for-own/-/for-own-0.1.4.tgz#0149b41a39088c7515f51ebe1c1386d45f935072"
   dependencies:
     for-in "^0.1.5"
+
+forkme:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/forkme/-/forkme-1.0.8.tgz#11abbd17af389f3348e289c3137cb1237e9ce23e"
+  dependencies:
+    caller-path "^0.1.0"
+
+forp:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/forp/-/forp-1.0.0.tgz#bb3a6ace6ad217ba20cf0b600e64d91ed62dbc7a"
 
 fs-exists-sync@^0.1.0:
   version "0.1.0"
