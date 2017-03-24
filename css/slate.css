@@ -1,5 +1,6 @@
 
 
+
 html {
 	font-family: sans-serif;
 	line-height: 1.15;
@@ -8,6 +9,7 @@ html {
 	width: 100%;
 }
 
+
 body {
 	margin: 0;
 	float: left;
@@ -15,29 +17,34 @@ body {
 	width: inherit;
 }
 
-
-article,aside,details,/* 1 */
-figcaption,figure,footer,header,main,/* 2 */
-menu,nav,section,summary {
+article,aside,footer,header,nav,section {
 	display: block;
 }
 
-audio,canvas,progress,video {
-	display: inline-block;
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+	font-weight: normal;
 }
 
-audio:not([controls]) {
-	display: none;
+
+figcaption,figure,main {
+	display: block;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
 	height: 0;
+	overflow: visible;
 }
 
-progress {
-	vertical-align: baseline;
-}
-
-template,/* 1 */
-[hidden] {
-	display: none;
+pre {
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
 
@@ -49,7 +56,6 @@ a {
 a:active,a:hover {
 	outline-width: 0;
 }
-
 
 abbr[title] {
 	border-bottom: none;
@@ -63,14 +69,13 @@ b,strong {
 }
 
 
-dfn {
-	font-style: italic;
+code,kbd,samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
 }
 
-h1 {
-	font-size: 2em;
-	margin: 0.67em 0;
-	font-weight: normal;
+dfn {
+	font-style: italic;
 }
 
 mark {
@@ -96,6 +101,15 @@ sup {
 }
 
 
+audio,video {
+	display: inline-block;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
 img {
 	border-style: none;
 }
@@ -105,29 +119,11 @@ svg:not(:root) {
 }
 
 
-code,kbd,pre,samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-
-figure {
-	margin: 1em 40px;
-}
-
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
-
-
 button,input,optgroup,select,textarea {
-	font: inherit;
+	font-family: sans-serif;
+	font-size: 100%;
+	line-height: 1.15;
 	margin: 0;
-}
-
-optgroup {
-	font-weight: bold;
 }
 
 button,input {
@@ -167,6 +163,11 @@ legend {
 	white-space: normal;
 }
 
+progress {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
 textarea {
 	overflow: auto;
 }
@@ -189,14 +190,33 @@ textarea {
 	-webkit-appearance: none;
 }
 
-::-webkit-input-placeholder {
-	color: inherit;
-	opacity: 0.54;
-}
-
 ::-webkit-file-upload-button {
 	-webkit-appearance: button;
 	font: inherit;
+}
+
+
+details,/* 1 */
+menu {
+	display: block;
+}
+
+summary {
+	display: list-item;
+}
+
+
+canvas {
+	display: inline-block;
+}
+
+template {
+	display: none;
+}
+
+
+[hidden] {
+	display: none;
 }
 
 @media screen and (min-width: 0px) {
@@ -211,7 +231,7 @@ textarea {
 	.xs-1:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-1:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-1:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-1:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-2 {
@@ -224,7 +244,7 @@ textarea {
 	.xs-2:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-2:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-2:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-2:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-3 {
@@ -237,7 +257,7 @@ textarea {
 	.xs-3:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-3:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-3:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-3:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-4 {
@@ -250,7 +270,7 @@ textarea {
 	.xs-4:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-4:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-4:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-4:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-5 {
@@ -263,7 +283,7 @@ textarea {
 	.xs-5:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-5:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-5:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-5:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-6 {
@@ -276,7 +296,7 @@ textarea {
 	.xs-6:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-6:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-6:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-6:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-7 {
@@ -289,7 +309,7 @@ textarea {
 	.xs-7:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-7:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-7:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-7:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-8 {
@@ -302,7 +322,7 @@ textarea {
 	.xs-8:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-8:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-8:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-8:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-9 {
@@ -315,7 +335,7 @@ textarea {
 	.xs-9:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-9:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-9:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-9:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-10 {
@@ -328,7 +348,7 @@ textarea {
 	.xs-10:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-10:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-10:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-10:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-11 {
@@ -341,7 +361,7 @@ textarea {
 	.xs-11:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-11:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-11:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-11:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.xs-12 {
@@ -354,7 +374,7 @@ textarea {
 	.xs-12:not(.equal-height):not([class*=xs-inline]):not([class*=xs-block]).xs-12:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xs-12:not(.equal-height):not([class*=pad]):not(input) {
+	.xs-12:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.equal-height {
@@ -487,7 +507,7 @@ textarea {
 	.sm-1:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-1:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-1:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-1:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-2 {
@@ -500,7 +520,7 @@ textarea {
 	.sm-2:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-2:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-2:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-2:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-3 {
@@ -513,7 +533,7 @@ textarea {
 	.sm-3:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-3:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-3:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-3:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-4 {
@@ -526,7 +546,7 @@ textarea {
 	.sm-4:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-4:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-4:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-4:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-5 {
@@ -539,7 +559,7 @@ textarea {
 	.sm-5:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-5:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-5:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-5:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-6 {
@@ -552,7 +572,7 @@ textarea {
 	.sm-6:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-6:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-6:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-6:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-7 {
@@ -565,7 +585,7 @@ textarea {
 	.sm-7:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-7:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-7:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-7:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-8 {
@@ -578,7 +598,7 @@ textarea {
 	.sm-8:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-8:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-8:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-8:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-9 {
@@ -591,7 +611,7 @@ textarea {
 	.sm-9:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-9:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-9:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-9:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-10 {
@@ -604,7 +624,7 @@ textarea {
 	.sm-10:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-10:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-10:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-10:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-11 {
@@ -617,7 +637,7 @@ textarea {
 	.sm-11:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-11:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-11:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-11:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.sm-12 {
@@ -630,7 +650,7 @@ textarea {
 	.sm-12:not(.equal-height):not([class*=sm-inline]):not([class*=sm-block]).sm-12:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.sm-12:not(.equal-height):not([class*=pad]):not(input) {
+	.sm-12:not(.equal-height):not([class*=pad]) {
 		padding: 10px;
 	}
 	.equal-height {
@@ -763,7 +783,7 @@ textarea {
 	.md-1:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-1:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-1:not(.equal-height):not([class*=pad]):not(input) {
+	.md-1:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-2 {
@@ -776,7 +796,7 @@ textarea {
 	.md-2:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-2:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-2:not(.equal-height):not([class*=pad]):not(input) {
+	.md-2:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-3 {
@@ -789,7 +809,7 @@ textarea {
 	.md-3:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-3:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-3:not(.equal-height):not([class*=pad]):not(input) {
+	.md-3:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-4 {
@@ -802,7 +822,7 @@ textarea {
 	.md-4:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-4:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-4:not(.equal-height):not([class*=pad]):not(input) {
+	.md-4:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-5 {
@@ -815,7 +835,7 @@ textarea {
 	.md-5:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-5:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-5:not(.equal-height):not([class*=pad]):not(input) {
+	.md-5:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-6 {
@@ -828,7 +848,7 @@ textarea {
 	.md-6:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-6:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-6:not(.equal-height):not([class*=pad]):not(input) {
+	.md-6:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-7 {
@@ -841,7 +861,7 @@ textarea {
 	.md-7:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-7:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-7:not(.equal-height):not([class*=pad]):not(input) {
+	.md-7:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-8 {
@@ -854,7 +874,7 @@ textarea {
 	.md-8:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-8:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-8:not(.equal-height):not([class*=pad]):not(input) {
+	.md-8:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-9 {
@@ -867,7 +887,7 @@ textarea {
 	.md-9:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-9:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-9:not(.equal-height):not([class*=pad]):not(input) {
+	.md-9:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-10 {
@@ -880,7 +900,7 @@ textarea {
 	.md-10:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-10:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-10:not(.equal-height):not([class*=pad]):not(input) {
+	.md-10:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-11 {
@@ -893,7 +913,7 @@ textarea {
 	.md-11:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-11:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-11:not(.equal-height):not([class*=pad]):not(input) {
+	.md-11:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.md-12 {
@@ -906,7 +926,7 @@ textarea {
 	.md-12:not(.equal-height):not([class*=md-inline]):not([class*=md-block]).md-12:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.md-12:not(.equal-height):not([class*=pad]):not(input) {
+	.md-12:not(.equal-height):not([class*=pad]) {
 		padding: 15px;
 	}
 	.equal-height {
@@ -1039,7 +1059,7 @@ textarea {
 	.lg-1:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-1:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-1:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-1:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-2 {
@@ -1052,7 +1072,7 @@ textarea {
 	.lg-2:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-2:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-2:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-2:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-3 {
@@ -1065,7 +1085,7 @@ textarea {
 	.lg-3:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-3:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-3:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-3:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-4 {
@@ -1078,7 +1098,7 @@ textarea {
 	.lg-4:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-4:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-4:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-4:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-5 {
@@ -1091,7 +1111,7 @@ textarea {
 	.lg-5:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-5:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-5:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-5:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-6 {
@@ -1104,7 +1124,7 @@ textarea {
 	.lg-6:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-6:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-6:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-6:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-7 {
@@ -1117,7 +1137,7 @@ textarea {
 	.lg-7:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-7:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-7:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-7:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-8 {
@@ -1130,7 +1150,7 @@ textarea {
 	.lg-8:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-8:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-8:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-8:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-9 {
@@ -1143,7 +1163,7 @@ textarea {
 	.lg-9:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-9:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-9:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-9:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-10 {
@@ -1156,7 +1176,7 @@ textarea {
 	.lg-10:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-10:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-10:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-10:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-11 {
@@ -1169,7 +1189,7 @@ textarea {
 	.lg-11:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-11:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-11:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-11:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.lg-12 {
@@ -1182,7 +1202,7 @@ textarea {
 	.lg-12:not(.equal-height):not([class*=lg-inline]):not([class*=lg-block]).lg-12:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.lg-12:not(.equal-height):not([class*=pad]):not(input) {
+	.lg-12:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.equal-height {
@@ -1315,7 +1335,7 @@ textarea {
 	.xl-1:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-1:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-1:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-1:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-2 {
@@ -1328,7 +1348,7 @@ textarea {
 	.xl-2:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-2:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-2:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-2:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-3 {
@@ -1341,7 +1361,7 @@ textarea {
 	.xl-3:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-3:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-3:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-3:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-4 {
@@ -1354,7 +1374,7 @@ textarea {
 	.xl-4:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-4:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-4:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-4:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-5 {
@@ -1367,7 +1387,7 @@ textarea {
 	.xl-5:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-5:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-5:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-5:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-6 {
@@ -1380,7 +1400,7 @@ textarea {
 	.xl-6:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-6:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-6:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-6:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-7 {
@@ -1393,7 +1413,7 @@ textarea {
 	.xl-7:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-7:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-7:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-7:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-8 {
@@ -1406,7 +1426,7 @@ textarea {
 	.xl-8:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-8:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-8:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-8:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-9 {
@@ -1419,7 +1439,7 @@ textarea {
 	.xl-9:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-9:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-9:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-9:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-10 {
@@ -1432,7 +1452,7 @@ textarea {
 	.xl-10:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-10:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-10:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-10:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-11 {
@@ -1445,7 +1465,7 @@ textarea {
 	.xl-11:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-11:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-11:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-11:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.xl-12 {
@@ -1458,7 +1478,7 @@ textarea {
 	.xl-12:not(.equal-height):not([class*=xl-inline]):not([class*=xl-block]).xl-12:not(.equal-height):not(.equal-height) {
 		display: inline-block;
 	}
-	.xl-12:not(.equal-height):not([class*=pad]):not(input) {
+	.xl-12:not(.equal-height):not([class*=pad]) {
 		padding: 20px;
 	}
 	.equal-height {
