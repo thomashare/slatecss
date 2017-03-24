@@ -5,7 +5,7 @@ let stylus = require('gulp-stylus');
 let postcss = require('gulp-postcss');
 let sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('default', ['slate-min', 'slate']);
+gulp.task('default', ['slate-min']);
 
 gulp.task('watch', function () {
 	return gulp.watch(['styl/**/*.styl', 'custom/**/*.styl'], ['slate']);
@@ -22,14 +22,12 @@ gulp.task('slate', function () {
 		.pipe(gulp.dest('./css'));
 });
 
-gulp.task('slate-min', function () {
+gulp.task('slate-min', ['slate'], function () {
 	let rename = require('gulp-rename');
 
-	return gulp.src('./styl/slate.styl')
+	return gulp.src(['./css/slate.css'])
 		.pipe(sourcemaps.init())
-		.pipe(stylus({'include css': true}))
 		.pipe(postcss([
-			require('autoprefixer'),
 			require('cssnano')
 		]))
 		.pipe(rename({
