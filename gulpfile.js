@@ -2,11 +2,7 @@
 
 let gulp = require('gulp');
 let stylus = require('gulp-stylus');
-let autoprefixer = require('gulp-autoprefixer');
-let csspurge = require('gulp-css-purge');
-let cssnano = require('gulp-cssnano');
-let rename = require('gulp-rename');
-let sourcemaps = require('gulp-sourcemaps');
+let postcss = require('gulp-postcss');
 let forp = require('forp');
 let forkme = require('forkme');
 
@@ -26,8 +22,7 @@ gulp.task('slate', function (done) {
 		 */
 		let gulp = require('gulp');
 		let stylus = require('gulp-stylus');
-		let autoprefixer = require('gulp-autoprefixer');
-		let csspurge = require('gulp-css-purge');
+		let postcss = require('gulp-postcss');
 		let sourcemaps = require('gulp-sourcemaps');
 
 		gulp.src('./styl/slate.styl')
@@ -35,8 +30,7 @@ gulp.task('slate', function (done) {
 			.pipe(stylus({'include css': true}).on('error', function () {
 				this.end();
 			}))
-			.pipe(autoprefixer())
-			.pipe(csspurge())
+			.pipe(postcss([require('autoprefixer')]))
 			.pipe(sourcemaps.write('./'))
 			.pipe(gulp.dest('./css'));
 	})).then(done);
@@ -53,18 +47,17 @@ gulp.task('slate-min', function (done) {
 		 */
 		let gulp = require('gulp');
 		let stylus = require('gulp-stylus');
-		let autoprefixer = require('gulp-autoprefixer');
-		let csspurge = require('gulp-css-purge');
-		let cssnano = require('gulp-cssnano');
+		let postcss = require('gulp-postcss');
 		let rename = require('gulp-rename');
 		let sourcemaps = require('gulp-sourcemaps');
 
 		gulp.src('./styl/slate.styl')
 			.pipe(sourcemaps.init())
 			.pipe(stylus({'include css': true}))
-			.pipe(autoprefixer())
-			.pipe(csspurge())
-			.pipe(cssnano())
+			.pipe(postcss([
+				require('autoprefixer'),
+				require('cssnano')
+			]))
 			.pipe(rename({
 				extname: '.min.css'
 			}))
@@ -77,23 +70,29 @@ gulp.task('slate-min', function (done) {
 gulp.task('margins', function () {
 	return gulp.src('./styl/margins.styl')
 		.pipe(stylus())
-		.pipe(autoprefixer())
-		.pipe(cssnano())
+		.pipe(postcss([
+			require('autoprefixer'),
+			require('cssnano')
+		]))
 		.pipe(gulp.dest('./css'));
 });
 
 gulp.task('backgrounds', function () {
 	return gulp.src('./styl/backgrounds.styl')
 		.pipe(stylus())
-		.pipe(autoprefixer())
-		.pipe(cssnano())
+		.pipe(postcss([
+			require('autoprefixer'),
+			require('cssnano')
+		]))
 		.pipe(gulp.dest('./css'));
 });
 
 gulp.task('divided', function () {
 	return gulp.src('./styl/divided.styl')
 		.pipe(stylus())
-		.pipe(autoprefixer())
-		.pipe(cssnano())
+		.pipe(postcss([
+			require('autoprefixer'),
+			require('cssnano')
+		]))
 		.pipe(gulp.dest('./css'));
 });
