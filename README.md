@@ -1,1 +1,1 @@
-refer to [slatecss.com]: https://slatecss.com
+refer to https://slatecss.com
