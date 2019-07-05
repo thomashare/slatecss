@@ -3,103 +3,90 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Slate CSS Web Framework</title>
+    <title>Slate CSS V3</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://rawcdn.githack.com/thomashare/slate.css/master/css/slate.min.css" rel="stylesheet">
+    <link href="https://rawcdn.githack.com/thomashare/slate.css/master/slate.css" rel="stylesheet">
   </head>
   <body>
-   
-    <div class="xs-12 md-8 lg-6 xl-5 md-push-2 lg-push-3">
-
-      <div class="xs-text-center md-text-left">
-          <img alt="Slate.css icon" class="xs-left" src="https://cdn.rawgit.com/thomashare/slatecss/0596e2f6/img/slatecss-logo.png" style="width: 58px;">
-          <h1 class="xs-left font-size-12 no-margin">Slate</h1>
-      </div>
-      <h2 class="xs-12 xs-pad-0 xs-margin-top-2 xs-margin-bottom-3 xs-text-center md-text-left">The easy to modify framework that works with you.</h2>
-
-      <span class="break xs-text-center md-text-left">Copy the CDN link:</span>
-      <input class="xs-12 xs-margin-y-2 break" onclick="select()" type="text" value="https://rawcdn.githack.com/thomashare/slate.css/master/css/slate.min.css">
-
-      <div class="xs-12 xs-margin-2-0 xs-text-center md-text-left xs-pad-0">
-        <a class="btn-primary" download href="https://github.com/thomashare/slate.css/raw/master/css/slate.min.css"><i class="fa fa-download"></i> Download Slate.css v1</a>
-      </div>
-      
-      <div class="xs-12">
-
-        <div class="section">
-          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-tablet"></i> Screen sizes</p>
-          <div class="description">
-            <p>Default device screen sizes:</p>
-            <ul>
-              <li>xs = extra-small (0px up to 543px)</li>
-              <li>sm = small (544px up to 767px)</li>
-              <li>md = medium (768px up to 992px)</li>
-              <li>lg = large (992px up to 1139px)</li>
-              <li>xl = extra-large (1140px and up)</li>
-            </ul>
-
-            <p>Slate.css is mobile-first with a standard floating grid. The default maximum column size value is 12 (or 100%) for the specified device screen size.</p>
-            <p>Note: Because Slate is mobile-first, setting the columns 'xs' column size value will affect all screen sizes up until the next screen-size column size value is set.</p>
-            <p class="note-primary">Ex: If 'xs-4' is set, medium devices up to extra-large devices will have a column size value of 4 also. If you set 'xs-4' and 'lg-6', small and medium devices will retain the size of 4, while xl and up will retain the size of 6.</p>
-            <p>Column sizes are set by screen size and value</p>
-            <p class="note-primary">Ex: &lt;div class='xs-12 md-6 xl-4'&gt;</p>
-            <p class="note-primary">This will give extra-small (xs) devices such as smaller phones, a column size of 12. While medium screen size devices will have a column size of 6 and an extra-large device will have a column size of 4.</p>
-          </div>
-        </div>
-        <div class="section">
-          <p class="title font-size-6 xs-margin-2-0 xs-text-center md-text-left"><i class="fa fa-cogs"></i> Utilities</p>
-          <div class="description">
-            <p>break or break-left: Will force an element to clear the current line and drop to the left of its parent.</p>
-            <p>break-right: Will force an element to clear the current line and drop to the right of its parent.</p>
-            <p>push: Columns can be pushed from the left a set amount of columns.</p>
-            <p class="note-primary">Ex: 'md-push-2' will push the column over 2 columns on medium size devices and up.</p>
-            <p>pull: Columns can be pulled left and right for each screen size.</p>
-            <p class="note-primary">Ex: 'md-right lg-left' will cause the element to pull to the right of its parent on medium size devices, while large screen sizes and up will pull the element back to the left of its parent.</p>
-          </div>
-        </div>
-        <div class="section">
-          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-code"></i> Margins</p>
-          <div class="description">
-            <p class="note-tertiary">SS = Screen Size, X = X-axis (left and right), Y = Y-axis (top and bottom)</p>
-            <p class="note-tertiary"># = level of margin. By default the max margin level is 25.</p>
-            <p>SS-margin-Y-X: Adds a specified level of margin to the top and bottom and left and right of an element. Y and X are equal to the level set, times the set margin-step. By default, the margin step is equal to 5px.</p>
-            <p class="note-primary">Ex: xs-margin-2-8 will give the element a margin of 10px on the top and bottom, and a margin of 40px on its left and right sides.</p>
-            <p class="note-primary">Margins from xs and up will be affected, unless a larger device margin size is set.</p>
-            <p>SS-margin-x-#: Adds a specified level of margin to the left and right of an element.</p>
-            <p class="note-primary">Ex: 'xs-margin-y-5' will add a 25px margin to the top and bottom of the element on extra small devices and up.</p>
-            <p>SS-margin-y-#: Adds a specified level of margin to the top and bottom of an element.</p>
-          </div>
-        </div>
-        <div class="section">
-          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-code"></i> Padding</p>
-          <div class="description">
-           <p class="note-tertiary"># = level of padding. By default the max padding level is 25.</p>
-            <p>SS-pad-Y-X: Adds a specified level of padding to the top and bottom and left and right of an element. Y and X are equal to the level set, times the set margin-step. By default, the pad step is equal to 5px.</p>
-            <p class="note-primary">Ex: xs-pad-2-0 lg-pad-3-2</p>
-            <p class="note-primary xs-margin-top-2 xs-margin-bottom-2">'xs-pad-2-0' will give the element a padding of 10px on the top and bottom, and a padding of 0px on its left and right sides. Because there is a padding setting for large devices, the element will only hold the setting for extra-small devices until it hits the large device.</p>
-            <p class="note-primary">'lg-pad-3-2' will give the element a padding of 15px on the top and bottom, and a padding of 10px on its left and right sides.</p>
-            <p>SS-pad-x-#: Adds a specified level of padding to the left and right of an element.</p>
-            <p>SS-pad-y-#: Adds a specified level of padding to the top and bottom of an element.</p>
-          </div>
-        </div>
-        <div class="section">
-          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-bars"></i> Nav</p>
-          <div class="description">
-           <p class="note-tertiary"># = size of nav. Size settings are 'sm', 'md', and 'lg'</p>
-            <p>SS-nav-#: Sets the size of the nav for each specified screen size.</p>
-          </div>
-        </div>
-        <div class="section">
-          <p class="title font-size-6 xs-text-center md-text-left"><i class="fa fa-exclamation-circle"></i> Keep in mind</p>
-          <div class="description">
-            <p>slate.css is currently in Beta development. Use at your own risk.</p>
-            <p>License MIT</p>
-          </div>
-        </div>
-        
-      </div>
-      
-    </div>
+    <aside class="s1 pad">
+      <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#layout">Layout</a>
+        <a href="#utilities">Utilities</a>
+      </nav>
+    </aside>
     
+    <main class="s4 pad">
+      <h1>Slate V3 <i class="far fa-grin-tongue primary"></i></h1>
+      <p>Slate.css is an unopinionated CSS framework for rapid web design.</p>
+      
+      <h2 id="introduction">Introduction</h2>
+      <p>Now, instead of using floats and endless helper functions, Slate uses the preexisting grid architecture for layouts. This helps minimize the code necessary and improves load times.</p>
+      
+      <h2 id="layout">Layout</h2>
+      <p>In modern CSS frameworks, you create layouts using helper classes such as “xs-4” or “md4” or even “sm-col-6”. With Slate, these classes are no longer needed.</p>
+      <p>Slate was created to help you break away from that habit and begin relying on the grid system built-in to modern browsers.</p>
+      <p>Slate uses a 6-column span system. Use “s1” through “s6” to represent your column span size.</p>
+      <div class="example grid">
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        
+        <div class="s2">s2</div>
+        <div class="s2">s2</div>
+        <div class="s2">s2</div>
+        
+        <div class="s3">s3</div>
+        <div class="s3">s3</div>
+        
+        <div class="s1">s1</div>
+        <div class="s5">s5</div>
+        
+        <div class="s2">s2</div>
+        <div class="s4">s4</div>
+        
+        <div class="s4">s4</div>
+        <div class="s2">s2</div>
+        
+        <div class="s5">s5</div>
+        <div class="s1">s1</div>
+        
+        <div class="s6">s6</div>
+      </div>
+      
+      <h2 id="utilities">Utility Classes</h2>
+      <h3>Break</h3>
+      <p>By adding the class “break” to an element, you force it to fall to the next row.</p>
+      <div class="example grid">
+        <div class="s2">s2</div>
+        <div class="s1">s1</div>
+        <div class="s3 break">s3 break</div>
+        <div class="s3">s3</div>
+      </div>
+      
+      <h3>Start</h3>
+      <p>If you need an offset without having to create an empty div, use a span range.</p>
+      <div class="example grid">
+        <div class="s1-2">s1-2</div>
+        <div class="s1-3">s1-3</div>
+        <div class="s1-4">s1-4</div>
+        <div class="s1-5">s1-5</div>
+        <div class="s2-5">s2-5</div>
+        <div class="s3-5">s3-5</div>
+        <div class="s4-5">s4-5</div>
+      </div>
+      <p>Or, if you need to span from a certain column to the end, leave out the second digit.</p>
+      <div class="example grid">
+        <div class="s2-">s2-</div>
+        <div class="s3-">s3-</div>
+        <div class="s4-">s4-</div>
+        <div class="s5-">s5-</div>
+      </div>
+      <h3>Pad</h3>
+      <p>Adding “pad” to any element will give it a slight padding of 8px.</p>
+    </main>
   </body>
 </html>
