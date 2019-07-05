@@ -1,0 +1,30 @@
+{
+  "name": "slatecss",
+  "version": "3.0.0",
+  "description": "Unopinionated CSS framework for rapid web development.",
+  "main": "slate.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomashare/slatecss.git"
+  },
+  "keywords": [
+    "css",
+    "framework",
+    "stylesheet",
+    "layout",
+    "design",
+    "development"
+  ],
+  "author": "Tommy Hare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thomashare/slatecss/issues"
+  },
+  "homepage": "https://github.com/thomashare/slatecss#readme"
+}
