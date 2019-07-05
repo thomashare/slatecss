@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slate CSS V3</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://rawcdn.githack.com/thomashare/slate.css/master/slate.css" rel="stylesheet">
+  </head>
+  <body>
+    <aside class="s1 pad">
+      <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#layout">Layout</a>
+        <a href="#utilities">Utilities</a>
+      </nav>
+    </aside>
+    
+    <main class="s4 pad">
+      <h1>Slate V3 <i class="far fa-grin-tongue primary"></i></h1>
+      <p>Slate.css is an unopinionated CSS framework for rapid web design.</p>
+      
+      <h2 id="introduction">Introduction</h2>
+      <p>Now, instead of using floats and endless helper functions, Slate uses the preexisting grid architecture for layouts. This helps minimize the code necessary and improves load times.</p>
+      
+      <h2 id="layout">Layout</h2>
+      <p>In modern CSS frameworks, you create layouts using helper classes such as “xs-4” or “md4” or even “sm-col-6”. With Slate, these classes are no longer needed.</p>
+      <p>Slate was created to help you break away from that habit and begin relying on the grid system built-in to modern browsers.</p>
+      <p>Slate uses a 6-column span system. Use “s1” through “s6” to represent your column span size.</p>
+      <div class="example grid">
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        <div class="s1">s1</div>
+        
+        <div class="s2">s2</div>
+        <div class="s2">s2</div>
+        <div class="s2">s2</div>
+        
+        <div class="s3">s3</div>
+        <div class="s3">s3</div>
+        
+        <div class="s1">s1</div>
+        <div class="s5">s5</div>
+        
+        <div class="s2">s2</div>
+        <div class="s4">s4</div>
+        
+        <div class="s4">s4</div>
+        <div class="s2">s2</div>
+        
+        <div class="s5">s5</div>
+        <div class="s1">s1</div>
+        
+        <div class="s6">s6</div>
+      </div>
+      
+      <h2 id="utilities">Utility Classes</h2>
+      <h3>Break</h3>
+      <p>By adding the class “break” to an element, you force it to fall to the next row.</p>
+      <div class="example grid">
+        <div class="s2">s2</div>
+        <div class="s1">s1</div>
+        <div class="s3 break">s3 break</div>
+        <div class="s3">s3</div>
+      </div>
+      
+      <h3>Start</h3>
+      <p>If you need an offset without having to create an empty div, use a span range.</p>
+      <div class="example grid">
+        <div class="s1-2">s1-2</div>
+        <div class="s1-3">s1-3</div>
+        <div class="s1-4">s1-4</div>
+        <div class="s1-5">s1-5</div>
+        <div class="s2-5">s2-5</div>
+        <div class="s3-5">s3-5</div>
+        <div class="s4-5">s4-5</div>
+      </div>
+      <p>Or, if you need to span from a certain column to the end, leave out the second digit.</p>
+      <div class="example grid">
+        <div class="s2-">s2-</div>
+        <div class="s3-">s3-</div>
+        <div class="s4-">s4-</div>
+        <div class="s5-">s5-</div>
+      </div>
+      <h3>Pad</h3>
+      <p>Adding “pad” to any element will give it a slight padding of 8px.</p>
+    </main>
+  </body>
+</html>
