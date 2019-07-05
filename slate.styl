@@ -1,0 +1,90 @@
+@import 'node_modules/normalize-stylus/normalize.styl'
+    
+// variables
+pad = 8px
+
+body
+	height: 100vh
+	width: 100%
+
+body, .grid
+	display: grid
+	grid-column-gap: pad
+	grid-row-gap: pad
+	grid-template-columns: repeat(6, 1fr)
+	& > *
+		grid-column: 1/-1
+
+.branding
+	align-items: center
+	display: flex
+	img
+		margin-right: pad
+
+header
+	align-items: center
+	display: flex
+	justify-content: space-between
+	padding: 0px
+	
+	nav
+		align-items: center
+		display: flex
+		a
+			align-items: center
+			box-sizing: border-box
+			display: flex
+			height: inherit
+			padding: pad
+			
+aside
+	nav
+		a
+			display: block
+			padding: pad
+			
+p
+	line-height: 1.75em
+		
+// spans
+for start in (1..6)
+	.s{start}
+		margin-top: 0
+		grid-column: span start
+		
+		&-
+			grid-column: start/-1
+		
+	for end in (1..6)
+		.s{start}-{end}
+			grid-column: start/end+1
+		
+// floating elements
+.left
+	float: left
+	margin-bottom: pad
+	margin-right: pad
+.right
+	float: right
+	margin-bottom: pad
+	margin-left: pad
+	
+// utilities
+.pad
+	padding: pad
+
+.center
+	display: block
+	text-align: center
+	
+.break
+	grid-column-start: 1
+	for i in (1..6)
+		&.s{i}
+			grid-column-end: i+1
+		
+// handle small screens
+@media screen and (max-width: 767px)
+	for i in (1..6)
+		.s{i}
+			grid-column:1/-1

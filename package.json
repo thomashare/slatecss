@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/thomashare/slatecss/issues"
   },
-  "homepage": "https://github.com/thomashare/slatecss#readme"
+  "homepage": "https://github.com/thomashare/slatecss#readme",
+  "dependencies": {
+    "normalize-stylus": "^1.0.1"
+  }
 }
