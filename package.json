@@ -1,6 +1,6 @@
 {
   "name": "slatecss",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Unopinionated CSS framework for rapid web development.",
   "main": "slate.css",
   "directories": {

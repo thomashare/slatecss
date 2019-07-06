@@ -1,5 +1,5 @@
 @import 'node_modules/normalize-stylus/normalize.styl'
-    
+	
 // variables
 pad = 8px
 bevel = 3px
@@ -96,7 +96,7 @@ form
 			label
 				margin-right: pad
 	input
-		flex-grow: 100%
+		flex-grow: 1
 		width: 100%
 			
 form > label, form > input
@@ -108,6 +108,7 @@ form > input
 	grid-column: span 2
 label
 	display: inline-block
+	
 input, textarea
 	box-sizing: border-box
 input
@@ -115,7 +116,7 @@ input
 	border-radius: bevel
 	box-shadow: inset 0 0 1px rgba(0,0,0,0.5)
 	padding: pad
-	-webkit-appearance: none
+	 -webkit-appearance: none
 	
 // buttons
 button, input[type="submit"]
@@ -132,3 +133,16 @@ button, input[type="submit"]
 	for i in (1..6)
 		.s{i}
 			grid-column:1/-1
+			
+	.mobile-off
+		display: none !important
+		
+	// ensure form elements fill the screen or enclosed area
+	form
+		label
+			text-align: left
+			width: auto
+		input
+			grid-column: 1/-1
+	label, textarea, input
+		width: 100%
