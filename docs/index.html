@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slate CSS V3</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/slatecss@3.0.4/slate.css" rel="stylesheet">
+    <link href="https://unpkg.com/slatecss@3.0.5/slate.css" rel="stylesheet">
     <style>
       .example > div {
         align-items: center;
@@ -170,9 +170,11 @@
       <h2 id="responsive">Responsive</h2>
       <p>Slate will automatically expand all spans to 100% on screens smaller than 767px.</p>
       <p>This means any sidebars will displayed before or after content. To avoid this, add a “mobile-off” class to the element. Notice the div with the “mobile-off” is hidden on smaller devices.</p>
+      <p>Similarly, adding the “mobile-on” class to an element will only show it on smaller devices.</p>
       <div class="example grid">
         <div class="s5">s5</div>
         <div class="s1 mobile-off">s1 mobile-off</div>
+        <div class="mobile-on">mobile-on</div>
       </div>
     </main>
   </body>
