@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slate CSS V3</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/slatecss@3.0.5/slate.css" rel="stylesheet">
+    <link href="https://unpkg.com/slatecss@3.0.6/slate.css" rel="stylesheet">
     <style>
       .example > div {
         align-items: center;
@@ -54,6 +54,8 @@
         <a href="#utilities">Utilities</a>
         <a href="#forms">Forms</a>
         <a href="#responsive">Responsive</a>
+        <a href="#content">Content</a>
+        <a href="#media">Media</a>
       </nav>
     </aside>
     
@@ -176,6 +178,72 @@
         <div class="s1 mobile-off">s1 mobile-off</div>
         <div class="mobile-on">mobile-on</div>
       </div>
+      
+      <h2 id="content">Content</h2>
+      <p>Writing content is easier than ever. When writing content, just use normal html5 tags.</p>
+      <p>Here's an example of a &lt;blockquote&gt;</p>
+      <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+        <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+    </blockquote>
+      
+      <h3>Text</h3>
+      <p>Paragraph tags can contain <small>small text</small> or <strong>strong text</strong> and still remain legible. if you need bigger text, wrap the text in a “txt1” through “txt6” tag. The larger the number, the larger the font.</p>
+      <div class="example grid">
+        <div class="s1 txt1">txt1</div>
+        <div class="s1 txt2">txt2</div>
+        <div class="s1 txt3">txt3</div>
+        <div class="s1 txt4">txt4</div>
+        <div class="s1 txt5">txt5</div>
+        <div class="s1 txt6">txt6</div>
+      </div>
+      
+      <h3>Font Weight</h3>
+      <p>Common font weights of thin (100), light (200), bold (600), and extra bold (800) can be applied using the following classes.</p>
+      <div class="example grid">
+        <div class="s3 thin">thin</div>
+        <div class="s3 light">light</div>
+        <div class="s3 bold">bold (600)</div>
+        <div class="s3 bold">extra bold (800)</div>
+      </div>
+      
+      <p>Note: If the font you're using doesn't support the font weight, it will use the closest available match.</p>
+      
+      <h3>Text Alignment</h3>
+      <p>Center text with the “txt-center” class and align-right with the “txt-right” class.</p>
+      
+      <h2 id="media">Media</h2>
+      <p>Any element can use span tags, even images and embeds.</p>
+      <p>Due to limitations in iframes, iframes must be wrapped in an “iframe” class element.</p>
+      <div class="grid">
+        <img alt="placeholder image" class="s1" src="https://placehold.it/600x400">
+        <div class="s3 iframe">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/iGpuQ0ioPrM?autoplay=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <img alt="placeholder image" class="s2" src="https://placehold.it/600x400">
+      </div>
+      
+      <p>Center elements by adding a “center” class to the container element.</p>
+      <div class="grid center">
+        <img alt="placeholder image" class="s1" src="https://placehold.it/600x400">
+        <div class="s3 iframe">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/iGpuQ0ioPrM?autoplay=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <img alt="placeholder image" class="s2" src="https://placehold.it/600x400">
+      </div>
+      
+      <p>Align elements to the bottom by adding a “bottom” class to the container element.</p>
+      <div class="grid bottom">
+        <img alt="placeholder image" class="s1" src="https://placehold.it/600x400">
+        <div class="s3 iframe">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/iGpuQ0ioPrM?autoplay=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        </div>
+        <img alt="placeholder image" class="s2" src="https://placehold.it/600x400">
+      </div>
     </main>
+    
+    <footer class="txt-center txt3 s2-5">
+      <p>License MIT. Fork it on <a href="#"><i class="fab fa-github"></i> Github.</a></p>
+    </footer>
   </body>
 </html>
