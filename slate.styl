@@ -213,6 +213,8 @@ for i in (1..6)
 	for i in (1..6)
 		.s{i}, [class^=s{i}-], [class*= s{i}-]
 			grid-column:1/-1
+	.break
+		grid-column: 1/-1 !important
 			
 	// hide element on smaller devices
 	.mobile-off
