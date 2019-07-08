@@ -195,6 +195,19 @@ for i in (1..6)
 		top: 0
 		width: 100%
 		
+// render tool
+.render
+	*
+		background-color: rgba(0,0,0,0.05)
+		box-shadow: 0 0 1px rgba(0,0,0,0.1)
+		min-height: 40px
+		&.sm
+			min-height: 100px
+		&.md
+			min-height: 250px
+		&.lg
+			min-height: 500px
+		
 // handle small screens
 @media screen and (max-width: 767px)
 	for i in (1..6)

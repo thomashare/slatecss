@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slate CSS V3</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/slatecss@3.0.8/slate.css" rel="stylesheet">
+    <link href="https://unpkg.com/slatecss@3.0.9/slate.css" rel="stylesheet">
     <style>
-      .example > div {
+      .example > * {
         align-items: center;
         background-color: #eee;
         color: rgba(0,0,0,0.5);
         display: flex;
-        height: 40px;
+        min-height: 40px;
         justify-content: center;
       }
       aside {
@@ -51,6 +51,7 @@
       <nav>
         <a href="#intro">Introduction</a>
         <a href="#layout">Layout</a>
+        <a href="#render">Render</a>
         <a href="#utilities">Utilities</a>
         <a href="#forms">Forms</a>
         <a href="#responsive">Responsive</a>
@@ -101,6 +102,18 @@
         <div class="s1">s1</div>
         
         <div class="s6">s6</div>
+      </div>
+      
+      <h2 id="render">Render</h2>
+      <p>Add the “render” class to any grid element to create a render.</p>
+      <p>The render class helps out with visually laying out your content. This class is strictly meant for mockups and visual representation.</p>
+      <p>All elements inside the render class will be given a default height of 40px. Add a class of “sm” to make the element's height 100px, “md” to make it 250px, and “lg” to make it 500px.</p>
+      <p>Here's a common example of a header, main, aside, and footer layout.</p>
+      <div class="example grid render">
+        <header>header</header>
+        <main class="s5 md">main .md</main>
+        <aside class="s1">aside</aside>
+        <footer>footer</footer>
       </div>
       
       <h2 id="utilities">Utility Classes</h2>
@@ -243,7 +256,7 @@
     </main>
     
     <footer class="txt-center txt3 s2-5">
-      <p>License MIT. Fork it on <a href="https://github.com/thomashare/slatecss"><i class="fab fa-github"></i> Github.</a></p>
+      <p>License MIT. Fork it on <a href="#"><i class="fab fa-github"></i> Github.</a></p>
     </footer>
   </body>
 </html>
