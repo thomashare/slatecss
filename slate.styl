@@ -198,7 +198,7 @@ for i in (1..6)
 // handle small screens
 @media screen and (max-width: 767px)
 	for i in (1..6)
-		.s{i}
+		.s{i}, [class^=s{i}-], [class*= s{i}-]
 			grid-column:1/-1
 			
 	// hide element on smaller devices
