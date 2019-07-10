@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slate CSS V3</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/slatecss@3.1.0/slate.css" rel="stylesheet">
+    <link href="https://unpkg.com/slatecss@3.1.1/slate.css" rel="stylesheet">
     <style>
       .example > * {
         align-items: center;
@@ -47,7 +47,7 @@
     </style>
   </head>
   <body>
-    <aside class="s1 pad">
+    <aside class="s2 pad">
       <nav>
         <a href="#intro">Introduction</a>
         <a href="#layout">Layout</a>
@@ -60,7 +60,7 @@
       </nav>
     </aside>
     
-    <main class="s4 pad">
+    <main class="s8 pad">
       <h1>Slate V3 <i class="far fa-grin-tongue primary"></i></h1>
       <p>Slate.css is an unopinionated CSS framework for rapid web design.</p>
       
@@ -73,7 +73,7 @@
       <h2 id="layout">Layout</h2>
       <p>In modern CSS frameworks, you create layouts using helper classes such as “xs-4” or “md4” or even “sm-col-6”. With Slate, these classes are no longer needed.</p>
       <p>Slate was created to help you break away from that habit and begin relying on the grid system built-in to modern browsers.</p>
-      <p>Slate uses a 6-column span system. Use “s1” through “s6” to represent your column span size.</p>
+      <p>Slate uses a 12-column span system. Use “s1” through “s12” to represent your column span size.</p>
       <div class="example grid">
         <div class="s1">s1</div>
         <div class="s1">s1</div>
@@ -98,29 +98,29 @@
         <div class="s4">s4</div>
         <div class="s2">s2</div>
         
-        <div class="s5">s5</div>
+        <div class="s4">s5</div>
         <div class="s1">s1</div>
-        
-        <div class="s6">s6</div>
       </div>
-
-      <h3>Span Range</h3>
+      
+      <h2>Span Range</h2>
       <p>If you need an offset without having to create an empty div, use a span range.</p>
       <div class="example grid">
         <div class="s1-2">s1-2</div>
         <div class="s1-3">s1-3</div>
         <div class="s1-4">s1-4</div>
         <div class="s1-5">s1-5</div>
-        <div class="s2-5">s2-5</div>
-        <div class="s3-5">s3-5</div>
-        <div class="s4-5">s4-5</div>
+        <div class="s1-6">s1-6</div>
+        <div class="s1-7">s1-7</div>
+        <div class="s1-8">s1-8</div>
+        <div class="s1-9">s1-9</div>
+        <div class="s1-10">s1-10</div>
+        <div class="s1-11">s1-11</div>
       </div>
       <p>Or, if you need to span from a certain column to the end, leave out the second digit.</p>
       <div class="example grid">
         <div class="s2-">s2-</div>
         <div class="s3-">s3-</div>
         <div class="s4-">s4-</div>
-        <div class="s5-">s5-</div>
       </div>
       
       <h2 id="render">Render</h2>
@@ -130,8 +130,8 @@
       <p>Here's a common example of a header, main, aside, and footer layout.</p>
       <div class="example grid render">
         <header>header</header>
-        <main class="s5 md">main .md</main>
-        <aside class="s1">aside</aside>
+        <main class="s9 md">main .md</main>
+        <aside class="s3">aside</aside>
         <footer>footer</footer>
       </div>
       
@@ -139,10 +139,10 @@
       <h3>Break</h3>
       <p>By adding the class “break” to an element, you force it to fall to the next row.</p>
       <div class="example grid">
-        <div class="s2">s2</div>
-        <div class="s1">s1</div>
-        <div class="s3 break">s3 break</div>
-        <div class="s3">s3</div>
+        <div class="s5">s5</div>
+        <div class="s5">s5</div>
+        <div class="s2 break">s2 break</div>
+        <div class="s10">s10</div>
       </div>
       
       <h3>Pad</h3>
@@ -167,7 +167,7 @@
           <label for="email2">Email:</label>
           <input id="email2" type="email">
         </div>
-        <button class="s6-">Submit</button>
+        <button class="s10-">Submit</button>
       </form>
       
       <p>Or, just wrap your form elements in a form tag to auto fit your inputs to the grid.</p>
@@ -180,7 +180,7 @@
         <input id="password" type="password">
         <label for="password2">Confirm Password:</label>
         <input id="password3" type="password3">
-        <input class="s6-" type="submit">
+        <input class="s10-" type="submit">
       </form>
       
       <h2 id="responsive">Responsive</h2>
@@ -188,8 +188,8 @@
       <p>This means any sidebars will displayed before or after content. To avoid this, add a “mobile-off” class to the element. Notice the div with the “mobile-off” is hidden on smaller devices.</p>
       <p>Similarly, adding the “mobile-on” class to an element will only show it on smaller devices.</p>
       <div class="example grid">
-        <div class="s5">s5</div>
-        <div class="s1 mobile-off">s1 mobile-off</div>
+        <div class="s9">s5</div>
+        <div class="s3 mobile-off">s3 mobile-off</div>
         <div class="mobile-on">mobile-on</div>
       </div>
       
@@ -204,12 +204,12 @@
       <h3>Text</h3>
       <p>Paragraph tags can contain <small>small text</small> or <strong>strong text</strong> and still remain legible. if you need bigger text, wrap the text in a “txt1” through “txt6” tag. The larger the number, the larger the font.</p>
       <div class="example grid">
-        <div class="s1 txt1">txt1</div>
-        <div class="s1 txt2">txt2</div>
-        <div class="s1 txt3">txt3</div>
-        <div class="s1 txt4">txt4</div>
-        <div class="s1 txt5">txt5</div>
-        <div class="s1 txt6">txt6</div>
+        <div class="s2 txt1">txt1</div>
+        <div class="s2 txt2">txt2</div>
+        <div class="s2 txt3">txt3</div>
+        <div class="s2 txt4">txt4</div>
+        <div class="s2 txt5">txt5</div>
+        <div class="s2 txt6">txt6</div>
       </div>
       
       <h3>Font Weight</h3>
@@ -230,33 +230,33 @@
       <p>Any element can use span tags, even images and embeds.</p>
       <p>Due to limitations in iframes, iframes must be wrapped in an “iframe” class element.</p>
       <div class="grid">
-        <img alt="placeholder image" class="s1" src="https://placehold.it/600x400">
-        <div class="s3 iframe">
+        <img alt="placeholder image" class="s3" src="https://placehold.it/600x400">
+        <div class="s6 iframe">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/iGpuQ0ioPrM?autoplay=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
-        <img alt="placeholder image" class="s2" src="https://placehold.it/600x400">
+        <img alt="placeholder image" class="s3" src="https://placehold.it/600x400">
       </div>
       
       <p>Center elements by adding a “center” class to the container element.</p>
       <div class="grid center">
-        <img alt="placeholder image" class="s1" src="https://placehold.it/600x400">
-        <div class="s3 iframe">
+        <img alt="placeholder image" class="s3" src="https://placehold.it/600x400">
+        <div class="s6 iframe">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/iGpuQ0ioPrM?autoplay=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
-        <img alt="placeholder image" class="s2" src="https://placehold.it/600x400">
+        <img alt="placeholder image" class="s3" src="https://placehold.it/600x400">
       </div>
       
       <p>Align elements to the bottom by adding a “bottom” class to the container element.</p>
       <div class="grid bottom">
-        <img alt="placeholder image" class="s1" src="https://placehold.it/600x400">
-        <div class="s3 iframe">
+        <img alt="placeholder image" class="s3" src="https://placehold.it/600x400">
+        <div class="s6 iframe">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/iGpuQ0ioPrM?autoplay=0&modestbranding=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
-        <img alt="placeholder image" class="s2" src="https://placehold.it/600x400">
+        <img alt="placeholder image" class="s3" src="https://placehold.it/600x400">
       </div>
     </main>
     
-    <footer class="txt-center txt3 s2-5">
+    <footer class="txt-center txt3 s3-10">
       <p>License MIT. Fork it on <a href="https://github.com/thomashare/slatecss"><i class="fab fa-github"></i> Github.</a></p>
     </footer>
   </body>

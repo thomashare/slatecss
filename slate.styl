@@ -16,7 +16,7 @@ body, .grid, form
 	display: grid
 	grid-column-gap: pad
 	grid-row-gap: pad
-	grid-template-columns: repeat(6, 1fr)
+	grid-template-columns: repeat(12, 1fr)
 	& > *
 		grid-column: 1/-1
 		
@@ -63,14 +63,14 @@ p
 	line-height: 1.75em
 		
 // spans
-for start in (1..6)
+for start in (1..12)
 	.s{start}
 		margin-top: 0
 		grid-column: span start
 		&-
 			grid-column: start/-1
 		
-	for end in (1..6)
+	for end in (1..12)
 		.s{start}-{end}
 			grid-column: start/end+1
 		
@@ -97,13 +97,13 @@ for start in (1..6)
 	
 .break
 	grid-column-start: 1
-	for i in (1..6)
+	for i in (1..12)
 		&.s{i}
 			grid-column-end: i+1
 			
 // forms
 form
-	for i in (1..6)
+	for i in (1..12)
 		& > .s{i}
 			align-items: center
 			display: flex
@@ -119,7 +119,7 @@ form > label, form > input
 form > label
 	text-align: right
 form > input
-	grid-column: span 2
+	grid-column: span 3
 label
 	display: inline-block
 	
@@ -159,7 +159,7 @@ blockquote
 			
 // text
 // font sizes
-for i in (1..6)
+for i in (1..12)
 	.txt{i}
 		font-size: 0.25em*i*1.5
 
@@ -181,9 +181,12 @@ mark
 
 // make span media widths 100%
 // images
-for i in (1..6)
+for i in (1..12)
 	img.s{i}, img.s{i}-, video.s{i}, video.s{i}-,.iframe.s{i}, .iframe.{s}i-
 		width: 100%
+		
+img
+	max-width: 100%
 		
 // iframes
 .iframe
@@ -210,11 +213,11 @@ for i in (1..6)
 		
 // handle small screens
 @media screen and (max-width: 767px)
-	for i in (1..6)
+	for i in (1..12)
 		.s{i}, [class^=s{i}-], [class*= s{i}-]
-			grid-column:1/-1
-	.break
-		grid-column: 1/-1 !important
+			grid-column: 1/-1
+			.break
+				grid-column-end: -1
 			
 	// hide element on smaller devices
 	.mobile-off
