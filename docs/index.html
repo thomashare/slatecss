@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Slate CSS V3</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-    <link href="https://unpkg.com/slatecss@3.1.1/slate.css" rel="stylesheet">
+    <link href="https://unpkg.com/slatecss@3.1.2/slate.css" rel="stylesheet">
     <style>
       .example > * {
         align-items: center;
@@ -52,6 +52,7 @@
         <a href="#intro">Introduction</a>
         <a href="#layout">Layout</a>
         <a href="#render">Render</a>
+        <a href="#debug">Debug</a>
         <a href="#utilities">Utilities</a>
         <a href="#forms">Forms</a>
         <a href="#responsive">Responsive</a>
@@ -61,8 +62,18 @@
     </aside>
     
     <main class="s8 pad">
-      <h1>Slate V3 <i class="far fa-grin-tongue primary"></i></h1>
-      <p>Slate.css is an unopinionated CSS framework for rapid web design.</p>
+      <h1><svg width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="150" height="40" fill="white"/>
+    <path d="M61.745 37C60.1013 37 58.2633 36.9396 56.2311 36.8189C54.2288 36.6982 52.4506 36.5473 50.8966 36.3662V32.7896C54.7817 33.182 58.0243 33.3782 60.6243 33.3782C62.2381 33.3782 63.5083 33.3178 64.4347 33.1971C65.391 33.0462 66.198 32.7896 66.8554 32.4274C67.4531 32.0652 67.8417 31.5371 68.021 30.8429C68.2003 30.1185 68.2899 29.1678 68.2899 27.9907C68.2899 26.5721 68.2152 25.5761 68.0658 25.0027C67.9164 24.399 67.5577 23.9614 66.9899 23.6897C66.452 23.4181 65.5106 23.2219 64.1657 23.1012L56.5449 22.241C54.692 22.0297 53.2874 21.5921 52.3311 20.9281C51.4046 20.2339 50.777 19.3435 50.4483 18.257C50.1494 17.1403 50 15.6915 50 13.9108C50 11.4359 50.4184 9.56458 51.2552 8.29694C52.1219 7.02929 53.3173 6.1842 54.8415 5.76165C56.3955 5.3391 58.4725 5.12783 61.0726 5.12783C62.8059 5.12783 64.5692 5.20328 66.3623 5.35419C68.1555 5.5051 69.575 5.6862 70.621 5.89747V9.33821C69.4854 9.15712 68.0807 9.0213 66.4072 8.93076C64.7336 8.81003 63.1795 8.74967 61.745 8.74967C60.0714 8.74967 58.7266 8.82512 57.7105 8.97603C56.6944 9.12694 55.9024 9.38349 55.3346 9.74567C54.707 10.1079 54.3035 10.5908 54.1242 11.1944C53.9449 11.798 53.8552 12.6582 53.8552 13.775C53.8552 15.0124 53.9449 15.9179 54.1242 16.4913C54.3035 17.0346 54.6472 17.4421 55.1553 17.7137C55.6633 17.9552 56.5001 18.1363 57.6656 18.257L65.1968 19.1172C66.9899 19.2983 68.3796 19.6152 69.3658 20.0679C70.352 20.5206 71.0693 21.3356 71.5176 22.5126C71.936 23.5992 72.1452 25.3347 72.1452 27.719C72.1452 30.4656 71.7268 32.518 70.89 33.8762C70.0532 35.2042 68.9325 36.0644 67.5279 36.4567C66.1232 36.8189 64.1956 37 61.745 37Z" fill="#4B4B4B"/>
+    <path d="M79.0894 36.6378V3H82.7205V36.6378H79.0894Z" fill="#4B4B4B"/>
+    <path d="M96.5682 37C93.9383 37 92.0256 36.5171 90.8302 35.5513C89.6347 34.5553 89.037 32.8047 89.037 30.2996C89.037 28.5189 89.2462 27.1305 89.6646 26.1345C90.083 25.1385 90.7853 24.4141 91.7716 23.9614C92.7877 23.5087 94.2072 23.2823 96.0302 23.2823C96.8969 23.2823 99.751 23.3577 104.592 23.5087V22.1505C104.592 20.3395 104.413 19.0568 104.055 18.3023C103.726 17.5477 103.098 17.0648 102.172 16.8535C101.275 16.6423 99.7361 16.5366 97.5544 16.5366C96.5981 16.5366 95.3877 16.597 93.9233 16.7177C92.4888 16.8083 91.3681 16.9139 90.5612 17.0346V13.8202C92.9222 13.3977 95.6866 13.1864 98.8544 13.1864C101.544 13.1864 103.546 13.4731 104.861 14.0466C106.206 14.5899 107.103 15.4953 107.551 16.763C107.999 18.0004 108.224 19.8114 108.224 22.1957V36.6378H104.951L104.772 33.4234H104.503C103.875 34.8722 102.859 35.838 101.454 36.3209C100.08 36.7736 98.451 37 96.5682 37ZM97.9579 33.6951C99.4521 33.6951 100.663 33.5593 101.589 33.2876C102.545 33.016 103.233 32.4878 103.651 31.7031C104.279 30.6165 104.592 29.1074 104.592 27.1758V26.1345H96.9716C95.7165 26.1345 94.79 26.225 94.1923 26.4061C93.6245 26.5872 93.221 26.9494 92.9819 27.4927C92.7428 28.0058 92.6233 28.8207 92.6233 29.9374C92.6233 31.024 92.7578 31.8238 93.0268 32.3369C93.2957 32.85 93.7888 33.2122 94.5061 33.4234C95.2532 33.6045 96.4038 33.6951 97.9579 33.6951Z" fill="#4B4B4B"/>
+    <path d="M117.702 36.6378V16.8988H113.084V13.5486H117.702V6.8482H121.333V13.5486H126.802V16.8988H121.333V36.6378H117.702Z" fill="#4B4B4B"/>
+    <path d="M150 26.4061H134.355C134.355 28.6094 134.504 30.1789 134.803 31.1145C135.102 32.0502 135.745 32.7142 136.731 33.1065C137.747 33.4687 139.435 33.6498 141.796 33.6498C144.098 33.6498 146.533 33.4838 149.103 33.1518V36.3662C148.147 36.5473 146.907 36.6982 145.383 36.8189C143.859 36.9396 142.409 37 141.034 37C137.956 37 135.685 36.6378 134.22 35.9134C132.786 35.1891 131.845 34.0271 131.396 32.4274C130.948 30.8278 130.724 28.3981 130.724 25.1385C130.724 21.9392 130.918 19.5397 131.307 17.9401C131.725 16.3404 132.637 15.1482 134.041 14.3635C135.476 13.5788 137.732 13.1864 140.81 13.1864C143.679 13.1864 145.756 13.5788 147.041 14.3635C148.326 15.1181 149.133 16.2801 149.462 17.8495C149.821 19.3888 150 21.8034 150 25.0932V26.4061ZM140.721 16.5366C138.778 16.5366 137.373 16.7177 136.507 17.0799C135.67 17.4119 135.102 18.0608 134.803 19.0266C134.534 19.9623 134.385 21.4865 134.355 23.5992H146.503V23.237C146.503 21.245 146.324 19.7812 145.965 18.8455C145.637 17.9099 145.084 17.2912 144.307 16.9893C143.53 16.6875 142.334 16.5366 140.721 16.5366Z" fill="#4B4B4B"/>
+    <rect width="40" height="40" rx="8" fill="#00C2FF"/>
+    <path d="M20.5805 22.1829L3 35.161L36.161 2L20.5805 22.1829Z" fill="white"/>
+    <path d="M27 30L15 36.8931L35.906 20.013L27 30Z" fill="white"/>
+    </svg> V3</h1>
+      <p>Slate.css is an unopinionated CSS framework for rapid web layout and design.</p>
       
       <label for="cdn">CDN:</label>
       <input id="cdn" type="text" value="https://unpkg.com/slatecss@latest/slate.css" style="width:100%" onclick="this.select()">
@@ -100,6 +111,7 @@
         
         <div class="s4">s5</div>
         <div class="s1">s1</div>
+        <div class="s7">s7</div>
       </div>
       
       <h2>Span Range</h2>
@@ -134,6 +146,14 @@
         <aside class="s3">aside</aside>
         <footer>footer</footer>
       </div>
+      
+      <h2 id="debug">Debug</h2>
+      <p>Add the class “debug” to any element to outline it in red. This is useful when working with margins/padding and alignment.</p>
+      <div class="example grid render">
+        <div class="s6 debug"></div>
+        <div class="s9-12"></div>
+      </div>
+      <p>If you have an element with no background and/or no border, giving it a red outline will help you clearly see the content box.</p>
       
       <h2 id="utilities">Utility Classes</h2>
       <h3>Break</h3>
@@ -195,11 +215,6 @@
       
       <h2 id="content">Content</h2>
       <p>Writing content is easier than ever. When writing content, just use normal html5 tags.</p>
-      <p>Here's an example of a &lt;blockquote&gt;</p>
-      <blockquote cite="https://www.huxley.net/bnw/four.html">
-        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
-        <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
-    </blockquote>
       
       <h3>Text</h3>
       <p>Paragraph tags can contain <small>small text</small> or <strong>strong text</strong> and still remain legible. if you need bigger text, wrap the text in a “txt1” through “txt6” tag. The larger the number, the larger the font.</p>
@@ -215,13 +230,20 @@
       <h3>Font Weight</h3>
       <p>Common font weights of thin (100), light (200), bold (600), and extra bold (800) can be applied using the following classes.</p>
       <div class="example grid">
-        <div class="s3 thin">thin</div>
-        <div class="s3 light">light</div>
+        <div class="s3 thin">thin (100)</div>
+        <div class="s3 light">light (200)</div>
         <div class="s3 bold">bold (600)</div>
         <div class="s3 bold">extra bold (800)</div>
       </div>
       
       <p>Note: If the font you're using doesn't support the font weight, it will use the closest available match.</p>
+      
+      <h3>Blockquote</h3>
+      <p>Here's an example of a &lt;blockquote&gt;</p>
+      <blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
+        <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+    </blockquote>
       
       <h3>Text Alignment</h3>
       <p>Center text with the “txt-center” class and align-right with the “txt-right” class.</p>
@@ -256,7 +278,7 @@
       </div>
     </main>
     
-    <footer class="txt-center txt3 s3-10">
+    <footer class="txt-center s3-10">
       <p>License MIT. Fork it on <a href="https://github.com/thomashare/slatecss"><i class="fab fa-github"></i> Github.</a></p>
     </footer>
   </body>
