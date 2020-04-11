@@ -1,4 +1,5 @@
 module.exports = {
+  base: 'https://github.com/thomashare/slatecss',
   title: 'SLATE.CSS',
   description: 'Slate is an unopinionated CSS framework for rapid web layout and design.',
   themeConfig: {
