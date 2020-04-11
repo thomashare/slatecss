@@ -1,5 +1,4 @@
 module.exports = {
-  base: '/slatecss/',
   dest: 'public',
   title: 'SLATE.CSS',
   description: 'Slate is an unopinionated CSS framework for rapid web layout and design.',
