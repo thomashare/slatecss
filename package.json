@@ -1,13 +1,14 @@
 {
   "name": "slatecss",
-  "version": "3.1.2",
+  "version": "4.0.0",
   "description": "Unopinionated CSS framework for rapid web development.",
   "main": "slate.css",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
