@@ -9,7 +9,7 @@ Slate uses a large screen first design structure with the use of [breaks](#break
 
 <div class="flex items-center">
   <span>CDN:</span>
-  <input class="ml2 p2" type="text" value="https://unpkg.com/slatecss@latestm/slate.css" style="border: solid #B0B0B0 1px; border-radius: 3px; width: 300px;" onClick="this.setSelectionRange(0, this.value.length);">
+  <input class="ml2 p2" type="text" value="https://unpkg.com/slatecss@latest/slate.css" style="border: solid #B0B0B0 1px; border-radius: 3px; width: 300px;" onClick="this.setSelectionRange(0, this.value.length);">
 </div>
 
 ## Grid
