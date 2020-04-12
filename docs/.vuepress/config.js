@@ -2,7 +2,7 @@ module.exports = {
   title: 'SLATE.CSS',
   description: 'Slate is an unopinionated CSS framework for rapid web layout and design.',
   themeConfig: {
-    logo: '/img/icon.png',
+    logo: '/img/icon.svg',
     nav: [
       { text: 'Getting Started', link: '/' },
       { text: 'Github', link: 'https://github.com/thomashare/slatecss' },

@@ -450,8 +450,8 @@ By adding the ```.cover``` class to the image, the image will fill the entire pa
 Here's an example of a 500x500 image beside some text content. Notice with the ```.cover``` class, the image maintains the aspect no matter the width.
 
 ```HTML
-<div class="grid render">
-  <img alt="example image cover" class="s4 cover" src="https://source.unsplash.com/500x500?random">
+<div class="grid render lg-break">
+  <img alt="example image" class="s4 cover minh10" src="https://source.unsplash.com/500x500?random">
   <div class="s5- p5">
     <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</p>
     <p>But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
@@ -460,8 +460,8 @@ Here's an example of a 500x500 image beside some text content. Notice with the `
 </div>
 ```
 
-<div class="grid render">
-  <img alt="example image cover" class="s4 cover" src="https://source.unsplash.com/500x500?random">
+<div class="grid render lg-break">
+  <img alt="example image" class="s4 cover minh10" src="https://source.unsplash.com/500x500?random">
   <div class="s5- p5 m0-ends-v">
     <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it?</p>
     <p>But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>

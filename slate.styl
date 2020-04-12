@@ -207,10 +207,16 @@ for size, i in breakpoints
 				& > *
 					grid-column: 1/-1
 
-// minimum height
+// min/max height and widths
 for i in (1..10)
-	.mh{i}
+	.maxh{i}
+		max-height: i * 25px
+	.minh{i}
 		min-height: i * 25px
+	.maxw{i}
+		max-width: i * 25px
+	.minw{i}
+		min-width: i * 25px
 
 // floating elements
 .left
