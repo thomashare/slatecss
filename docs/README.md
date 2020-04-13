@@ -469,10 +469,12 @@ Here's an example of a 500x500 image beside some text content. Notice with the `
   </div>
 </div>
 
-### Max Width
-Easily set a max width of an element using one of the max width classes.
-These classes begin with ```.mw``` and are appended with a level between 1 and 10. Each level is multiplied by 10ch.<br>
+## Heights and Widths
+Easily set a max width or height of an element using one of the min/maxheight and width classes.
+Minimum height classes begin with ```.minh``` and are appended with a level between 1 and 10. Each level is multiplied by 10ch.<br>
 
-Ex: ```.mw3``` would be the equivelent of ```max-width: 30ch```.
+Ex: ```.minh3``` would be the equivelent of ```min-height: 30ch```.<br>
 
-This is useful when you need to insert an image at a smaller width or if you need to constrain text to a certain width.
+Much like height classes, width classes are defined as ```.minw``` and are appended with a level between 1 and 10.<br>
+
+Ex: an element with ```.minw8``` would have a minimum width of 80ch.
