@@ -1,2 +1,5 @@
 node_modules
-.firebase*
+.firebase
+.firebaserc
+firebase.json
+.DS_STORE
